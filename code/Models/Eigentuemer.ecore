@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Eigentümer" nsPrefix="Eigentümer" nsURI="http://Eigentümer/1.0">
+	<eSubpackages name="Personen- und Bestandsdaten">
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Verwaltung">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="beginnDerBestellung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="bestellungsbeschluss" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="endeDerBestellung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="grundakt" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="notariat" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_DQOhneDatenerhebung" name="qualitaetsangaben" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" upperBound="-1" name="beziehtSichAuf" eType="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle/wirdVerwaltetVon"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" name="haengtAn" eType="#//Personen-%20und%20Bestandsdaten/AX_Person" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Person/benennt"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Vertretung">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZurVertretung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="artDerVertretung" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="beginnDerVertretung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="endeDerVertretung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" upperBound="-1" name="vertritt" eType="#//Personen-%20und%20Bestandsdaten/AX_Person" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Person/wirdVertretenVon"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" name="haengtAn" eType="#//Personen-%20und%20Bestandsdaten/AX_Person" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Person/uebtAus"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Personengruppe">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nameDerPersonengruppe" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="2" upperBound="*" name="bestehtAus" eType="#//Personen-%20und%20Bestandsdaten/AX_Person" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Person/gehoertZu"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Person">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="akademischerGrad" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_Anrede_Person" name="anrede" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="beruf" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsname" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="haushaltsstelleLandesgrundbesitz" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nachnameOderFirma" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="namensbestandteil" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_DQOhneDatenerhebung" name="qualitaetsangaben" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="sonstigeEigenschaften" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="vorname" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="wohnortOderSitz" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="wirdVertretenVon" eType="#//Personen-%20und%20Bestandsdaten/AX_Vertretung" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Vertretung/vertritt"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="gehoertZu" eType="#//Personen-%20und%20Bestandsdaten/AX_Personengruppe" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Personengruppe/bestehtAus"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="benennt" eType="#//Personen-%20und%20Bestandsdaten/AX_Verwaltung" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Verwaltung/haengtAn"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="weistAuf" eType="#//Personen-%20und%20Bestandsdaten/AX_Namensnummer" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Namensnummer/benennt"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Personen-%20und%20Bestandsdaten/AX_Person" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Person/zeigtAuf"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="uebtAus" eType="#//Personen-%20und%20Bestandsdaten/AX_Vertretung" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Vertretung/haengtAn"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="hat" eType="#//Personen-%20und%20Bestandsdaten/AX_Anschrift" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Anschrift/gehoertZu"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Namensnummer">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_Anteil" name="anteil" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_ArtDerRechtsgemeinschaft_Namensnummer" name="artDerRechtsgemeinschaft" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="beschriebDerRechtsgemeinschaft" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_Eigentuemerart_Namensnummer" name="eigentuemerart" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummerNachDIN1421" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="strichblattnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Personen-%20und%20Bestandsdaten/AX_Namensnummer" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Namensnummer/bestehtAusRechtsverhaeltnissenZu"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" name="istBestandteilVon" eType="#//Personen-%20und%20Bestandsdaten/AX_Buchungsblatt" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Buchungsblatt/@eStructuralFeatures.5"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Personen-%20und%20Bestandsdaten/AX_Namensnummer" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Namensnummer/hatVorgaenger"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="benennt" eType="#//Personen-%20und%20Bestandsdaten/AX_Person" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Person/weistAuf"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_LI_ProcessStep_OhneDatenerhebung_Description">
+			<eLiterals name="Erhebung" value=""/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_LI_ProcessStep_OhneDatenerhebung">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="dateTime" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_LI_ProcessStep_OhneDatenerhebung_Description" name="description" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="processor" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_LI_Lineage_OhneDatenerhebung">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_LI_ProcessStep_OhneDatenerhebung" name="processStep" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Eigentuemerart_Namensnummer">
+			<eLiterals name="Natürliche Personen" value="1000"/>
+			<eLiterals name="Natürliche Person - Alleineigentum oder Ehepartner" value="1100"/>
+			<eLiterals name="Natürliche Person - Wohnsitz im Land" value="1200"/>
+			<eLiterals name="Natürliche Person - Wohnsitz außerhalb des Landes" value="1300"/>
+			<eLiterals name="Natürliche Person - Gemeinschaftseigentum" value="1500"/>
+			<eLiterals name="Juristische Personen" value="2000"/>
+			<eLiterals name="Gemeinnützige Bau-, Wohnungs- oder Siedlungsgesellschaft oder -genossenschaft einschließlich Heimstätte" value="2100"/>
+			<eLiterals name="Sonstige gemeinnützige Institution (Träger von Krankenhäusern, Altenheimen usw.)" value="2200"/>
+			<eLiterals name="Privates Wohnungsunternehmen, private Baugesellschaft u.ä." value="2300"/>
+			<eLiterals name="Kreditinstitut" value="2400"/>
+			<eLiterals name="Versicherungsunternehmen" value="2500"/>
+			<eLiterals name="Andere Unternehmen, Gesellschaften usw." value="2900"/>
+			<eLiterals name="Körperschaften" value="3000"/>
+			<eLiterals name="Stiftung" value="3100"/>
+			<eLiterals name="Kirchliches Eigentum" value="4000"/>
+			<eLiterals name="Evangelische Kirche" value="4100"/>
+			<eLiterals name="Katholische Kirche" value="4200"/>
+			<eLiterals name="Andere Kirchen, Religionsgemeinschaften usw." value="4900"/>
+			<eLiterals name="Bundesrepublik Deutschland" value="5100"/>
+			<eLiterals name="Bundesrepublik Deutschland, Bundesstraßenverwaltung" value="5101"/>
+			<eLiterals name="Bundesrepublik Deutschland, Bundeswehrverwaltung" value="5102"/>
+			<eLiterals name="Bundesrepublik Deutschland, Forstverwaltung" value="5103"/>
+			<eLiterals name="Bundesrepublik Deutschland, Finanzverwaltung" value="5104"/>
+			<eLiterals name="Bundesrepublik Deutschland, Zivilschutz" value="5105"/>
+			<eLiterals name="Bundesrepublik Deutschland, Wasserstraßenverwaltung" value="5106"/>
+			<eLiterals name="Bundesrepublik Deutschland, Bundeseisenbahnvermögen" value="5107"/>
+			<eLiterals name="Eigentum des Volkes nach DDR-Recht" value="5210"/>
+			<eLiterals name="Eigentum der Genossenschaften und deren Einrichtungen" value="5220"/>
+			<eLiterals name="Eigentum der gesellschaftlichen Organisationen und deren Einrichtungen" value="5230"/>
+			<eLiterals name="Kommunale Gebietskörperschaften nach DDR-Recht" value="5240"/>
+			<eLiterals name="Ausländischer Staat" value="5300"/>
+			<eLiterals name="Kreis" value="5400"/>
+			<eLiterals name="Gemeinde" value="5500"/>
+			<eLiterals name="Kommunale Gebietskörperschaften" value="5600"/>
+			<eLiterals name="Andere Gebietskörperschaften, Regionalverbände usw." value="5700"/>
+			<eLiterals name="Zweckverbände, Kommunale Betriebe" value="5800"/>
+			<eLiterals name="Eigenes Bundesland" value="5920"/>
+			<eLiterals name="Eigenes Bundesland, Denkmalpflege" value="5921"/>
+			<eLiterals name="Eigenes Bundesland, Domänenverwaltung" value="5922"/>
+			<eLiterals name="Eigenes Bundesland, Eichverwaltung" value="5923"/>
+			<eLiterals name="Eigenes Bundesland, Finanzverwaltung" value="5924"/>
+			<eLiterals name="Eigenes Bundesland, Forstverwaltung" value="5925"/>
+			<eLiterals name="Eigenes Bundesland, Gesundheitswesen" value="5926"/>
+			<eLiterals name="Eigenes Bundesland, Polizeiverwaltung" value="5927"/>
+			<eLiterals name="Eigenes Bundesland, innere Verwaltung" value="5928"/>
+			<eLiterals name="Eigenes Bundesland, Justizverwaltung" value="5929"/>
+			<eLiterals name="Eigenes Bundesland, Kultusverwaltung" value="5930"/>
+			<eLiterals name="Eigenes Bundesland, Landespflanzenschutzverwaltung" value="5931"/>
+			<eLiterals name="Eigenes Bundesland, Arbeitsverwaltung" value="5932"/>
+			<eLiterals name="Eigenes Bundesland, Sozialwesen" value="5933"/>
+			<eLiterals name="Eigenes Bundesland, Landesbetrieb Straßen und Verkehr" value="5934"/>
+			<eLiterals name="Eigenes Bundesland, Umweltverwaltung" value="5935"/>
+			<eLiterals name="Eigenes Bundesland, Vermessungs- und Katasterverwaltung" value="5936"/>
+			<eLiterals name="Eigenes Bundesland, Wasserwirtschaftsverwaltung" value="5937"/>
+			<eLiterals name="Eigenes Bundesland, Wirtschaftsverwaltung" value="5938"/>
+			<eLiterals name="Eigenes Bundesland, Liegenschafts- und Baubetreuung (LBB)" value="5939"/>
+			<eLiterals name="Anderes Bundesland (allg.)" value="6000"/>
+			<eLiterals name="Schleswig-Holstein" value="6001"/>
+			<eLiterals name="Hamburg" value="6002"/>
+			<eLiterals name="Niedersachsen" value="6003"/>
+			<eLiterals name="Bremen" value="6004"/>
+			<eLiterals name="Nordrhein-Westfalen" value="6005"/>
+			<eLiterals name="Hessen" value="6006"/>
+			<eLiterals name="Rheinland-Pfalz" value="6007"/>
+			<eLiterals name="Baden-Württemberg" value="6008"/>
+			<eLiterals name="Bayern" value="6009"/>
+			<eLiterals name="Saarland" value="6010"/>
+			<eLiterals name="Brandenburg" value="6012"/>
+			<eLiterals name="Berlin" value="6011"/>
+			<eLiterals name="Mecklenburg-Vorpommern" value="6013"/>
+			<eLiterals name="Sachsen" value="6014"/>
+			<eLiterals name="Sachsen-Anhalt" value="6015"/>
+			<eLiterals name="Thüringen" value="6016"/>
+			<eLiterals name="Deutsche Bahn AG" value="7100"/>
+			<eLiterals name="Herrenlos" value="8000"/>
+			<eLiterals name="Eigentümer unbekannt" value="9000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_DQOhneDatenerhebung">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_LI_Lineage_OhneDatenerhebung" name="herkunft" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Buchungsstelle">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_Anteil" name="anteil" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="beschreibungDesSondereigentums" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="beschreibungDesUmfangsDerBuchung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_Buchungsart_Buchungsstelle" name="buchungsart" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungstext" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nummerImAufteilungsplan" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeitpunktDerEintragung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="wirdVerwaltetVon" eType="#//Personen-%20und%20Bestandsdaten/AX_Verwaltung" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Verwaltung/beziehtSichAuf"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" name="istBestandteilVon" eType="#//Personen-%20und%20Bestandsdaten/AX_Buchungsblatt" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Buchungsblatt/bestehtAus"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="beziehtSichAuf" eType="#//Personen-%20und%20Bestandsdaten/AX_Buchungsblatt" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Buchungsblatt/@eStructuralFeatures.6"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle/zu"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle/hatVorgaenger"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle/an"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle/durch"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Buchungsblatt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_Blattart_Buchungsblatt" name="blattart" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsblattbezirk" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsblattkennzeichen" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="true" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsblattnummerMitBuchstabenerweiterung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="bestehtAus" eType="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle/istBestandteilVon"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Personen-%20und%20Bestandsdaten/AX_Namensnummer" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Namensnummer/istBestandteilVon"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Buchungsstelle/beziehtSichAuf"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Buchungsart_Buchungsstelle">
+			<eLiterals name="Grundstück" value="1100"/>
+			<eLiterals name="Aufgeteiltes Grundstück WEG" value="1101"/>
+			<eLiterals name="Aufgeteiltes Grundstück Par. 3 Abs. 4 GBO" value="1102"/>
+			<eLiterals name="Ungetrennter Hofraum" value="1200"/>
+			<eLiterals name="Wohnungs-/Teileigentum" value="1301"/>
+			<eLiterals name="Miteigentum Par. 3 Abs. 4 GBO" value="1302"/>
+			<eLiterals name="Anteil am ungetrennten Hofraum" value="1303"/>
+			<eLiterals name="Aufgeteilter Anteil Wohnungs-/Teileigentum" value="1401"/>
+			<eLiterals name="Aufgeteilter Anteil Miteigentum Par. 3 Abs. 4 GBO" value="1402"/>
+			<eLiterals name="Aufgeteilter Anteil am ungetrennten Hofraum" value="1403"/>
+			<eLiterals name="Anteil an Wohnungs-/Teileigentumsanteil" value="1501"/>
+			<eLiterals name="Anteil an Miteigentumsanteil Par. 3 Abs. 4 GBO" value="1502"/>
+			<eLiterals name="Anteil am Anteil zum ungetrennten Hofraum" value="1503"/>
+			<eLiterals name="Erbbaurecht" value="2101"/>
+			<eLiterals name="Untererbbaurecht" value="2102"/>
+			<eLiterals name="Gebäudeeigentum" value="2103"/>
+			<eLiterals name="Fischereirecht" value="2104"/>
+			<eLiterals name="Bergwerksrecht" value="2105"/>
+			<eLiterals name="Nutzungsrecht" value="2106"/>
+			<eLiterals name="Realgewerberecht" value="2107"/>
+			<eLiterals name="Gemeinderecht" value="2108"/>
+			<eLiterals name="Stavenrecht" value="2109"/>
+			<eLiterals name="Hauberge" value="2110"/>
+			<eLiterals name="Aufgeteiltes Erbbaurecht WEG" value="2201"/>
+			<eLiterals name="Aufgeteiltes Untererbbaurecht WEG" value="2202"/>
+			<eLiterals name="Aufgeteiltes Recht Par. 3 Abs. 4 GBO" value="2203"/>
+			<eLiterals name="Aufgeteiltes Recht, Körperschaft" value="2204"/>
+			<eLiterals name="Aufgeteiltes Gebäudeeigentum" value="2205"/>
+			<eLiterals name="Wohnungs-/Teilerbbaurecht" value="2301"/>
+			<eLiterals name="Wohnungs-/Teiluntererbbaurecht" value="2302"/>
+			<eLiterals name="Erbbaurechtsanteil Par. 3 Abs. 4 GBO" value="2303"/>
+			<eLiterals name="Anteiliges Recht, Körperschaft" value="2304"/>
+			<eLiterals name="Anteil am Gebäudeeigentum" value="2305"/>
+			<eLiterals name="Aufgeteilter Anteil Wohnungs-/Teilerbbaurecht" value="2401"/>
+			<eLiterals name="Aufgeteilter Anteil Wohnungs-/Teiluntererbbaurecht" value="2402"/>
+			<eLiterals name="Aufgeteilter Erbbaurechtsanteil Par. 3 Abs. 4 GBO" value="2403"/>
+			<eLiterals name="Aufgeteiltes anteiliges Recht, Körperschaft" value="2404"/>
+			<eLiterals name="Aufgeteilter Anteil am Gebäudeeigentum" value="2405"/>
+			<eLiterals name="Anteil am Wohnungs-/Teilerbbaurechtsanteil" value="2501"/>
+			<eLiterals name="Anteil am Wohnungs-/Teiluntererbbaurechtsanteil" value="2502"/>
+			<eLiterals name="Anteil am Erbbaurechtsanteil Par. 3 Abs. 4 GBO" value="2503"/>
+			<eLiterals name="Anteil am anteiligen Recht, Körperschaft" value="2504"/>
+			<eLiterals name="Anteil am Anteil zum Gebäudeeigentum" value="2505"/>
+			<eLiterals name="Vermerk subjektiv dinglicher Rechte (Par. 9 GBO)" value="3100"/>
+			<eLiterals name="Stockwerkseigentum" value="4100"/>
+			<eLiterals name="Von Buchungspflicht befreit Par. 3 Abs. 2 GBO" value="5101"/>
+			<eLiterals name="Anliegerflurstück" value="5200"/>
+			<eLiterals name="Anliegerweg" value="5201"/>
+			<eLiterals name="Anliegergraben" value="5202"/>
+			<eLiterals name="Anliegerwasserlauf, Anliegergewässer" value="5203"/>
+			<eLiterals name="Nicht gebuchtes Fischereirecht" value="6101"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Blattart_Buchungsblatt">
+			<eLiterals name="Grundbuchblatt" value="1000"/>
+			<eLiterals name="Katasterblatt" value="2000"/>
+			<eLiterals name="Pseudoblatt" value="3000"/>
+			<eLiterals name="Erwerberblatt" value="4000"/>
+			<eLiterals name="Fiktives Blatt" value="5000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_ArtDerRechtsgemeinschaft_Namensnummer">
+			<eLiterals name="Erbengemeinschaft" value="1000"/>
+			<eLiterals name="Gütergemeinschaft" value="2000"/>
+			<eLiterals name="BGB-Gesellschaft" value="3000"/>
+			<eLiterals name="Sonstiges" value="9999"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Anteil">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nenner" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zaehler" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Anschrift">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="bestimmungsland" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="fax" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="hausnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ort_AmtlichesOrtsnamensverzeichnis" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ort_Post" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ortsteil" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="postfach" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="postleitzahlPostfach" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="postleitzahlPostzustellung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Personen-%20und%20Bestandsdaten/AX_DQOhneDatenerhebung" name="qualitaetsangaben" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="strasse" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="telefon" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="weitereAdressen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="gehoertZu" eType="#//Personen-%20und%20Bestandsdaten/AX_Person" eOpposite="#//Personen-%20und%20Bestandsdaten/AX_Person/hat"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Anrede_Person">
+			<eLiterals name="Frau" value="1000"/>
+			<eLiterals name="Herr" value="2000"/>
+			<eLiterals name="Firma" value="3000"/>
+		</eClassifiers>
+	</eSubpackages>
+</ecore:EPackage>

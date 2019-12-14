@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Gebäude" nsPrefix="Gebäude" nsURI="http://Gebäude/1.0">
+	<eSubpackages name="Angaben zum Gebäude">
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Zustand_Gebaeude">
+			<eLiterals name="In behelfsmäßigem Zustand" value="1000"/>
+			<eLiterals name="In ungenutztem Zustand" value="2000"/>
+			<eLiterals name="Außer Betrieb, stillgelegt, verlassen" value="2100"/>
+			<eLiterals name="Verfallen, zerstört" value="2200"/>
+			<eLiterals name="Teilweise zerstört" value="2300"/>
+			<eLiterals name="Geplant und beantragt" value="3000"/>
+			<eLiterals name="Im Bau" value="4000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Weitere_Gebaeudefunktion">
+			<eLiterals name="Bankfiliale" value="1000"/>
+			<eLiterals name="Hotel" value="1010"/>
+			<eLiterals name="Jugendherberge" value="1020"/>
+			<eLiterals name="Gaststätte" value="1030"/>
+			<eLiterals name="Kino" value="1040"/>
+			<eLiterals name="Spielkasino" value="1050"/>
+			<eLiterals name="Tiefgarage" value="1060"/>
+			<eLiterals name="Parkdeck" value="1070"/>
+			<eLiterals name="Toilette" value="1080"/>
+			<eLiterals name="Post" value="1090"/>
+			<eLiterals name="Zoll" value="1100"/>
+			<eLiterals name="Theater" value="1110"/>
+			<eLiterals name="Museum" value="1120"/>
+			<eLiterals name="Bibliothek" value="1130"/>
+			<eLiterals name="Kapelle" value="1140"/>
+			<eLiterals name="Moschee" value="1150"/>
+			<eLiterals name="Tempel" value="1160"/>
+			<eLiterals name="Apotheke" value="1170"/>
+			<eLiterals name="Polizeiwache" value="1180"/>
+			<eLiterals name="Rettungsstelle" value="1190"/>
+			<eLiterals name="Touristisches Informationszentrum" value="1200"/>
+			<eLiterals name="Kindergarten" value="1210"/>
+			<eLiterals name="Arztpraxis" value="1220"/>
+			<eLiterals name="Supermarkt" value="1230"/>
+			<eLiterals name="Geschäft" value="1240"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Nutzung_Gebaeude">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="anteil" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Nutzung" name="nutzung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Nutzung">
+			<eLiterals name="Zivil" value="1000"/>
+			<eLiterals name="Privat" value="1100"/>
+			<eLiterals name="Öffentlich" value="1200"/>
+			<eLiterals name="Religiös" value="1300"/>
+			<eLiterals name="Militärisch" value="2000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_LageZurErdoberflaeche_Gebaeude">
+			<eLiterals name="Unter der Erdoberfläche" value="1200"/>
+			<eLiterals name="Aufgeständert" value="1400"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_LageZurErdoberflaeche_Bauteil">
+			<eLiterals name="Unter der Erdoberfläche" value="1200"/>
+			<eLiterals name="Aufgeständert" value="1400"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Gebaeudefunktion">
+			<eLiterals name="Wohngebäude" value="1000"/>
+			<eLiterals name="Wohnhaus" value="1010"/>
+			<eLiterals name="Wohnheim" value="1020"/>
+			<eLiterals name="Kinderheim" value="1021"/>
+			<eLiterals name="Seniorenheim" value="1022"/>
+			<eLiterals name="Schwesternwohnheim" value="1023"/>
+			<eLiterals name="Studenten-, Schülerwohnheim" value="1024"/>
+			<eLiterals name="Schullandheim" value="1025"/>
+			<eLiterals name="Gemischt genutztes Gebäude mit Wohnen" value="1100"/>
+			<eLiterals name="Wohngebäude mit Gemeinbedarf" value="1110"/>
+			<eLiterals name="Wohngebäude mit Handel und Dienstleistungen" value="1120"/>
+			<eLiterals name="Wohn- und Verwaltungsgebäude" value="1121"/>
+			<eLiterals name="Wohn- und Bürogebäude" value="1122"/>
+			<eLiterals name="Wohn- und Geschäftsgebäude" value="1123"/>
+			<eLiterals name="Wohngebäude mit Gewerbe und Industrie" value="1130"/>
+			<eLiterals name="Wohn- und Betriebsgebäude" value="1131"/>
+			<eLiterals name="Land- und forstwirtschaftliches Wohngebäude" value="1210"/>
+			<eLiterals name="Land- und forstwirtschaftliches Wohn- und Betriebsgebäude" value="1220"/>
+			<eLiterals name="Bauernhaus" value="1221"/>
+			<eLiterals name="Wohn- und Wirtschaftsgebäude" value="1222"/>
+			<eLiterals name="Forsthaus" value="1223"/>
+			<eLiterals name="Gebäude zur Freizeitgestaltung" value="1310"/>
+			<eLiterals name="Ferienhaus" value="1311"/>
+			<eLiterals name="Wochenendhaus" value="1312"/>
+			<eLiterals name="Gartenhaus" value="1313"/>
+			<eLiterals name="Gebäude für Wirtschaft oder Gewerbe" value="2000"/>
+			<eLiterals name="Gebäude für Handel und Dienstleistungen" value="2010"/>
+			<eLiterals name="Bürogebäude" value="2020"/>
+			<eLiterals name="Kreditinstitut" value="2030"/>
+			<eLiterals name="Versicherung" value="2040"/>
+			<eLiterals name="Geschäftsgebäude" value="2050"/>
+			<eLiterals name="Kaufhaus" value="2051"/>
+			<eLiterals name="Einkaufszentrum" value="2052"/>
+			<eLiterals name="Markthalle" value="2053"/>
+			<eLiterals name="Laden" value="2054"/>
+			<eLiterals name="Kiosk" value="2055"/>
+			<eLiterals name="Apotheke" value="2056"/>
+			<eLiterals name="Messehalle" value="2060"/>
+			<eLiterals name="Gebäude für Beherbergung" value="2070"/>
+			<eLiterals name="Hotel, Motel, Pension" value="2071"/>
+			<eLiterals name="Jugendherberge" value="2072"/>
+			<eLiterals name="Hütte (mit Übernachtungsmöglichkeit)" value="2073"/>
+			<eLiterals name="Campingplatzgebäude" value="2074"/>
+			<eLiterals name="Gebäude für Bewirtung" value="2080"/>
+			<eLiterals name="Gaststätte, Restaurant" value="2081"/>
+			<eLiterals name="Hütte (ohne Übernachtungsmöglichkeit)" value="2082"/>
+			<eLiterals name="Kantine" value="2083"/>
+			<eLiterals name="Freizeit- und Vergnügungsstätte" value="2090"/>
+			<eLiterals name="Festsaal" value="2091"/>
+			<eLiterals name="Kino" value="2092"/>
+			<eLiterals name="Kegel-, Bowlinghalle" value="2093"/>
+			<eLiterals name="Spielkasino" value="2094"/>
+			<eLiterals name="Gebäude für Gewerbe und Industrie" value="2100"/>
+			<eLiterals name="Produktionsgebäude" value="2110"/>
+			<eLiterals name="Fabrik" value="2111"/>
+			<eLiterals name="Betriebsgebäude" value="2112"/>
+			<eLiterals name="Brauerei" value="2113"/>
+			<eLiterals name="Brennerei" value="2114"/>
+			<eLiterals name="Werkstatt" value="2120"/>
+			<eLiterals name="Sägewerk" value="2121"/>
+			<eLiterals name="Tankstelle" value="2130"/>
+			<eLiterals name="Waschstraße, Waschanlage, Waschhalle" value="2131"/>
+			<eLiterals name="Gebäude für Vorratshaltung" value="2140"/>
+			<eLiterals name="Kühlhaus" value="2141"/>
+			<eLiterals name="Speichergebäude" value="2142"/>
+			<eLiterals name="Lagerhalle, Lagerschuppen, Lagerhaus" value="2143"/>
+			<eLiterals name="Speditionsgebäude" value="2150"/>
+			<eLiterals name="Gebäude für Forschungszwecke" value="2160"/>
+			<eLiterals name="Gebäude für Grundstoffgewinnung" value="2170"/>
+			<eLiterals name="Bergwerk" value="2171"/>
+			<eLiterals name="Saline" value="2172"/>
+			<eLiterals name="Gebäude für betriebliche Sozialeinrichtung" value="2180"/>
+			<eLiterals name="Sonstiges Gebäude für Gewerbe und Industrie" value="2200"/>
+			<eLiterals name="Mühle" value="2210"/>
+			<eLiterals name="Windmühle" value="2211"/>
+			<eLiterals name="Wassermühle" value="2212"/>
+			<eLiterals name="Schöpfwerk" value="2213"/>
+			<eLiterals name="Wetterstation" value="2220"/>
+			<eLiterals name="Gebäude für Handel und Dienstleistung mit Wohnen" value="2310"/>
+			<eLiterals name="Gebäude für Gewerbe und Industrie mit Wohnen" value="2320"/>
+			<eLiterals name="Betriebsgebäude zu Verkehrsanlagen (allgemein)" value="2400"/>
+			<eLiterals name="Betriebsgebäude für Straßenverkehr" value="2410"/>
+			<eLiterals name="Straßenmeisterei" value="2411"/>
+			<eLiterals name="Wartehalle" value="2412"/>
+			<eLiterals name="Betriebsgebäude für Schienenverkehr" value="2420"/>
+			<eLiterals name="Bahnwärterhaus" value="2421"/>
+			<eLiterals name="Lokschuppen, Wagenhalle" value="2422"/>
+			<eLiterals name="Stellwerk, Blockstelle" value="2423"/>
+			<eLiterals name="Betriebsgebäude des Güterbahnhofs" value="2424"/>
+			<eLiterals name="Betriebsgebäude für Flugverkehr" value="2430"/>
+			<eLiterals name="Flugzeughalle" value="2431"/>
+			<eLiterals name="Betriebsgebäude für Schiffsverkehr" value="2440"/>
+			<eLiterals name="Werft (Halle)" value="2441"/>
+			<eLiterals name="Dock (Halle)" value="2442"/>
+			<eLiterals name="Betriebsgebäude zur Schleuse" value="2443"/>
+			<eLiterals name="Bootshaus" value="2444"/>
+			<eLiterals name="Betriebsgebäude zur Seilbahn" value="2450"/>
+			<eLiterals name="Spannwerk zur Drahtseilbahn" value="2451"/>
+			<eLiterals name="Gebäude zum Parken" value="2460"/>
+			<eLiterals name="Parkhaus" value="2461"/>
+			<eLiterals name="Parkdeck" value="2462"/>
+			<eLiterals name="Garage" value="2463"/>
+			<eLiterals name="Fahrzeughalle" value="2464"/>
+			<eLiterals name="Tiefgarage" value="2465"/>
+			<eLiterals name="Gebäude zur Versorgung" value="2500"/>
+			<eLiterals name="Gebäude zur Energieversorgung" value="2501"/>
+			<eLiterals name="Gebäude zur Wasserversorgung" value="2510"/>
+			<eLiterals name="Wasserwerk" value="2511"/>
+			<eLiterals name="Pumpstation" value="2512"/>
+			<eLiterals name="Wasserbehälter" value="2513"/>
+			<eLiterals name="Gebäude zur Elektrizitätsversorgung" value="2520"/>
+			<eLiterals name="Elektrizitätswerk" value="2521"/>
+			<eLiterals name="Umspannwerk" value="2522"/>
+			<eLiterals name="Umformer" value="2523"/>
+			<eLiterals name="Reaktorgebäude" value="2527"/>
+			<eLiterals name="Turbinenhaus" value="2528"/>
+			<eLiterals name="Kesselhaus" value="2529"/>
+			<eLiterals name="Gebäude für Fernmeldewesen" value="2540"/>
+			<eLiterals name="Gebäude an unterirdischen Leitungen" value="2560"/>
+			<eLiterals name="Gebäude zur Gasversorgung" value="2570"/>
+			<eLiterals name="Gaswerk" value="2571"/>
+			<eLiterals name="Heizwerk" value="2580"/>
+			<eLiterals name="Gebäude zur Versorgungsanlage" value="2590"/>
+			<eLiterals name="Pumpwerk (nicht für Wasserversorgung)" value="2591"/>
+			<eLiterals name="Gebäude zur Entsorgung" value="2600"/>
+			<eLiterals name="Gebäude zur Abwasserbeseitigung" value="2610"/>
+			<eLiterals name="Gebäude der Kläranlage" value="2611"/>
+			<eLiterals name="Toilette" value="2612"/>
+			<eLiterals name="Gebäude zur Abfallbehandlung" value="2620"/>
+			<eLiterals name="Müllbunker" value="2621"/>
+			<eLiterals name="Gebäude zur Müllverbrennung" value="2622"/>
+			<eLiterals name="Gebäude der Abfalldeponie" value="2623"/>
+			<eLiterals name="Gebäude für Land- und Forstwirtschaft" value="2700"/>
+			<eLiterals name="Land- und forstwirtschaftliches Betriebsgebäude" value="2720"/>
+			<eLiterals name="Scheune" value="2721"/>
+			<eLiterals name="Schuppen" value="2723"/>
+			<eLiterals name="Stall" value="2724"/>
+			<eLiterals name="Scheune und Stall" value="2726"/>
+			<eLiterals name="Stall für Tiergroßhaltung" value="2727"/>
+			<eLiterals name="Reithalle" value="2728"/>
+			<eLiterals name="Wirtschaftsgebäude" value="2729"/>
+			<eLiterals name="Almhütte" value="2732"/>
+			<eLiterals name="Jagdhaus, Jagdhütte" value="2735"/>
+			<eLiterals name="Treibhaus, Gewächshaus" value="2740"/>
+			<eLiterals name="Treibhaus" value="2741"/>
+			<eLiterals name="Gewächshaus, verschiebbar" value="2742"/>
+			<eLiterals name="Gebäude für öffentliche Zwecke" value="3000"/>
+			<eLiterals name="Verwaltungsgebäude" value="3010"/>
+			<eLiterals name="Parlament" value="3011"/>
+			<eLiterals name="Rathaus" value="3012"/>
+			<eLiterals name="Post" value="3013"/>
+			<eLiterals name="Zollamt" value="3014"/>
+			<eLiterals name="Gericht" value="3015"/>
+			<eLiterals name="Botschaft, Konsulat" value="3016"/>
+			<eLiterals name="Kreisverwaltung" value="3017"/>
+			<eLiterals name="Bezirksregierung" value="3018"/>
+			<eLiterals name="Finanzamt" value="3019"/>
+			<eLiterals name="Gebäude für Bildung und Forschung" value="3020"/>
+			<eLiterals name="Allgemein bildende Schule" value="3021"/>
+			<eLiterals name="Berufsbildende Schule" value="3022"/>
+			<eLiterals name="Hochschulgebäude (Fachhochschule, Universität)" value="3023"/>
+			<eLiterals name="Forschungsinstitut" value="3024"/>
+			<eLiterals name="Gebäude für kulturelle Zwecke" value="3030"/>
+			<eLiterals name="Schloss" value="3031"/>
+			<eLiterals name="Theater, Oper" value="3032"/>
+			<eLiterals name="Konzertgebäude" value="3033"/>
+			<eLiterals name="Museum" value="3034"/>
+			<eLiterals name="Rundfunk, Fernsehen" value="3035"/>
+			<eLiterals name="Veranstaltungsgebäude" value="3036"/>
+			<eLiterals name="Bibliothek, Bücherei" value="3037"/>
+			<eLiterals name="Burg, Festung" value="3038"/>
+			<eLiterals name="Gebäude für religiöse Zwecke" value="3040"/>
+			<eLiterals name="Kirche" value="3041"/>
+			<eLiterals name="Synagoge" value="3042"/>
+			<eLiterals name="Kapelle" value="3043"/>
+			<eLiterals name="Gemeindehaus" value="3044"/>
+			<eLiterals name="Gotteshaus" value="3045"/>
+			<eLiterals name="Moschee" value="3046"/>
+			<eLiterals name="Tempel" value="3047"/>
+			<eLiterals name="Kloster" value="3048"/>
+			<eLiterals name="Gebäude für Gesundheitswesen" value="3050"/>
+			<eLiterals name="Krankenhaus" value="3051"/>
+			<eLiterals name="Heilanstalt, Pflegeanstalt, Pflegestation" value="3052"/>
+			<eLiterals name="Ärztehaus, Poliklinik" value="3053"/>
+			<eLiterals name="Gebäude für soziale Zwecke" value="3060"/>
+			<eLiterals name="Jugendfreizeitheim" value="3061"/>
+			<eLiterals name="Freizeit-, Vereinsheim, Dorfgemeinschafts-, Bürgerhaus" value="3062"/>
+			<eLiterals name="Seniorenfreizeitstätte" value="3063"/>
+			<eLiterals name="Obdachlosenheim" value="3064"/>
+			<eLiterals name="Kinderkrippe, Kindergarten, Kindertagesstätte" value="3065"/>
+			<eLiterals name="Asylbewerberheim" value="3066"/>
+			<eLiterals name="Gebäude für Sicherheit und Ordnung" value="3070"/>
+			<eLiterals name="Polizei" value="3071"/>
+			<eLiterals name="Feuerwehr" value="3072"/>
+			<eLiterals name="Kaserne" value="3073"/>
+			<eLiterals name="Schutzbunker" value="3074"/>
+			<eLiterals name="Justizvollzugsanstalt" value="3075"/>
+			<eLiterals name="Friedhofsgebäude" value="3080"/>
+			<eLiterals name="Trauerhalle" value="3081"/>
+			<eLiterals name="Krematorium" value="3082"/>
+			<eLiterals name="Empfangsgebäude" value="3090"/>
+			<eLiterals name="Bahnhofsgebäude" value="3091"/>
+			<eLiterals name="Flughafengebäude" value="3092"/>
+			<eLiterals name="Gebäude zum U-Bahnhof" value="3094"/>
+			<eLiterals name="Gebäude zum S-Bahnhof" value="3095"/>
+			<eLiterals name="Gebäude zum Busbahnhof" value="3097"/>
+			<eLiterals name="Empfangsgebäude Schifffahrt" value="3098"/>
+			<eLiterals name="Gebäude für öffentliche Zwecke mit Wohnen" value="3100"/>
+			<eLiterals name="Gebäude für Erholungszwecke" value="3200"/>
+			<eLiterals name="Gebäude für Sportzwecke" value="3210"/>
+			<eLiterals name="Sport-, Turnhalle" value="3211"/>
+			<eLiterals name="Gebäude zum Sportplatz" value="3212"/>
+			<eLiterals name="Badegebäude" value="3220"/>
+			<eLiterals name="Hallenbad" value="3221"/>
+			<eLiterals name="Gebäude im Freibad" value="3222"/>
+			<eLiterals name="Gebäude im Stadion" value="3230"/>
+			<eLiterals name="Gebäude für Kurbetrieb" value="3240"/>
+			<eLiterals name="Badegebäude für medizinische Zwecke" value="3241"/>
+			<eLiterals name="Sanatorium" value="3242"/>
+			<eLiterals name="Gebäude im Zoo" value="3260"/>
+			<eLiterals name="Empfangsgebäude des Zoos" value="3261"/>
+			<eLiterals name="Aquarium, Terrarium, Voliere" value="3262"/>
+			<eLiterals name="Tierschauhaus" value="3263"/>
+			<eLiterals name="Stall im Zoo" value="3264"/>
+			<eLiterals name="Gebäude im botanischen Garten" value="3270"/>
+			<eLiterals name="Empfangsgebäude des botanischen Gartens" value="3271"/>
+			<eLiterals name="Gewächshaus (Botanik)" value="3272"/>
+			<eLiterals name="Pflanzenschauhaus" value="3273"/>
+			<eLiterals name="Gebäude für andere Erholungseinrichtung" value="3280"/>
+			<eLiterals name="Schutzhütte" value="3281"/>
+			<eLiterals name="Touristisches Informationszentrum" value="3290"/>
+			<eLiterals name="Nach Quellenlage nicht zu spezifizieren" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Gebaeude">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="anzahlDerOberirdischenGeschosse" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="anzahlDerUnterirdischenGeschosse" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="baujahr" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Bauweise_Gebaeude" name="bauweise" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="dachart" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Dachform" name="dachform" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Dachgeschossausbau_Gebaeude" name="dachgeschossausbau" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Gebaeudefunktion" name="gebaeudefunktion" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="gebaeudekennzeichen" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="geschossflaeche" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="grundflaeche" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="hochhaus" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_LageZurErdoberflaeche_Gebaeude" name="lageZurErdoberflaeche" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Nutzung_Gebaeude" name="nutzung" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="objekthoehe" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="qualitaetsangaben" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="umbauterRaum" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Weitere_Gebaeudefunktion" name="weitereGebaeudefunktion" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Zustand_Gebaeude" name="zustand" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="haengtZusammenMit" eType="#//Angaben%20zum%20Gebäude/AX_Gebaeude" eOpposite="#//Angaben%20zum%20Gebäude/AX_Gebaeude/gehoertZu"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Firstlinie"/>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Dachgeschossausbau_Gebaeude">
+			<eLiterals name="Nicht ausbaufähig" value="1000"/>
+			<eLiterals name="Ausbaufähig" value="2000"/>
+			<eLiterals name="Ausgebaut" value="3000"/>
+			<eLiterals name="Ausbaufähigkeit unklar" value="4000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Dachform">
+			<eLiterals name="Flachdach" value="1000"/>
+			<eLiterals name="Pultdach" value="2100"/>
+			<eLiterals name="Versetztes Pultdach" value="2200"/>
+			<eLiterals name="Satteldach" value="3100"/>
+			<eLiterals name="Walmdach" value="3200"/>
+			<eLiterals name="Krüppelwalmdach" value="3300"/>
+			<eLiterals name="Mansardendach" value="3400"/>
+			<eLiterals name="Zeltdach" value="3500"/>
+			<eLiterals name="Kegeldach" value="3600"/>
+			<eLiterals name="Kuppeldach" value="3700"/>
+			<eLiterals name="Sheddach" value="3800"/>
+			<eLiterals name="Bogendach" value="3900"/>
+			<eLiterals name="Turmdach" value="4000"/>
+			<eLiterals name="Mischform" value="5000"/>
+			<eLiterals name="Sonstiges" value="9999"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_BesondererGebaeudepunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Art_Gebaeudepunkt" name="art" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="punktkennung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="sonstigeEigenschaft" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zustaendigeStelle" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_BesondereGebaeudelinie">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Beschaffenheit_BesondereGebaeudelinie" name="beschaffenheit" lowerBound="1" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Beschaffenheit_BesondereGebaeudelinie">
+			<eLiterals name="Offene Gebäudelinie" value="1000"/>
+			<eLiterals name="Unverputzt" value="2100"/>
+			<eLiterals name="Verputzt" value="2200"/>
+			<eLiterals name="Verklinkert" value="2300"/>
+			<eLiterals name="Holz" value="3100"/>
+			<eLiterals name="Sichtbeton" value="3200"/>
+			<eLiterals name="Naturstein" value="3300"/>
+			<eLiterals name="Glas" value="3400"/>
+			<eLiterals name="Trennlinie nicht eindeutig festgelegt" value="4000"/>
+			<eLiterals name="Sonstiges" value="9999"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Bauweise_Gebaeude">
+			<eLiterals name="Freistehendes Einzelgebäude" value="1100"/>
+			<eLiterals name="Freistehender Gebäudeblock" value="1200"/>
+			<eLiterals name="Einzelgarage" value="1300"/>
+			<eLiterals name="Doppelgarage" value="1400"/>
+			<eLiterals name="Sammelgarage" value="1500"/>
+			<eLiterals name="Doppelhaushälfte" value="2100"/>
+			<eLiterals name="Reihenhaus" value="2200"/>
+			<eLiterals name="Haus in Reihe" value="2300"/>
+			<eLiterals name="Gruppenhaus" value="2400"/>
+			<eLiterals name="Gebäudeblock in geschlossener Bauweise" value="2500"/>
+			<eLiterals name="Offene Halle" value="4000"/>
+			<eLiterals name="Sonstiges" value="9999"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Bauteil">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="anzahlDerOberirdischenGeschosse" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Bauart_Bauteil" name="bauart" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="baujahr" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_Dachform" name="dachform" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="durchfahrtshoehe" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Gebäude/AX_LageZurErdoberflaeche_Bauteil" name="lageZurErdoberflaeche" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Bauart_Bauteil">
+			<eLiterals name="Geringergeschossiger Gebäudeteil" value="1100"/>
+			<eLiterals name="Höhergeschossiger Gebäudeteil (nicht Hochhaus)" value="1200"/>
+			<eLiterals name="Hochhausgebäudeteil" value="1300"/>
+			<eLiterals name="Abweichende Geschosshöhe" value="1400"/>
+			<eLiterals name="Keller" value="2000"/>
+			<eLiterals name="Tiefgarage" value="2100"/>
+			<eLiterals name="Loggia" value="2300"/>
+			<eLiterals name="Wintergarten" value="2350"/>
+			<eLiterals name="Arkade" value="2400"/>
+			<eLiterals name="Auskragende/zurückspringende Geschosse" value="2500"/>
+			<eLiterals name="Auskragende Geschosse" value="2510"/>
+			<eLiterals name="Zurückspringende Geschosse" value="2520"/>
+			<eLiterals name="Durchfahrt im Gebäude" value="2610"/>
+			<eLiterals name="Durchfahrt an überbauter Verkehrsstraße" value="2620"/>
+			<eLiterals name="Schornstein im Gebäude" value="2710"/>
+			<eLiterals name="Turm im Gebäude" value="2720"/>
+			<eLiterals name="Sonstiges" value="9999"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Art_Gebaeudepunkt">
+			<eLiterals name="First" value="1100"/>
+			<eLiterals name="Traufe" value="1200"/>
+			<eLiterals name="Eingang" value="2100"/>
+			<eLiterals name="Lichtschacht" value="2200"/>
+		</eClassifiers>
+	</eSubpackages>
+</ecore:EPackage>

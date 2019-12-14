@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Angaben zum Flurstück" nsPrefix="Angaben zum Flurstück" nsURI="http://Angaben zum Flurstück/1.0">
+	<eClassifiers xsi:type="ecore:EEnum" name="AX_ArtDerFlurstuecksgrenze_BesondereFlurstuecksgrenze">
+		<eLiterals name="Strittige Grenze" value="1000"/>
+		<eLiterals name="Nicht festgestellte Grenze" value="2001"/>
+		<eLiterals name="Verwaltungsstreitverfahren (Grenze)" value="2002"/>
+		<eLiterals name="Mittellinie in Gewässern" value="2003"/>
+		<eLiterals name="Flurstücksgrenze nicht feststellbar" value="2004"/>
+		<eLiterals name="Topographische Grenzeinrichtung" value="2010"/>
+		<eLiterals name="Topographische Gewaesserbegrenzung" value="2100"/>
+		<eLiterals name="Grenze der Region" value="2500"/>
+		<eLiterals name="Grenze der Flur" value="3000"/>
+		<eLiterals name="Grenze der Gemarkung" value="7003"/>
+		<eLiterals name="Grenze der Bundesrepublik Deutschland" value="7101"/>
+		<eLiterals name="Grenze des Bundeslandes" value="7102"/>
+		<eLiterals name="Grenze des Regierungsbezirks" value="7103"/>
+		<eLiterals name="Grenze des Landkreises" value="7104"/>
+		<eLiterals name="Grenze der Gemeinde" value="7106"/>
+		<eLiterals name="Grenze des Gemeindeteils" value="7107"/>
+		<eLiterals name="Grenze der Verwaltungsgemeinschaft" value="7108"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EEnum" name="AX_BemerkungZurAbmarkung_Grenzpunkt">
+		<eLiterals name="Abmarkung unterirdisch gesichert" value="1000"/>
+		<eLiterals name="Abmarkung exzentrisch gesichert" value="2000"/>
+		<eLiterals name="Abmarkung unterirdisch und exzentrisch gesichert" value="3000"/>
+		<eLiterals name="Ohne unterirdische oder exzentrische Sicherung" value="4000"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_BesondereFlurstuecksgrenze">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_ArtDerFlurstuecksgrenze_BesondereFlurstuecksgrenze" name="artDerFlurstuecksgrenze" lowerBound="1" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Flurstueck" eSuperTypes="#//AX_Flurstueck_Kerndaten">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zustaendigeStelle" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="beziehtSichAufFlurstueck" eType="#//AX_Flurstueck" eOpposite="#//AX_Flurstueck/gehoertAnteiligZu" />
+		<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="gehoertAnteiligZu" eType="#//AX_Flurstueck" eOpposite="#//AX_Flurstueck/beziehtSichAufFlurstueck" />
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Flurstueck_Kerndaten">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="abweichenderRechtszustand" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="amtlicheFlaeche" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurstuecksfolge" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurstueckskennzeichen" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="true" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Flurstuecksnummer" name="flurstuecksnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemarkung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemeindezugehoerigkeit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="objektkoordinaten" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="rechtsbehelfsverfahren" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_SonstigeEigenschaften_Flurstueck" name="sonstigeEigenschaften" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeitpunktDerEntstehung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zweifelhafterFlurstuecksnachweis" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eOperations name="bildeFlurstueckskennzeichen"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Flurstuecksnummer">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="nenner" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zaehler" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Grenzpunkt">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="abmarkung_Marke" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="ausgesetzteAbmarkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_BemerkungZurAbmarkung_Grenzpunkt" name="bemerkungZurAbmarkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="besonderePunktnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="festgestellterGrenzpunkt" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_GruendeDerAusgesetztenAbmarkung_Grenzpunkt" name="gruendeDerAusgesetztenAbmarkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Horizontfreiheit_Grenzpunkt" name="horizontfreiheit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="punktkennung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="relativeHoehe" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="sonstigeEigenschaft" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeitpunktDerEntstehung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zustaendigeStelle" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zwischenmarke" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EReference"  ordered="false" upperBound="-1" eType="#//AX_Grenzpunkt" eOpposite="#//AX_Grenzpunkt/zeigtAuf"/>
+		<eStructuralFeatures xsi:type="ecore:EReference" name ="zeigtAuf" ordered="false" upperBound="-1" eType="#//AX_Grenzpunkt" />
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EEnum" name="AX_GruendeDerAusgesetztenAbmarkung_Grenzpunkt">
+		<eLiterals name="Grenzpunkt durch bauliche Anlage ausreichend gekennzeichnet" value="1000"/>
+		<eLiterals name="Grenzpunkt liegt innerhalb einer baulichen Anlage" value="2000"/>
+		<eLiterals name="Grenzpunkt in öffentlich-rechtlichem Bodenordnungsverfahren" value="3000"/>
+		<eLiterals name="Grenzpunkt liegt innerhalb eines Baugebietes" value="4000"/>
+		<eLiterals name="Grenzpunkt liegt innerhalb oder an einem Gewässer" value="5000"/>
+		<eLiterals name="Keine Abmarkung aufgrund von anderweitigen Hindernissen" value="6000"/>
+		<eLiterals name="Abmarkung würde unzumutbare Schäden verursachen" value="7000"/>
+		<eLiterals name="Langfristige gemeinschaftliche Nutzung der angrenzenden  Flurstücke" value="8000"/>
+		<eLiterals name="Angrenzende Flurstücke dienen dem Gemeingebrauch" value="9000"/>
+		<eLiterals name="Sonstiges" value="9999"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EEnum" name="AX_Horizontfreiheit_Grenzpunkt">
+		<eLiterals name="Uneingeschränkt" value="1000"/>
+		<eLiterals name="Eingeschränkt" value="2000"/>
+		<eLiterals name="Nicht geeignet" value="3000"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_SonstigeEigenschaften_Flurstueck">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZumAbschnittBemerkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZumAbschnittFlurstueck" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZumAbschnittNummerAktenzeichen" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZumAbschnittStelle" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="flaecheDesAbschnitts" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="kennungSchluessel" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+</ecore:EPackage>

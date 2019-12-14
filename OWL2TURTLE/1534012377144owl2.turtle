@@ -1,0 +1,443 @@
+Prefix(:=<http://example.com/owl/UMLClassDiagram/>)
+Prefix(xsd:<=http://www.w3.org/2001/XMLSchema#>)
+Prefix(owl:<=http://www.w3.org/2002/owl2#>)
+Ontology(<=http://example.com/owl/UMLClassDiagram>)
+
+:AX_DQFestpunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :befund;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :gnssTauglichkeit;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_GNSSTauglichkeit;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :punktstabilitaet;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Punktstabilitaet;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :ueberwachungsdatum;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_DQHoehenfestpunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :befund;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :gnssTauglichkeit;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_GNSSTauglichkeit;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :punktstabilitaet;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Punktstabilitaet_Hoehenfestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :ueberwachungsdatum;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_Festpunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :darstellungshinweis;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :frueherePunktnummer;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "-1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :gemarkung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :gemeinde;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :interneBemerkungen;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "-1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :katasteramt;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :land;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :nameLagebeschreibung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :nutzerspezifischeBemerkungen;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "-1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :punktkennung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :punktvermarkung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Marke;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :relativeHoehe;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+:AX_Funktion_Lagefestpunktowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("Zentrum"^^xsd:String "Exzentrum, Stationspunkt, Nebenstand"^^xsd:String "Zwillingspunkt, Orientierungspunkt"^^xsd:String "Versicherungspunkt"^^xsd:String 		
+:AX_Funktion_Referenzstationspunktowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("Zentrum"^^xsd:String "Exzentrum"^^xsd:String 		
+:AX_Funktion_Schwerefestpunktowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("Zentrum"^^xsd:String "Exzentrum"^^xsd:String 		
+
+:AX_GNSSAntennerdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :abbaudatum;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :antennenhoehe;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :antennenreferenzpunkt;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :aufbaudatum;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :azimutaleAbweichung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :gnssAntennenUndRadomeTyp;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :hoehenoffsetL1;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :hoehenoffsetL2;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :seriennummer;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :zusaetzlicheInformationen;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_GNSSEmpfaengerrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :abbaudatum;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :aufbaudatum;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :firmwareversion;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :gnssEmpfaengertyp;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :seriennummer;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :zusaetzlicheInformationen;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+:AX_GNSSTauglichkeitowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("weitgehende Horizontfreiheit, Mehrwegeffekte nicht wahrscheinlich"^^xsd:String "sehr gute Satelliten-Empfangseigenschaften nachgewiesen"^^xsd:String "eingeschränkte Horizontfreiheit "^^xsd:String "eingeschränkte Horizontfreiheit, Tauglichkeit nachgewiesen"^^xsd:String "Mehrwegeffekte möglich"^^xsd:String "Mehrwegeffekte nachgewiesen"^^xsd:String "Festpunkt nicht geeignet für Satellitenmessverfahren"^^xsd:String "GNSS-Tauglichkeit nicht untersucht"^^xsd:String 		
+
+:AX_Hoehenfestpunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :nivlinie;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "-1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :ordnung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Ordnung_Hoehenfestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :qualitaetsangaben;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_DQHoehenfestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+:AX_Klassifikation_Hierarchiestufe3D_Lagefestpunktowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("Hierarchiestufe A"^^xsd:String "Hierarchiestufe B"^^xsd:String "Hierarchiestufe C"^^xsd:String "Hierarchiestufe D"^^xsd:String "Hierarchiestufe E"^^xsd:String "Nach Quellenlage nicht zu spezifizieren"^^xsd:String 		
+
+:AX_Klassifikation_Lagefestpunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :hierarchiestufe3D;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Klassifikation_Hierarchiestufe3D_Lagefestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :ordnung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Klassifikation_Ordnung_Lagefestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :wertigkeit;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Klassifikation_Wertigkeit_Lagefestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+:AX_Klassifikation_Ordnung_Lagefestpunktowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("TP (1) - Hauptdreieckspunkt, Zwischenpunkt 1. Ordnung"^^xsd:String "TP (2) - Trigonometrischer Punkt 2. Ordnung"^^xsd:String "TP (3) - Trigonometrischer Punkt 3. Ordnung"^^xsd:String "TP (4) - Trigonometrischer Punkt 4. Ordnung"^^xsd:String "TP (5) - Trigonometrischer Punkt 5. Ordnung"^^xsd:String "ÜL - Übergeordneter Lagefestpunkt (Berlin)"^^xsd:String "LFP, der nur eine interne Bedeutung hat"^^xsd:String "Nach Quellenlage nicht zu spezifieren"^^xsd:String "Sonstiges"^^xsd:String 		
+:AX_Klassifikation_Wertigkeit_Lagefestpunktowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("Fundamentalpunkt (Punkt auf dem die Position (3D), die schwerebezogene Höhe und die Schwere hoch genau bestimmt worden sind)"^^xsd:String "Übergeordneter Festpunkt"^^xsd:String "Geodätischer Grundnetzpunkt"^^xsd:String "Gebrauchsfestpunkt"^^xsd:String "Untergeordneter Festpunkt"^^xsd:String "Nach Quellenlage nicht zu spezifizieren"^^xsd:String "Sonstiges"^^xsd:String 		
+
+:AX_Lagefestpunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :funktion;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Funktion_Lagefestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :klassifikation;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Klassifikation_Lagefestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :pfeilerhoehe;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Pfeilerhoehe_Lagefestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :qualitaetsangaben;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_DQFestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_Offsetkomponenten_Referenzstationspunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :east;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :height;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :north;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]]
+]
+)
+]
+
+:AX_Ordnung_Hoehenfestpunktowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("NivP(1) - Haupthöhenpunkt, Zwischenlinienpunkt 1.Ordnung"^^xsd:String "NivP(1) - Netzverdichtung GPS (Niedersachsen)"^^xsd:String "NivP(2) - Nivellementpunkt 2. Ordnung"^^xsd:String "NivP(3) - Nivellementpunkt 3. Ordnung"^^xsd:String "NivP(3) - nivellitisch bestimmter Bodenpunkt für Referenzstation"^^xsd:String "NivP(4) - Nivellementpunkt 4. Ordnung"^^xsd:String "ÜH - Übergeordneter Höhenfestpunkt (Berlin)"^^xsd:String "Höhenfestpunkt, der nur eine interne Bedeutung hat"^^xsd:String "Nach Quellenlage nicht zu spezifizieren"^^xsd:String 		
+:AX_Ordnung_Schwerefestpunktowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("SFP(0) - Schweregrundnetzpunkt"^^xsd:String "SFP(1) - Schwerefestpunkt 1.Ordnung, Hauptschwerenetzpunkt"^^xsd:String "SFP(2) - Schwerefestpunkt 2.Ordnung"^^xsd:String "SFP(3) - Schwerefestpunkt 3.Ordnung"^^xsd:String "SFP(4) - Schwerefestpunkt 4. Ordnung"^^xsd:String "SFP, der nur eine interne Bedeutung hat"^^xsd:String "nach Quellenlage nicht zu spezifizieren"^^xsd:String 		
+
+:AX_Pfeilerhoehe_Lagefestpunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :abstand;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :messung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_Phasenzentrumsvariation_Referenzstationspunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :zeile;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "72"^^xsd:integer ]			[ xsd:minExclusive "72"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeilerdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :werte;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "19"^^xsd:integer ]			[ xsd:minExclusive "19"^^xsd:integer]]
+]
+)
+]
+
+:AX_Punktstabilitaetowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("sehr gut"^^xsd:String "gut"^^xsd:String "befriedigend"^^xsd:String "ausreichend"^^xsd:String "mangelhaft (ohne Nennung eines Grundes)"^^xsd:String "mangelhaft (Bergsenkungsgebiet)"^^xsd:String "mangelhaft (in rutschgefährdeter Hanglage)"^^xsd:String "mangelhaft (sehr nahe an Gewässer)"^^xsd:String "mangelhaft (instabiler Untergrund)"^^xsd:String "aus Wiederholungsmessungen nachgewiesene Stabilität der Vermarkung"^^xsd:String "mangelhaft"^^xsd:String "Stabilität der Vermarkung nicht untersucht"^^xsd:String 		
+
+:AX_Punktstabilitaet_Hoehenfestpunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :geologischeStabilitaet;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Punktstabilitaet_Hoehenfestpunkt_GeologischeStabilitaet;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :grundwasserschwankung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserschwankung;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :grundwasserstand;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserstand;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :gueteDesBaugrundes;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesBaugrundes;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :gueteDesVermarkungstraegers;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesVermarkungstraegers;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :hoehenstabilitaetAusWiederholungsmessungen;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Punktstabilitaet_Hoehenfestpunkt_HoehenstabilitaetAusWiederholungsmessungen;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :topographieUndUmwelt;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Punktstabilitaet_Hoehenfestpunkt_TopographieUndUmwelt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :vermuteteHoehenstabilitaet;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Punktstabilitaet_Hoehenfestpunkt_VermuteteHoehenstabilitaet;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+:AX_Punktstabilitaet_Hoehenfestpunkt_GeologischeStabilitaetowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("sehr gute geologische Stabilität"^^xsd:String "gute geologische Stabilität"^^xsd:String "befriedigende geologische Stabilität"^^xsd:String "ausreichende geologische Stabilität"^^xsd:String "mangelhafte geologische Stabilität"^^xsd:String "geologische Stabilität nicht untersucht"^^xsd:String 		
+:AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserschwankungowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("sehr geringe Grundwasserschwankung (kleiner gleich 0,5 m)"^^xsd:String "geringe Grundwasserschwankung (groesser 0,5 m und kleiner gleich 2 m)"^^xsd:String "mäßige Grundwasserschwankung (groesser 2 m und kleiner gleich 5 m)"^^xsd:String "starke Grundwasserschwankung (groesser 5m und kleiner gleich 10 m)"^^xsd:String "sehr starke Grundwasserschwankung (groesser 10 m)"^^xsd:String "Grundwasserschwankung nicht ermittelt"^^xsd:String 		
+:AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserstandowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("Grundwasserstand sehr tief (groesser 10 m)"^^xsd:String "Grundwasserstand tief (groesser 5 m und kleiner gleich 10 m)"^^xsd:String "Grundwasserstand normal (groesser 2 m und kleiner gleich 5 m)"^^xsd:String "Grundwasserstand hoch (groesser 0,5 m und kleiner gleich 2 m)"^^xsd:String "Grundwasserstand sehr hoch (kleiner gleich 0,5 m)"^^xsd:String "Grundwasserstand abgesenkt"^^xsd:String "Grundwasserstand nicht ermittelt"^^xsd:String 		
+:AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesBaugrundesowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("sehr gute Stabilität des Baugrundes"^^xsd:String "gute Stabilität des Baugrundes"^^xsd:String "befriedigende Güte des Baugrundes"^^xsd:String "ausreichende Güte des Baugrundes"^^xsd:String "mangelhafte Güte des Baugrundes"^^xsd:String "Güte des Baugrundes nicht untersucht"^^xsd:String 		
+:AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesVermarkungstraegersowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("sehr gut"^^xsd:String "gut"^^xsd:String "befriedigend"^^xsd:String "ausreichend"^^xsd:String "unzureichend"^^xsd:String "nicht bekannt"^^xsd:String 		
+:AX_Punktstabilitaet_Hoehenfestpunkt_HoehenstabilitaetAusWiederholungsmessungenowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("sehr gut"^^xsd:String "gut"^^xsd:String "befriedigend"^^xsd:String "bedenklich"^^xsd:String "unzureichend"^^xsd:String "nicht bekannt"^^xsd:String 		
+:AX_Punktstabilitaet_Hoehenfestpunkt_TopographieUndUmweltowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("keine Topographie- und Umwelteinflüsse"^^xsd:String "geringe Topographie- und Umwelteinflüsse"^^xsd:String "mäßige Topographie- und Umwelteinflüsse"^^xsd:String "starke Topographie- und Umwelteinflüsse"^^xsd:String "sehr starke Topographie- und Umwelteinflüsse"^^xsd:String "Topographie- und Umwelteinflüsse nicht untersucht"^^xsd:String 		
+:AX_Punktstabilitaet_Hoehenfestpunkt_VermuteteHoehenstabilitaetowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("sehr gut"^^xsd:String "gut"^^xsd:String "befriedigend"^^xsd:String "ausreichend"^^xsd:String "mangelhaft"^^xsd:String "nicht bekannt"^^xsd:String 		
+
+:AX_Referenzstationspunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :beginn;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :ende;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :funkfrequenz;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :funktion;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Funktion_Referenzstationspunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :gnssAntenne;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_GNSSAntenne;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :gnssEmpfaenger;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_GNSSEmpfaenger;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :isdnNummer;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :offsetL1;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Offsetkomponenten_Referenzstationspunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :offsetL2;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Offsetkomponenten_Referenzstationspunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :phasenzentrumsvariationL1;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Phasenzentrumsvariation_Referenzstationspunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :phasenzentrumsvariationL2;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Phasenzentrumsvariation_Referenzstationspunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :qualitaetsangaben;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_DQFestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :tcpipNummer;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_Schwerefestpunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :funktion;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Funktion_Schwerefestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :ordnung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Ordnung_Schwerefestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :qualitaetsangaben;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_DQFestpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_Skizzerdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :bemerkungen;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :skizzenart;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Skizzenart_Skizze;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :skizzenname;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]]
+]
+)
+]
+
+:AX_Skizzenart_Skizzeowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("Lage-/Einmessungsskizze/Ansicht für die Standardausgabe"^^xsd:String "sonstige Lageskizze"^^xsd:String "sonstige Einmessungsskizze"^^xsd:String "sonstige Ansichtszeichnung oder Foto"^^xsd:String "Randzeichnung"^^xsd:String "Ausschnitt aus der Punktübersicht"^^xsd:String "Luftbildausschnitt mit Punkteintrag"^^xsd:String "Diagramm, Tabelle"^^xsd:String 		
+

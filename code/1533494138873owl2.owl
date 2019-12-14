@@ -1,0 +1,39 @@
+Prefix(:=<http://example.com/owl/UMLClassDiagram/>)
+Prefix(xsd:<=http://www.w3.org/2001/XMLSchema#>)
+Prefix(owl:<=http://www.w3.org/2002/owl2#>)
+Ontology(<=http://example.com/owl/UMLClassDiagram>)
+
+DatatypeDefinition(
+:AX_ArtDerFlurstuecksgrenze_BesondereFlurstuecksgrenze)
+DataOneOf("Strittige Grenze"^^xsd:String "Nicht festgestellte Grenze"^^xsd:String "Verwaltungsstreitverfahren (Grenze)"^^xsd:String "Mittellinie in Gewässern"^^xsd:String "Flurstücksgrenze nicht feststellbar"^^xsd:String "Topographische Grenzeinrichtung"^^xsd:String "Topographische Gewaesserbegrenzung"^^xsd:String "Grenze der Region"^^xsd:String "Grenze der Flur"^^xsd:String "Grenze der Gemarkung"^^xsd:String "Grenze der Bundesrepublik Deutschland"^^xsd:String "Grenze des Bundeslandes"^^xsd:String "Grenze des Regierungsbezirks"^^xsd:String "Grenze des Landkreises"^^xsd:String "Grenze der Gemeinde"^^xsd:String "Grenze des Gemeindeteils"^^xsd:String "Grenze der Verwaltungsgemeinschaft"^^xsd:String ))
+Declaration(Class(:AX_ArtDerFlurstuecksgrenze_BesondereFlurstuecksgrenze))
+
+DatatypeDefinition(
+:AX_BemerkungZurAbmarkung_Grenzpunkt)
+DataOneOf("Abmarkung unterirdisch gesichert"^^xsd:String "Abmarkung exzentrisch gesichert"^^xsd:String "Abmarkung unterirdisch und exzentrisch gesichert"^^xsd:String "Ohne unterirdische oder exzentrische Sicherung"^^xsd:String ))
+Declaration(Class(:AX_BemerkungZurAbmarkung_Grenzpunkt))
+
+DatatypeDefinition(
+:AX_GruendeDerAusgesetztenAbmarkung_Grenzpunkt)
+DataOneOf("Grenzpunkt durch bauliche Anlage ausreichend gekennzeichnet"^^xsd:String "Grenzpunkt liegt innerhalb einer baulichen Anlage"^^xsd:String "Grenzpunkt in öffentlich-rechtlichem Bodenordnungsverfahren"^^xsd:String "Grenzpunkt liegt innerhalb eines Baugebietes"^^xsd:String "Grenzpunkt liegt innerhalb oder an einem Gewässer"^^xsd:String "Keine Abmarkung aufgrund von anderweitigen Hindernissen"^^xsd:String "Abmarkung würde unzumutbare Schäden verursachen"^^xsd:String "Langfristige gemeinschaftliche Nutzung der angrenzenden  Flurstücke"^^xsd:String "Angrenzende Flurstücke dienen dem Gemeingebrauch"^^xsd:String "Sonstiges"^^xsd:String ))
+Declaration(Class(:AX_GruendeDerAusgesetztenAbmarkung_Grenzpunkt))
+
+DatatypeDefinition(
+:AX_Horizontfreiheit_Grenzpunkt)
+DataOneOf("Uneingeschränkt"^^xsd:String "Eingeschränkt"^^xsd:String "Nicht geeignet"^^xsd:String ))
+Declaration(Class(:AX_Horizontfreiheit_Grenzpunkt))
+EquivalentClasses(:AX_Grenzpunkt
+ObjectUnionOf()
+):AX_Grenzpunkt)EquivalentClasses(:AX_BesondereFlurstuecksgrenze
+ObjectUnionOf()
+):AX_Grenzpunkt):AX_BesondereFlurstuecksgrenze)EquivalentClasses(:AX_SonstigeEigenschaften_Flurstueck
+ObjectUnionOf()
+):AX_Grenzpunkt):AX_BesondereFlurstuecksgrenze):AX_SonstigeEigenschaften_Flurstueck)EquivalentClasses(:AX_Flurstueck
+ObjectUnionOf( :AX_Flurstueck_Kerndaten)
+):AX_Grenzpunkt):AX_BesondereFlurstuecksgrenze):AX_SonstigeEigenschaften_Flurstueck):AX_Flurstueck:AX_Flurstueck_Kerndaten)EquivalentClasses(:AX_Flurstuecksnummer
+ObjectUnionOf()
+):AX_Grenzpunkt):AX_BesondereFlurstuecksgrenze):AX_SonstigeEigenschaften_Flurstueck):AX_Flurstueck:AX_Flurstueck_Kerndaten):AX_Flurstuecksnummer)EquivalentClasses(:AX_Flurstueck_Kerndaten
+ObjectUnionOf()
+):AX_Grenzpunkt):AX_BesondereFlurstuecksgrenze):AX_SonstigeEigenschaften_Flurstueck):AX_Flurstueck:AX_Flurstueck_Kerndaten):AX_Flurstuecksnummer):AX_Flurstueck_Kerndaten)IntersectionOf(:AX_Flurstueck_Kerndaten
+SubClassOf( :AX_Flurstueck_Kerndaten
+))

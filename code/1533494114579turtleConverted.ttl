@@ -1,0 +1,80 @@
+@prefix ns0: <http://www.omg.org/> .
+@prefix ns1: <e> .
+@prefix ns2: <http://www.w3.org/2001/> .
+
+[]
+  a <http://www.eclipse.org/emf/2002/EcoreEPackage> ;
+  ns0:XMIversion "2.0" ;
+  ns1:Subpackages [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EClass" ;
+    ns1:StructuralFeatures [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ]
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EClass" ;
+    ns1:StructuralFeatures [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EReference" ]
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EClass"
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EClass" ;
+    ns1:StructuralFeatures [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ]
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EClass" ;
+    ns1:StructuralFeatures [ ns2:XMLSchema-instancetype "ecore:EAttribute" ]
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EClass" ;
+    ns1:StructuralFeatures [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ], [ ns2:XMLSchema-instancetype "ecore:EAttribute" ]
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ], [
+    a <http://njh.me/eClassifiers> ;
+    ns2:XMLSchema-instancetype "ecore:EEnum" ;
+    ns1:Literals ""
+  ] .
+

@@ -1,0 +1,181 @@
+Prefix(:=<http://example.com/owl/UMLClassDiagram/>)
+Prefix(xsd:<=http://www.w3.org/2001/XMLSchema#>)
+Prefix(owl:<=http://www.w3.org/2002/owl2#>)
+Ontology(<=http://example.com/owl/UMLClassDiagram>)
+:AX_ArtDerFlurstuecksgrenze_BesondereFlurstuecksgrenzeowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("Strittige Grenze"^^xsd:String "Nicht festgestellte Grenze"^^xsd:String "Verwaltungsstreitverfahren (Grenze)"^^xsd:String "Mittellinie in Gewässern"^^xsd:String "Flurstücksgrenze nicht feststellbar"^^xsd:String "Topographische Grenzeinrichtung"^^xsd:String "Topographische Gewaesserbegrenzung"^^xsd:String "Grenze der Region"^^xsd:String "Grenze der Flur"^^xsd:String "Grenze der Gemarkung"^^xsd:String "Grenze der Bundesrepublik Deutschland"^^xsd:String "Grenze des Bundeslandes"^^xsd:String "Grenze des Regierungsbezirks"^^xsd:String "Grenze des Landkreises"^^xsd:String "Grenze der Gemeinde"^^xsd:String "Grenze des Gemeindeteils"^^xsd:String "Grenze der Verwaltungsgemeinschaft"^^xsd:String 		
+:AX_BemerkungZurAbmarkung_Grenzpunktowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("Abmarkung unterirdisch gesichert"^^xsd:String "Abmarkung exzentrisch gesichert"^^xsd:String "Abmarkung unterirdisch und exzentrisch gesichert"^^xsd:String "Ohne unterirdische oder exzentrische Sicherung"^^xsd:String 		
+
+:AX_BesondereFlurstuecksgrenzerdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :artDerFlurstuecksgrenze;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_ArtDerFlurstuecksgrenze_BesondereFlurstuecksgrenze;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "-1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_Flurstueckrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :zustaendigeStelle;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "-1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_Flurstueck_Kerndatenrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :abweichenderRechtszustand;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :amtlicheFlaeche;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :flurnummer;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :flurstuecksfolge;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :flurstueckskennzeichen;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :flurstuecksnummer;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Flurstuecksnummer;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :gemarkung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :gemeindezugehoerigkeit;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :objektkoordinaten;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :rechtsbehelfsverfahren;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :sonstigeEigenschaften;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_SonstigeEigenschaften_Flurstueck;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "-1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :zeitpunktDerEntstehung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :zweifelhafterFlurstuecksnachweis;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_Flurstuecksnummerrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :nenner;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :zaehler;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]]
+]
+)
+]
+
+
+:AX_Grenzpunktrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :abmarkung_Marke;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "1"^^xsd:integer]		owl:onProperty :ausgesetzteAbmarkung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :bemerkungZurAbmarkung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_BemerkungZurAbmarkung_Grenzpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :besonderePunktnummer;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :festgestellterGrenzpunkt;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :gruendeDerAusgesetztenAbmarkung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_GruendeDerAusgesetztenAbmarkung_Grenzpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :horizontfreiheit;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: AX_Horizontfreiheit_Grenzpunkt;
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :punktkennung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :relativeHoehe;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :sonstigeEigenschaft;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "-1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :zeitpunktDerEntstehung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :zustaendigeStelle;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :zwischenmarke;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+:AX_GruendeDerAusgesetztenAbmarkung_Grenzpunktowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("Grenzpunkt durch bauliche Anlage ausreichend gekennzeichnet"^^xsd:String "Grenzpunkt liegt innerhalb einer baulichen Anlage"^^xsd:String "Grenzpunkt in öffentlich-rechtlichem Bodenordnungsverfahren"^^xsd:String "Grenzpunkt liegt innerhalb eines Baugebietes"^^xsd:String "Grenzpunkt liegt innerhalb oder an einem Gewässer"^^xsd:String "Keine Abmarkung aufgrund von anderweitigen Hindernissen"^^xsd:String "Abmarkung würde unzumutbare Schäden verursachen"^^xsd:String "Langfristige gemeinschaftliche Nutzung der angrenzenden  Flurstücke"^^xsd:String "Angrenzende Flurstücke dienen dem Gemeingebrauch"^^xsd:String "Sonstiges"^^xsd:String 		
+:AX_Horizontfreiheit_Grenzpunktowl:equivalentClass [ rdf:type owl:Enumeration 
+DataOneOf("Uneingeschränkt"^^xsd:String "Eingeschränkt"^^xsd:String "Nicht geeignet"^^xsd:String 		
+
+:AX_SonstigeEigenschaften_Flurstueckrdf:type owl:Class ;
+
+owl:equivalentClass [ rdf:type owl:Class ;
+
+		owl:onProperty :angabenZumAbschnittBemerkung;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :angabenZumAbschnittFlurstueck;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :angabenZumAbschnittNummerAktenzeichen;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :angabenZumAbschnittStelle;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :flaecheDesAbschnitts;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]		owl:onProperty :kennungSchluessel;
+ 			owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+				owl:onDatatype xsd: String:
+			owl:withRestrictions ( 			[ xsd:maxExclusive "1"^^xsd:integer ]			[ xsd:minExclusive "0"^^xsd:integer]]
+]
+)
+]
+
+

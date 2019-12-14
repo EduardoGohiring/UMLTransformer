@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Fortführungsnachweis" nsPrefix="Fortführungsnachweis" nsURI="http://Fortführungsnachweis/1.0">
+	<eClassifiers xsi:type="ecore:EEnum" name="AX_Art_Adressat_Auszug">
+		<eLiterals name="Privat" value="1000"/>
+		<eLiterals name="Notar" value="2000"/>
+		<eLiterals name="Grundbuchamt" value="3000"/>
+		<eLiterals name="Finanzamt" value="4000"/>
+		<eLiterals name="Bauaufsichtsbehörde" value="5000"/>
+		<eLiterals name="Weitere Beteiligte" value="6000"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Auszug">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="adressat" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Art_Adressat_Auszug" name="art" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="datum" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Dienststellenlogo">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_FGraphik">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_K_AUSGKOPF_Standard" name="ausgabekopf" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Fortfuehrungsfall">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="anmerkungFuerDenNotar" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="anzahlDerFortfuehrungsmitteilungen" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="bemerkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsfallnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsmitteilungAnEigentuemerAntragsteller" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="ueberschriftImFortfuehrungsnachweis" lowerBound="1" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_FGraphik" name="verweistAuf" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeigtAufAltesFlurstueck" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeigtAufNeuesFlurstueck" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" eType="#//AX_FortfuehrungsnachweisDeckblatt" eOpposite="#//AX_FortfuehrungsnachweisDeckblatt/beziehtSichAuf"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_FortfuehrungsnachweisDeckblatt">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_K_AUSGKOPF_Standard" name="ausgabekopf" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Auszug" name="auszugFuer" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="bekanntgabeAnBeteiligteAm" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="bemerkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="eignungspruefungAm" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="eignungspruefungVon" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="erstelltAm" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="erstelltVon" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Fortfuehrungsnummer" name="fNNummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsentscheidungAm" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsentscheidungVon" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsfallNummernbereich" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsmitteilungenErzeugt" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="grundbuchmitteilungFuerFinanzamt" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="inGemarkung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="titel" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="verwaltungsaktJN" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" upperBound="-1" name="beziehtSichAuf" eType="#//AX_Fortfuehrungsfall" eOpposite="#//AX_Fortfuehrungsfall/@eStructuralFeatures.10"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Fortfuehrungsnummer">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemarkungsnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="land" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_K_ANSCHRIFT">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="plzOrt" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="strasseHausnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="telefon" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_K_AUSGKOPF_Standard">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_K_ANSCHRIFT" name="anschriftDienststelle" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="artDerAusgabe" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="datumDerAusgabe" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="dienststelle" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Dienststellenlogo" name="dienststellenlogo" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Landeswappen" name="enthaeltEWP" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Landeswappen">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+</ecore:EPackage>

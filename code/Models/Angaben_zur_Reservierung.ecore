@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Angaben zur Reservierung" nsPrefix="Angaben zur Reservierung" nsURI="http://Angaben zur Reservierung/1.0">
+	<eClassifiers xsi:type="ecore:EEnum" name="AX_Art_Punktkennung">
+		<eLiterals name="Punktkennung - allgemein" value="1000"/>
+		<eLiterals name="Punktkennung - Grenzpunkt" value="1100"/>
+		<eLiterals name="Punktkennung - Besonderer Gebäudepunkt" value="1200"/>
+		<eLiterals name="Punktkennung - Besonderer topographischer Punkt" value="1300"/>
+		<eLiterals name="Punktkennung - Aufnahmepunkt" value="1400"/>
+		<eLiterals name="Punktkennung - Sicherungspunkt" value="1500"/>
+		<eLiterals name="Punktkennung - Sonstiger Vermessungspunkt" value="1600"/>
+		<eLiterals name="Punktkennung - Besonderer Bauwerkspunkt" value="1700"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EEnum" name="AX_Art_Reservierung">
+		<eLiterals name="Punktkennung" value="1000"/>
+		<eLiterals name="Punktkennung - Grenzpunkt" value="1300"/>
+		<eLiterals name="Punktkennung - Besonderer Gebäudepunkt" value="1400"/>
+		<eLiterals name="Punktkennung - Besonderer topographischer Punkt" value="1500"/>
+		<eLiterals name="Punktkennung - Besonderer Bauwerkspunkt" value="1600"/>
+		<eLiterals name="Punktkennung - Aufnahmepunkt" value="1700"/>
+		<eLiterals name="Punktkennung - Sicherungspunkt" value="1800"/>
+		<eLiterals name="Punktkennung - Sonstiger Vermessungspunkt" value="1900"/>
+		<eLiterals name="Punktkennung - Lagefestpunkt" value="2000"/>
+		<eLiterals name="Punktkennung - Höhenfestpunkt" value="2100"/>
+		<eLiterals name="Punktkennung - Schwerefestpunkt" value="2200"/>
+		<eLiterals name="Punktkennung - Referenzstationspunkt" value="2300"/>
+		<eLiterals name="Flurstückskennzeichen" value="3000"/>
+		<eLiterals name="FN-Nummer" value="4000"/>
+		<eLiterals name="Abmarkungsprotokollnummer" value="5000"/>
+		<eLiterals name="Buchungsblattkennzeichen" value="6000"/>
+		<eLiterals name="Katasterblatt" value="6100"/>
+		<eLiterals name="Pseudoblatt" value="6200"/>
+		<eLiterals name="Erwerberblatt" value="6300"/>
+		<eLiterals name="Fiktives Blatt" value="6400"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_PunktkennungUntergegangen">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Art_Punktkennung" name="art" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="punktkennung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_PunktkennungVergleichend">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="antragsnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Art_Punktkennung" name="art" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="endgueltigePunktkennung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="vorlaeufigePunktkennung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Reservierung">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="ablaufDerReservierung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="antragsnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Art_Reservierung" name="art" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="auftragsnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Reservierungsauftrag_Gebietskennung" name="gebietskennung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="nummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="nummerierungsbezirk" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="vermessungsstelle" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Reservierungsauftrag_Gebietskennung">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsblattbezirk" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="flur" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemarkung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+</ecore:EPackage>

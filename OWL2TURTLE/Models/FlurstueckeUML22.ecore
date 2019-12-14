@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Flurstücke, Lage, Punkte" nsPrefix="Flurstücke, Lage, Punkte" nsURI="http://Flurstücke, Lage, Punkte/1.0">
+	<eSubpackages name="Angaben zu Festpunkten der Landesvermessung">
+		<eClassifiers xsi:type="ecore:EClass" name="AX_DQFestpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="befund" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_GNSSTauglichkeit" name="gnssTauglichkeit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Punktstabilitaet" name="punktstabilitaet" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ueberwachungsdatum" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_DQHoehenfestpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="befund" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_GNSSTauglichkeit" name="gnssTauglichkeit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Punktstabilitaet_Hoehenfestpunkt" name="punktstabilitaet" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ueberwachungsdatum" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Festpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="darstellungshinweis" lowerBound="0" upperBound="1" defaultValueLiteral="true" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="frueherePunktnummer" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemarkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemeinde" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="interneBemerkungen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="katasteramt" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="land" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nameLagebeschreibung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nutzerspezifischeBemerkungen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="punktkennung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Netzpunkt/AX_Marke" name="punktvermarkung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="relativeHoehe" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Funktion_Lagefestpunkt">
+			<eLiterals name="Zentrum" value="1000"/>
+			<eLiterals name="Exzentrum, Stationspunkt, Nebenstand" value="2000"/>
+			<eLiterals name="Zwillingspunkt, Orientierungspunkt" value="3000"/>
+			<eLiterals name="Versicherungspunkt" value="4000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Funktion_Referenzstationspunkt">
+			<eLiterals name="Zentrum" value="1000"/>
+			<eLiterals name="Exzentrum" value="2000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Funktion_Schwerefestpunkt">
+			<eLiterals name="Zentrum" value="1000"/>
+			<eLiterals name="Exzentrum" value="2000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_GNSSAntenne">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="abbaudatum" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="antennenhoehe" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="antennenreferenzpunkt" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="aufbaudatum" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="azimutaleAbweichung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="gnssAntennenUndRadomeTyp" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="hoehenoffsetL1" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="hoehenoffsetL2" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="seriennummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zusaetzlicheInformationen" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_GNSSEmpfaenger">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="abbaudatum" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="aufbaudatum" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="firmwareversion" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="gnssEmpfaengertyp" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="seriennummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zusaetzlicheInformationen" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_GNSSTauglichkeit">
+			<eLiterals name="weitgehende Horizontfreiheit, Mehrwegeffekte nicht wahrscheinlich" value="1000"/>
+			<eLiterals name="sehr gute Satelliten-Empfangseigenschaften nachgewiesen" value="1001"/>
+			<eLiterals name="eingeschränkte Horizontfreiheit " value="3000"/>
+			<eLiterals name="eingeschränkte Horizontfreiheit, Tauglichkeit nachgewiesen" value="3001"/>
+			<eLiterals name="Mehrwegeffekte möglich" value="3100"/>
+			<eLiterals name="Mehrwegeffekte nachgewiesen" value="3101"/>
+			<eLiterals name="Festpunkt nicht geeignet für Satellitenmessverfahren" value="5000"/>
+			<eLiterals name="GNSS-Tauglichkeit nicht untersucht" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Hoehenfestpunkt" eSuperTypes="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Festpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nivlinie" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Ordnung_Hoehenfestpunkt" name="ordnung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_DQHoehenfestpunkt" name="qualitaetsangaben" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitSFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt/istIdentischMitHFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitRSP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Referenzstationspunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Referenzstationspunkt/istIdentischMitHFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitLFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt/unterschiedlicherBezugspunktMitHFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitAP" eType="#//Angaben%20zum%20Netzpunkt/AX_Aufnahmepunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_Aufnahmepunkt/haengtAn"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitLFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt/istIdentischMitHFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitSFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt/unterschiedlicherBezugspunktMitHFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitSVP" eType="#//Angaben%20zum%20Netzpunkt/AX_SonstigerVermessungspunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_SonstigerVermessungspunkt/@eStructuralFeatures.5"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitSP" eType="#//Angaben%20zum%20Netzpunkt/AX_Sicherungspunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_Sicherungspunkt/@eStructuralFeatures.3"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Klassifikation_Hierarchiestufe3D_Lagefestpunkt">
+			<eLiterals name="Hierarchiestufe A" value="1000"/>
+			<eLiterals name="Hierarchiestufe B" value="2000"/>
+			<eLiterals name="Hierarchiestufe C" value="3000"/>
+			<eLiterals name="Hierarchiestufe D" value="4000"/>
+			<eLiterals name="Hierarchiestufe E" value="5000"/>
+			<eLiterals name="Nach Quellenlage nicht zu spezifizieren" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Klassifikation_Lagefestpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Klassifikation_Hierarchiestufe3D_Lagefestpunkt" name="hierarchiestufe3D" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Klassifikation_Ordnung_Lagefestpunkt" name="ordnung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Klassifikation_Wertigkeit_Lagefestpunkt" name="wertigkeit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Klassifikation_Ordnung_Lagefestpunkt">
+			<eLiterals name="TP (1) - Hauptdreieckspunkt, Zwischenpunkt 1. Ordnung" value="1000"/>
+			<eLiterals name="TP (2) - Trigonometrischer Punkt 2. Ordnung" value="2000"/>
+			<eLiterals name="TP (3) - Trigonometrischer Punkt 3. Ordnung" value="3000"/>
+			<eLiterals name="TP (4) - Trigonometrischer Punkt 4. Ordnung" value="4000"/>
+			<eLiterals name="TP (5) - Trigonometrischer Punkt 5. Ordnung" value="5000"/>
+			<eLiterals name="ÜL - Übergeordneter Lagefestpunkt (Berlin)" value="6000"/>
+			<eLiterals name="LFP, der nur eine interne Bedeutung hat" value="9000"/>
+			<eLiterals name="Nach Quellenlage nicht zu spezifieren" value="9998"/>
+			<eLiterals name="Sonstiges" value="9999"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Klassifikation_Wertigkeit_Lagefestpunkt">
+			<eLiterals name="Fundamentalpunkt (Punkt auf dem die Position (3D), die schwerebezogene Höhe und die Schwere hoch genau bestimmt worden sind)" value="1000"/>
+			<eLiterals name="Übergeordneter Festpunkt" value="2000"/>
+			<eLiterals name="Geodätischer Grundnetzpunkt" value="3000"/>
+			<eLiterals name="Gebrauchsfestpunkt" value="4000"/>
+			<eLiterals name="Untergeordneter Festpunkt" value="5000"/>
+			<eLiterals name="Nach Quellenlage nicht zu spezifizieren" value="9998"/>
+			<eLiterals name="Sonstiges" value="9999"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Lagefestpunkt" eSuperTypes="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Festpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Funktion_Lagefestpunkt" name="funktion" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Klassifikation_Lagefestpunkt" name="klassifikation" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Pfeilerhoehe_Lagefestpunkt" name="pfeilerhoehe" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_DQFestpunkt" name="qualitaetsangaben" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istExzentrumZu" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" />
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitSFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt/unterschiedlicherBezugspunktMitLFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitAP" eType="#//Angaben%20zum%20Netzpunkt/AX_Aufnahmepunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_Aufnahmepunkt/beziehtSichAuf"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitSVP" eType="#//Angaben%20zum%20Netzpunkt/AX_SonstigerVermessungspunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_SonstigerVermessungspunkt/verbundenMit"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitHFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt/unterschiedlicherBezugspunktMitLFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitRSP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Referenzstationspunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Referenzstationspunkt/istIdentischMitLFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitHFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt/istIdentischMitLFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitGrenzpunkt" eType="#//Angaben%20zum%20Flurstück/AX_Grenzpunkt" eOpposite="#//Angaben%20zum%20Flurstück/AX_Grenzpunkt/gehoertZuLFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitAP" eType="#//Angaben%20zum%20Netzpunkt/AX_Aufnahmepunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_Aufnahmepunkt/gehoertZu"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitSFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt/istIdentischMitLFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitGrenzpunkt" eType="#//Angaben%20zum%20Flurstück/AX_Grenzpunkt" eOpposite="#//Angaben%20zum%20Flurstück/AX_Grenzpunkt/@eStructuralFeatures.16"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitSVP" eType="#//Angaben%20zum%20Netzpunkt/AX_SonstigerVermessungspunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_SonstigerVermessungspunkt/beziehtSichAuf"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Offsetkomponenten_Referenzstationspunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="east" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="height" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="north" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Ordnung_Hoehenfestpunkt">
+			<eLiterals name="NivP(1) - Haupthöhenpunkt, Zwischenlinienpunkt 1.Ordnung" value="1000"/>
+			<eLiterals name="NivP(1) - Netzverdichtung GPS (Niedersachsen)" value="1001"/>
+			<eLiterals name="NivP(2) - Nivellementpunkt 2. Ordnung" value="2000"/>
+			<eLiterals name="NivP(3) - Nivellementpunkt 3. Ordnung" value="3000"/>
+			<eLiterals name="NivP(3) - nivellitisch bestimmter Bodenpunkt für Referenzstation" value="3001"/>
+			<eLiterals name="NivP(4) - Nivellementpunkt 4. Ordnung" value="4000"/>
+			<eLiterals name="ÜH - Übergeordneter Höhenfestpunkt (Berlin)" value="6000"/>
+			<eLiterals name="Höhenfestpunkt, der nur eine interne Bedeutung hat" value="9000"/>
+			<eLiterals name="Nach Quellenlage nicht zu spezifizieren" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Ordnung_Schwerefestpunkt">
+			<eLiterals name="SFP(0) - Schweregrundnetzpunkt" value="0500"/>
+			<eLiterals name="SFP(1) - Schwerefestpunkt 1.Ordnung, Hauptschwerenetzpunkt" value="1000"/>
+			<eLiterals name="SFP(2) - Schwerefestpunkt 2.Ordnung" value="2000"/>
+			<eLiterals name="SFP(3) - Schwerefestpunkt 3.Ordnung" value="3000"/>
+			<eLiterals name="SFP(4) - Schwerefestpunkt 4. Ordnung" value="4000"/>
+			<eLiterals name="SFP, der nur eine interne Bedeutung hat" value="9000"/>
+			<eLiterals name="nach Quellenlage nicht zu spezifizieren" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Pfeilerhoehe_Lagefestpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="abstand" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="messung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Phasenzentrumsvariation_Referenzstationspunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile" name="zeile" lowerBound="72" upperBound="72" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="werte" lowerBound="19" upperBound="19" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Punktstabilitaet">
+			<eLiterals name="sehr gut" value="1000"/>
+			<eLiterals name="gut" value="2000"/>
+			<eLiterals name="befriedigend" value="3000"/>
+			<eLiterals name="ausreichend" value="4000"/>
+			<eLiterals name="mangelhaft (ohne Nennung eines Grundes)" value="5000"/>
+			<eLiterals name="mangelhaft (Bergsenkungsgebiet)" value="5100"/>
+			<eLiterals name="mangelhaft (in rutschgefährdeter Hanglage)" value="5200"/>
+			<eLiterals name="mangelhaft (sehr nahe an Gewässer)" value="5300"/>
+			<eLiterals name="mangelhaft (instabiler Untergrund)" value="5400"/>
+			<eLiterals name="aus Wiederholungsmessungen nachgewiesene Stabilität der Vermarkung" value="6000"/>
+			<eLiterals name="mangelhaft" value="8000"/>
+			<eLiterals name="Stabilität der Vermarkung nicht untersucht" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Punktstabilitaet_Hoehenfestpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Punktstabilitaet_Hoehenfestpunkt_GeologischeStabilitaet" name="geologischeStabilitaet" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserschwankung" name="grundwasserschwankung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserstand" name="grundwasserstand" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesBaugrundes" name="gueteDesBaugrundes" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesVermarkungstraegers" name="gueteDesVermarkungstraegers" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Punktstabilitaet_Hoehenfestpunkt_HoehenstabilitaetAusWiederholungsmessungen" name="hoehenstabilitaetAusWiederholungsmessungen" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Punktstabilitaet_Hoehenfestpunkt_TopographieUndUmwelt" name="topographieUndUmwelt" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Punktstabilitaet_Hoehenfestpunkt_VermuteteHoehenstabilitaet" name="vermuteteHoehenstabilitaet" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Punktstabilitaet_Hoehenfestpunkt_GeologischeStabilitaet">
+			<eLiterals name="sehr gute geologische Stabilität" value="1000"/>
+			<eLiterals name="gute geologische Stabilität" value="2000"/>
+			<eLiterals name="befriedigende geologische Stabilität" value="3000"/>
+			<eLiterals name="ausreichende geologische Stabilität" value="4000"/>
+			<eLiterals name="mangelhafte geologische Stabilität" value="5000"/>
+			<eLiterals name="geologische Stabilität nicht untersucht" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserschwankung">
+			<eLiterals name="sehr geringe Grundwasserschwankung (kleiner gleich 0,5 m)" value="1000"/>
+			<eLiterals name="geringe Grundwasserschwankung (groesser 0,5 m und kleiner gleich 2 m)" value="2000"/>
+			<eLiterals name="mäßige Grundwasserschwankung (groesser 2 m und kleiner gleich 5 m)" value="3000"/>
+			<eLiterals name="starke Grundwasserschwankung (groesser 5m und kleiner gleich 10 m)" value="4000"/>
+			<eLiterals name="sehr starke Grundwasserschwankung (groesser 10 m)" value="5000"/>
+			<eLiterals name="Grundwasserschwankung nicht ermittelt" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserstand">
+			<eLiterals name="Grundwasserstand sehr tief (groesser 10 m)" value="1000"/>
+			<eLiterals name="Grundwasserstand tief (groesser 5 m und kleiner gleich 10 m)" value="2000"/>
+			<eLiterals name="Grundwasserstand normal (groesser 2 m und kleiner gleich 5 m)" value="3000"/>
+			<eLiterals name="Grundwasserstand hoch (groesser 0,5 m und kleiner gleich 2 m)" value="4000"/>
+			<eLiterals name="Grundwasserstand sehr hoch (kleiner gleich 0,5 m)" value="5000"/>
+			<eLiterals name="Grundwasserstand abgesenkt" value="9000"/>
+			<eLiterals name="Grundwasserstand nicht ermittelt" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesBaugrundes">
+			<eLiterals name="sehr gute Stabilität des Baugrundes" value="1000"/>
+			<eLiterals name="gute Stabilität des Baugrundes" value="2000"/>
+			<eLiterals name="befriedigende Güte des Baugrundes" value="3000"/>
+			<eLiterals name="ausreichende Güte des Baugrundes" value="4000"/>
+			<eLiterals name="mangelhafte Güte des Baugrundes" value="5000"/>
+			<eLiterals name="Güte des Baugrundes nicht untersucht" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesVermarkungstraegers">
+			<eLiterals name="sehr gut" value="1000"/>
+			<eLiterals name="gut" value="2000"/>
+			<eLiterals name="befriedigend" value="3000"/>
+			<eLiterals name="ausreichend" value="4000"/>
+			<eLiterals name="unzureichend" value="5000"/>
+			<eLiterals name="nicht bekannt" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Punktstabilitaet_Hoehenfestpunkt_HoehenstabilitaetAusWiederholungsmessungen">
+			<eLiterals name="sehr gut" value="1000"/>
+			<eLiterals name="gut" value="2000"/>
+			<eLiterals name="befriedigend" value="3000"/>
+			<eLiterals name="bedenklich" value="4000"/>
+			<eLiterals name="unzureichend" value="5000"/>
+			<eLiterals name="nicht bekannt" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Punktstabilitaet_Hoehenfestpunkt_TopographieUndUmwelt">
+			<eLiterals name="keine Topographie- und Umwelteinflüsse" value="1000"/>
+			<eLiterals name="geringe Topographie- und Umwelteinflüsse" value="2000"/>
+			<eLiterals name="mäßige Topographie- und Umwelteinflüsse" value="3000"/>
+			<eLiterals name="starke Topographie- und Umwelteinflüsse" value="4000"/>
+			<eLiterals name="sehr starke Topographie- und Umwelteinflüsse" value="5000"/>
+			<eLiterals name="Topographie- und Umwelteinflüsse nicht untersucht" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Punktstabilitaet_Hoehenfestpunkt_VermuteteHoehenstabilitaet">
+			<eLiterals name="sehr gut" value="1000"/>
+			<eLiterals name="gut" value="2000"/>
+			<eLiterals name="befriedigend" value="3000"/>
+			<eLiterals name="ausreichend" value="4000"/>
+			<eLiterals name="mangelhaft" value="5000"/>
+			<eLiterals name="nicht bekannt" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Referenzstationspunkt" eSuperTypes="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Festpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="beginn" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ende" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="funkfrequenz" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Funktion_Referenzstationspunkt" name="funktion" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_GNSSAntenne" name="gnssAntenne" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_GNSSEmpfaenger" name="gnssEmpfaenger" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="isdnNummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Offsetkomponenten_Referenzstationspunkt" name="offsetL1" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Offsetkomponenten_Referenzstationspunkt" name="offsetL2" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Phasenzentrumsvariation_Referenzstationspunkt" name="phasenzentrumsvariationL1" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Phasenzentrumsvariation_Referenzstationspunkt" name="phasenzentrumsvariationL2" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_DQFestpunkt" name="qualitaetsangaben" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="tcpipNummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitHFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt/istIdentischMitRSP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitLFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt/istIdentischMitRSP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitSFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt/unterschiedlicherBezugspunktMitRSP"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Schwerefestpunkt" eSuperTypes="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Festpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Funktion_Schwerefestpunkt" name="funktion" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Ordnung_Schwerefestpunkt" name="ordnung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_DQFestpunkt" name="qualitaetsangaben" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitHFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt/istIdentischMitSFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitLFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt/unterschiedlicherBezugspunktMitSFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitSVP" eType="#//Angaben%20zum%20Netzpunkt/AX_SonstigerVermessungspunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_SonstigerVermessungspunkt/gehoertZu"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitSP" eType="#//Angaben%20zum%20Netzpunkt/AX_Sicherungspunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_Sicherungspunkt/hat"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitRSP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Referenzstationspunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Referenzstationspunkt/unterschiedlicherBezugspunktMitSFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitAP" eType="#//Angaben%20zum%20Netzpunkt/AX_Aufnahmepunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_Aufnahmepunkt/hatIdentitaet"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="istZentrumZu" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt" />
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitGrenzpunkt" eType="#//Angaben%20zum%20Flurstück/AX_Grenzpunkt" eOpposite="#//Angaben%20zum%20Flurstück/AX_Grenzpunkt/beziehtSichAufSFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="unterschiedlicherBezugspunktMitHFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt/unterschiedlicherBezugspunktMitSFP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="istIdentischMitLFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt/istIdentischMitSFP"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Skizze">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="bemerkungen" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Skizzenart_Skizze" name="skizzenart" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="skizzenname" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Skizzenart_Skizze">
+			<eLiterals name="Lage-/Einmessungsskizze/Ansicht für die Standardausgabe" value="1000"/>
+			<eLiterals name="sonstige Lageskizze" value="2000"/>
+			<eLiterals name="sonstige Einmessungsskizze" value="2100"/>
+			<eLiterals name="sonstige Ansichtszeichnung oder Foto" value="2200"/>
+			<eLiterals name="Randzeichnung" value="2300"/>
+			<eLiterals name="Ausschnitt aus der Punktübersicht" value="3000"/>
+			<eLiterals name="Luftbildausschnitt mit Punkteintrag" value="3100"/>
+			<eLiterals name="Diagramm, Tabelle" value="4000"/>
+		</eClassifiers>
+	</eSubpackages>
+	<eSubpackages name="Angaben zum Flurstück">
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_ArtDerFlurstuecksgrenze_BesondereFlurstuecksgrenze">
+			<eLiterals name="Strittige Grenze" value="1000"/>
+			<eLiterals name="Nicht festgestellte Grenze" value="2001"/>
+			<eLiterals name="Verwaltungsstreitverfahren (Grenze)" value="2002"/>
+			<eLiterals name="Mittellinie in Gewässern" value="2003"/>
+			<eLiterals name="Flurstücksgrenze nicht feststellbar" value="2004"/>
+			<eLiterals name="Topographische Grenzeinrichtung" value="2010"/>
+			<eLiterals name="Topographische Gewaesserbegrenzung" value="2100"/>
+			<eLiterals name="Grenze der Region" value="2500"/>
+			<eLiterals name="Grenze der Flur" value="3000"/>
+			<eLiterals name="Grenze der Gemarkung" value="7003"/>
+			<eLiterals name="Grenze der Bundesrepublik Deutschland" value="7101"/>
+			<eLiterals name="Grenze des Bundeslandes" value="7102"/>
+			<eLiterals name="Grenze des Regierungsbezirks" value="7103"/>
+			<eLiterals name="Grenze des Landkreises" value="7104"/>
+			<eLiterals name="Grenze der Gemeinde" value="7106"/>
+			<eLiterals name="Grenze des Gemeindeteils" value="7107"/>
+			<eLiterals name="Grenze der Verwaltungsgemeinschaft" value="7108"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_BemerkungZurAbmarkung_Grenzpunkt">
+			<eLiterals name="Abmarkung unterirdisch gesichert" value="1000"/>
+			<eLiterals name="Abmarkung exzentrisch gesichert" value="2000"/>
+			<eLiterals name="Abmarkung unterirdisch und exzentrisch gesichert" value="3000"/>
+			<eLiterals name="Ohne unterirdische oder exzentrische Sicherung" value="4000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_BesondereFlurstuecksgrenze">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Flurstück/AX_ArtDerFlurstuecksgrenze_BesondereFlurstuecksgrenze" name="artDerFlurstuecksgrenze" lowerBound="1" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Flurstueck" eSuperTypes="#//Angaben%20zum%20Flurstück/AX_Flurstueck_Kerndaten">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zustaendigeStelle" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="weistAuf" eType="#//Angaben%20zur%20Lage/AX_LagebezeichnungMitHausnummer" eOpposite="#//Angaben%20zur%20Lage/AX_LagebezeichnungMitHausnummer/gehoertZu"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="zeigtAuf" eType="#//Angaben%20zur%20Lage/AX_LagebezeichnungOhneHausnummer" eOpposite="#//Angaben%20zur%20Lage/AX_LagebezeichnungOhneHausnummer/gehoertZu"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="beziehtSichAufFlurstueck" eType="#//Angaben%20zum%20Flurstück/AX_Flurstueck" />
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Flurstueck_Kerndaten">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="abweichenderRechtszustand" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="amtlicheFlaeche" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurstuecksfolge" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurstueckskennzeichen" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="true" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Flurstück/AX_Flurstuecksnummer" name="flurstuecksnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemarkung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemeindezugehoerigkeit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="objektkoordinaten" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="rechtsbehelfsverfahren" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Flurstück/AX_SonstigeEigenschaften_Flurstueck" name="sonstigeEigenschaften" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeitpunktDerEntstehung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zweifelhafterFlurstuecksnachweis" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eOperations name="bildeFlurstueckskennzeichen"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Flurstuecksnummer">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nenner" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zaehler" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Grenzpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Netzpunkt/AX_Marke" name="abmarkung_Marke" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ausgesetzteAbmarkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Flurstück/AX_BemerkungZurAbmarkung_Grenzpunkt" name="bemerkungZurAbmarkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="besonderePunktnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="festgestellterGrenzpunkt" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Flurstück/AX_GruendeDerAusgesetztenAbmarkung_Grenzpunkt" name="gruendeDerAusgesetztenAbmarkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Flurstück/AX_Horizontfreiheit_Grenzpunkt" name="horizontfreiheit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="punktkennung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="relativeHoehe" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="sonstigeEigenschaft" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeitpunktDerEntstehung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zustaendigeStelle" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zwischenmarke" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Angaben%20zum%20Flurstück/AX_Grenzpunkt" />
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="gehoertZuLFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt/istIdentischMitGrenzpunkt"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="beziehtSichAufSFP" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt/istIdentischMitGrenzpunkt"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt/unterschiedlicherBezugspunktMitGrenzpunkt"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_GruendeDerAusgesetztenAbmarkung_Grenzpunkt">
+			<eLiterals name="Grenzpunkt durch bauliche Anlage ausreichend gekennzeichnet" value="1000"/>
+			<eLiterals name="Grenzpunkt liegt innerhalb einer baulichen Anlage" value="2000"/>
+			<eLiterals name="Grenzpunkt in öffentlich-rechtlichem Bodenordnungsverfahren" value="3000"/>
+			<eLiterals name="Grenzpunkt liegt innerhalb eines Baugebietes" value="4000"/>
+			<eLiterals name="Grenzpunkt liegt innerhalb oder an einem Gewässer" value="5000"/>
+			<eLiterals name="Keine Abmarkung aufgrund von anderweitigen Hindernissen" value="6000"/>
+			<eLiterals name="Abmarkung würde unzumutbare Schäden verursachen" value="7000"/>
+			<eLiterals name="Langfristige gemeinschaftliche Nutzung der angrenzenden  Flurstücke" value="8000"/>
+			<eLiterals name="Angrenzende Flurstücke dienen dem Gemeingebrauch" value="9000"/>
+			<eLiterals name="Sonstiges" value="9999"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Horizontfreiheit_Grenzpunkt">
+			<eLiterals name="Uneingeschränkt" value="1000"/>
+			<eLiterals name="Eingeschränkt" value="2000"/>
+			<eLiterals name="Nicht geeignet" value="3000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_SonstigeEigenschaften_Flurstueck">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZumAbschnittBemerkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZumAbschnittFlurstueck" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZumAbschnittNummerAktenzeichen" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZumAbschnittStelle" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="flaecheDesAbschnitts" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="kennungSchluessel" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+	</eSubpackages>
+	<eSubpackages name="Angaben zum Netzpunkt">
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Aufnahmepunkt" eSuperTypes="#//Angaben%20zum%20Netzpunkt/AX_Netzpunkt">
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="hat" eType="#//Angaben%20zum%20Netzpunkt/AX_Sicherungspunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_Sicherungspunkt/gehoertZu"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="beziehtSichAuf" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt/unterschiedlicherBezugspunktMitAP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="haengtAn" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt/unterschiedlicherBezugspunktMitAP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="hatIdentitaet" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt/istIdentischMitAP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="gehoertZu" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt/istIdentischMitAP"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Horizontfreiheit_Netzpunkt">
+			<eLiterals name="Uneingeschränkt" value="1000"/>
+			<eLiterals name="Eingeschränkt" value="2000"/>
+			<eLiterals name="Nicht geeignet" value="3000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Marke">
+			<eLiterals name="Marke, allgemein" value="1000"/>
+			<eLiterals name="Stein" value="1100"/>
+			<eLiterals name="Stein, Grenzstein" value="1110"/>
+			<eLiterals name="Lochstein" value="1111"/>
+			<eLiterals name="Vermessungspunktstein" value="1112"/>
+			<eLiterals name="Unbehauener Feldstein" value="1120"/>
+			<eLiterals name="Gemeinde- und Waldgrenzstein" value="1130"/>
+			<eLiterals name="Gemeindegrenzstein" value="1131"/>
+			<eLiterals name="Waldgrenzstein, Forstgrenzstein" value="1132"/>
+			<eLiterals name="Kunststoffmarke" value="1140"/>
+			<eLiterals name="Landesgrenzstein" value="1160"/>
+			<eLiterals name="Stein mit Besonderheiten in Form oder Material" value="1190"/>
+			<eLiterals name="Rohr" value="1200"/>
+			<eLiterals name="Rohr mit Schutzkappe" value="1201"/>
+			<eLiterals name="Rohr mit Kopf" value="1202"/>
+			<eLiterals name="Rohr mit Bolzen, oberirdisch" value="1203"/>
+			<eLiterals name="Eisenrohr" value="1210"/>
+			<eLiterals name="Eisenrohr (mit Schutzkappe)" value="1211"/>
+			<eLiterals name="Eisenrohr (ohne Schutzkappe)" value="1212"/>
+			<eLiterals name="Kunststoffrohr" value="1220"/>
+			<eLiterals name="Kunststoffrohr (mit Schutzkappe)" value="1221"/>
+			<eLiterals name="Kunststoffrohr (ohne Schutzkappe)" value="1222"/>
+			<eLiterals name="Drainrohr" value="1230"/>
+			<eLiterals name="Rohr mit Schutzkasten" value="1240"/>
+			<eLiterals name="Zementrohr" value="1250"/>
+			<eLiterals name="Glasrohr" value="1260"/>
+			<eLiterals name="Tonrohr" value="1290"/>
+			<eLiterals name="Bolzen/Nagel" value="1300"/>
+			<eLiterals name="Bolzen" value="1310"/>
+			<eLiterals name="Adapterbolzen" value="1311"/>
+			<eLiterals name="Nagel" value="1320"/>
+			<eLiterals name="Meißelzeichen (z. B. Kreuz, Kerbe, Anker)" value="1400"/>
+			<eLiterals name="Bohrloch" value="1410"/>
+			<eLiterals name="Pfahl" value="1500"/>
+			<eLiterals name="Sonstige Marke" value="1600"/>
+			<eLiterals name="Marke in Schutzbehälter" value="1610"/>
+			<eLiterals name="Flasche" value="1620"/>
+			<eLiterals name="Platte" value="1630"/>
+			<eLiterals name="Klinkerplatte" value="1631"/>
+			<eLiterals name="Granitplatte" value="1632"/>
+			<eLiterals name="Platte mit Loch" value="1635"/>
+			<eLiterals name="Hohlziegel" value="1640"/>
+			<eLiterals name="Klebemarke" value="1650"/>
+			<eLiterals name="Schlagmarke" value="1655"/>
+			<eLiterals name="Kanaldeckel (Kreuz des Gütesiegels auf Rand)" value="1660"/>
+			<eLiterals name="Marke besonderer Ausführung" value="1670"/>
+			<eLiterals name="Punkt dauerhaft und gut erkennbar festgelegt" value="1700"/>
+			<eLiterals name="Punkt der baulichen Anlage" value="1710"/>
+			<eLiterals name="Sockel (roh)" value="1711"/>
+			<eLiterals name="Sockel (verputzt)" value="1712"/>
+			<eLiterals name="Mauerecke (roh)" value="1713"/>
+			<eLiterals name="Mauerecke (verputzt)" value="1714"/>
+			<eLiterals name="Grenzsäule" value="1720"/>
+			<eLiterals name="Pfeiler" value="1800"/>
+			<eLiterals name="Kegel" value="1820"/>
+			<eLiterals name="Festlegung 1. Ordnung, Kopf 30x30 cm, Bezugspunkt Platte" value="2100"/>
+			<eLiterals name="Festlegung 1. Ordnung, Bezugspunkt Kopf 30x30 cm" value="2101"/>
+			<eLiterals name="Festlegung STN 1. Ordnung, Pfeiler-kopf 30x30 cm, Bezugspunkt Platte 60x60 cm, Steinwürfel, Tonkegel" value="2102"/>
+			<eLiterals name="Festlegung 2. bis 5. Ordnung, Kopf 16x16 oder 12x12 cm, Bezugspunkt Platte 30x30 cm" value="2110"/>
+			<eLiterals name="Festlegung 3. bis 5. Ordnung, Bezugspunkt Kopf 16x16 oder 12x12 cm, Platte 30x30 cm" value="2111"/>
+			<eLiterals name="Festlegung 2. bis 4. Ordnung, Kopf 20x20 cm, Bezugspunkt Platte " value="2120"/>
+			<eLiterals name="Festlegung 2. bis 4. Ordnung, Bezugspunkt Kopf 20x20 cm, " value="2121"/>
+			<eLiterals name="Festlegung 2. bis 4. Ordnung, Kopf 25x25 cm, Bezugspunkt Platte " value="2130"/>
+			<eLiterals name="Festlegung 2. bis 4. Ordnung, Bezugspunkt Kopf 25x25 cm, " value="2131"/>
+			<eLiterals name="Festlegung STN 3. und 5. Ordnung, Pfeilerkopf 16x16 cm, Bezugspunkt Platte 30x30-40x40 cm" value="2132"/>
+			<eLiterals name="Festlegung STN 3. und 5. Ordnung, Pfeilerkopf 16x16 cm, Bezugspunkt Bolzen oder Rotgußkappe im Fels" value="2133"/>
+			<eLiterals name="Festlegung TP-Feld, Pfeilerkopf 25x25 cm, Bezugspunkt Platte 35x35 cm" value="2134"/>
+			<eLiterals name="Festlegung RBP-Feld, Pfeilerkopf 16x16 cm mit Gravur &quot;TP&quot; und &quot;Dreieck&quot;, Bezugspunkt Platte 30x30-35x35 cm" value="2135"/>
+			<eLiterals name="Plattformbolzen mit Aufschrift TP" value="2140"/>
+			<eLiterals name="Turmbolzen mit Aufschrift TP" value="2150"/>
+			<eLiterals name="Leuchtschraube oder -bolzen" value="2160"/>
+			<eLiterals name="Schraube (vertikal)" value="2161"/>
+			<eLiterals name="Messingmarke oder Messingbolzen" value="2162"/>
+			<eLiterals name="Keramikbolzen, oberirdisch" value="2163"/>
+			<eLiterals name="Bolzen im Fels, unterirdisch" value="2164"/>
+			<eLiterals name="Rotgusskappe im Fels, unterirdisch" value="2165"/>
+			<eLiterals name="Messingbolzen (gewölbt), Aufschrift TP und Dreieck" value="2166"/>
+			<eLiterals name="Turmbolzen, Festlegungsbolzen oder sonstiger Bolzen, keine weiteren Angaben bekannt oder gespeichert" value="2170"/>
+			<eLiterals name="Festlegung 2. Ordnung, Kopf 16x16 cm oder 12x12 cm, Bezugspunkt Platte 60x60 cm" value="2180"/>
+			<eLiterals name="Festlegung 2. Ordnung, Bezugspunkt Kopf 16x16 cm oder 12x12 cm, Platte 60x60 cm" value="2181"/>
+			<eLiterals name="Festlegung 2. bis 3. Ordnung, Kopf 16x16 cm, Bezugspunkt Platte 40x40 cm" value="2190"/>
+			<eLiterals name="Festlegung 2. bis 3. Ordnung, Bezugspunkt Kopf 16x16 cm, Platte 40x40 cm" value="2191"/>
+			<eLiterals name="Bergpfeiler ca. 60 cm lang, ohne Platte, Kopf 12x12 cm" value="2192"/>
+			<eLiterals name="Pfeiler mit Aufschrift AP" value="2200"/>
+			<eLiterals name="Pfeiler mit Aufschrift AP mit Platte, Bezugspunkt Kopf" value="2201"/>
+			<eLiterals name="Plattformbolzen mit der Aufschrift AP" value="2210"/>
+			<eLiterals name="Turmbolzen mit der Aufschrift AP" value="2220"/>
+			<eLiterals name="Festlegung der Wasserstraßenverwaltung, Stein mit Rohr und Stehbolzen, Typ 1" value="2230"/>
+			<eLiterals name="Festlegung der Wasserstraßenverwaltung, Stein mit Rohr und Stehbolzen, Typ 2" value="2240"/>
+			<eLiterals name="Festlegung der Wasserstraßenverwaltung, Stein mit Rohr und Stehbolzen, Typ 3" value="2250"/>
+			<eLiterals name="Festlegung Sachsen-Anhalt SANREF (unterirdischer Granitpfeiler mit Kopfbolzen)" value="2260"/>
+			<eLiterals name="3D-Bolzen einzementiert in Kopffläche einer Festlegung STN 1. Ordnung" value="2261"/>
+			<eLiterals name="3D-Bolzen in Kopffläche einer Festle-gung TP-Feld" value="2262"/>
+			<eLiterals name="3D-Bolzen in Kopffläche einer AF Sachsen 3. Ordnung" value="2263"/>
+			<eLiterals name="3D-Bolzen in Kopffläche einer AF Sachsen 5. Ordnung" value="2264"/>
+			<eLiterals name="3D-Bolzen in Granitplatte unter Schutzkasten oder Kunststoff- Schutz-rohr" value="2265"/>
+			<eLiterals name="Sondervermarkung, einbetonierter Granitpfeiler 40x40x90 cm mit Zentrumsbolzen in Kopffläche" value="2266"/>
+			<eLiterals name="Alte Festlegung der Kgl. Generalkommission und von Kurhessen, Rillenstein" value="2300"/>
+			<eLiterals name="Alte Festlegung von Nassau, exz., ehemals 2.O." value="2310"/>
+			<eLiterals name="Alte Festlegung von Nassau, exz., ehemals 3.O." value="2320"/>
+			<eLiterals name="Alte Festlegung von Hessen-Darmstadt, 3.O." value="2330"/>
+			<eLiterals name="Alte Festlegung von Hessen-Darmstadt, 4.O." value="2340"/>
+			<eLiterals name="Alte Festlegung von Hessen-Darmstadt, 3.O. exz." value="2350"/>
+			<eLiterals name="Alte Festlegung von Hessen-Darmstadt, 4.O.exz." value="2360"/>
+			<eLiterals name="Alte Festlegung von Westfalen, 2. O. exz." value="2370"/>
+			<eLiterals name="Alte Festlegung von Württemberg, exz." value="2400"/>
+			<eLiterals name="Alte Festlegung von Württemberg" value="2410"/>
+			<eLiterals name="Alte Festlegung von Mecklenburg, ehemals 1. bis 2. Ordnung" value="2420"/>
+			<eLiterals name="Alte Festlegung von Mecklenburg, ehemals 2. bis 3. Ordnung" value="2430"/>
+			<eLiterals name="Alte Festlegung von Mecklenburg, ehemals 4. Ordnung" value="2440"/>
+			<eLiterals name="Alte Festlegung Sachsen, 1. und 2. Ordnung (Nagelsche Säule)" value="2450"/>
+			<eLiterals name="Alte Festlegung Sachsen, 3. Ordnung, Pfeilerkopf 35x35 cm mit zentrischer Messingmarke" value="2460"/>
+			<eLiterals name="Alte Festlegung Sachsen, 5. Ordnung, Pfeilerkopf 25x25 cm mit zentrischer Messingmarke" value="2470"/>
+			<eLiterals name="Alte Festlegung von Baden, exz., Typ 1" value="2500"/>
+			<eLiterals name="Alte Festlegung von Baden, exz., Typ 2" value="2510"/>
+			<eLiterals name="Alte Festlegung von Baden" value="2540"/>
+			<eLiterals name="Rohr mit Schutzkasten, Grundständer" value="2550"/>
+			<eLiterals name="Grundständer mit Messingmarke unter Schutzkasten" value="2551"/>
+			<eLiterals name="Marke (allgemein) unter Schutzkasten" value="2552"/>
+			<eLiterals name="Platte unter Schutzkasten" value="2553"/>
+			<eLiterals name="Rohr mit Verschlusskappe und aufgesetztem Lochstein" value="2560"/>
+			<eLiterals name="Alte Festlegung in Bayern, exz." value="2600"/>
+			<eLiterals name="gebohrter Granitstein (Bezugspunkt) über Tonrohr" value="2601"/>
+			<eLiterals name="gebohrter Granitstein über Tonrohr (Bezugspunkt)" value="2602"/>
+			<eLiterals name="gebohrter Granitstein (Bezugspunkt) über Platte" value="2603"/>
+			<eLiterals name="gebohrter Granitstein über Platte (Bezugspunkt)" value="2604"/>
+			<eLiterals name="gebohrter Granitstein (Bezugspunkt) über Eisenrohr" value="2605"/>
+			<eLiterals name="gebohrter Granitstein über Eisenrohr (Bezugspunkt)" value="2606"/>
+			<eLiterals name="Betonstein (Bezugspunkt) über Platte" value="2607"/>
+			<eLiterals name="Betonstein über Platte (Bezugspunkt)" value="2608"/>
+			<eLiterals name="Betonstein mit durchgehendem Bohrloch (Einschaltpunkt-Stein in Bayern) " value="2609"/>
+			<eLiterals name="Alte Festlegung in Bayern" value="2610"/>
+			<eLiterals name="KT-Stein der österreichischen Katastraltriangulation" value="2611"/>
+			<eLiterals name="Stein (Bezugspunkt) über Platte" value="2612"/>
+			<eLiterals name="Stein über Platte (Bezugspunkt)" value="2613"/>
+			<eLiterals name="Stein (Bezugspunkt) über Tonrohr" value="2614"/>
+			<eLiterals name="Stein über Tonrohr (Bezugspunkt)" value="2615"/>
+			<eLiterals name="Stein mit Eisenrohr" value="2616"/>
+			<eLiterals name="Alte Festlegung in Sachsen-Coburg, 3.O." value="2620"/>
+			<eLiterals name="Alte Festlegung in Sachsen-Coburg, 4.O." value="2630"/>
+			<eLiterals name="Alte Festlegung in Bayern und der Pfalz, HDNP-Stein" value="2640"/>
+			<eLiterals name="Festlegung MP-Pfeiler" value="2700"/>
+			<eLiterals name="Festlegung Orientierungspunkt" value="2710"/>
+			<eLiterals name="Steinpfeiler" value="2750"/>
+			<eLiterals name="Betonpfeiler" value="2760"/>
+			<eLiterals name="Kreuz (gemeisselt)" value="2770"/>
+			<eLiterals name="Knopf" value="2800"/>
+			<eLiterals name="Mitte" value="2810"/>
+			<eLiterals name="Spitze" value="2820"/>
+			<eLiterals name="Kreuz (Mitte)" value="2830"/>
+			<eLiterals name="Helmstange" value="2840"/>
+			<eLiterals name="Fahnenstange" value="2850"/>
+			<eLiterals name="Wetterstange" value="2860"/>
+			<eLiterals name="Blitzableiter" value="2870"/>
+			<eLiterals name="Antenne" value="2880"/>
+			<eLiterals name="Rohrstange " value="2890"/>
+			<eLiterals name="Platte, unterirdisch" value="2900"/>
+			<eLiterals name="Platte einbetoniert mit zentrischem Messingbolzen" value="2901"/>
+			<eLiterals name="Platte einbetoniert mit zentrischem Bohrloch" value="2902"/>
+			<eLiterals name="Platte einbetoniert mit zentrischer Keramikmarke" value="2903"/>
+			<eLiterals name="Platte einbetoniert mit zentrischer Messingmarke" value="2904"/>
+			<eLiterals name="Steinwürfel, unterirdisch" value="2910"/>
+			<eLiterals name="Steinplatte, unterirdisch" value="2920"/>
+			<eLiterals name="Platte, unterirdisch, 60x60 cm" value="2930"/>
+			<eLiterals name="Platte, unterirdisch, 30x30 cm" value="2940"/>
+			<eLiterals name="Platte, unterirdisch, mit Stehniet" value="2950"/>
+			<eLiterals name="Platte unterirdisch mit Kopfbolzen" value="2951"/>
+			<eLiterals name="Platte, unterirdisch, mit Schutzrohr" value="2960"/>
+			<eLiterals name="Pfeiler 30x30x90 cm, mit Stehniete" value="2970"/>
+			<eLiterals name="Platte, mit Bolzen, unterirdisch, im Schacht" value="2980"/>
+			<eLiterals name="Unterirdische Festlegung (des RfL)" value="3000"/>
+			<eLiterals name="Unterirdische Festlegung Sonderform" value="3010"/>
+			<eLiterals name="Unterirdischer Rammpfahl" value="3020"/>
+			<eLiterals name="Unterirdischer Pfeilerbolzen" value="3030"/>
+			<eLiterals name="Unterirdischer Bolzen" value="3040"/>
+			<eLiterals name="Hamburger Flachpunkt" value="3050"/>
+			<eLiterals name="Unterirdische Säule" value="3060"/>
+			<eLiterals name="Unterirdischer Rammstab" value="3070"/>
+			<eLiterals name="Rohrfestpunkt" value="3100"/>
+			<eLiterals name="Rohrfestpunkt, Hamburger Bauart" value="3110"/>
+			<eLiterals name="Rohrfestpunkt, Oldenburger Bauart" value="3120"/>
+			<eLiterals name="Rohrfestpunkt, Eider Bauart" value="3130"/>
+			<eLiterals name="Rohrfestpunkt Nordrhein-Westfalen" value="3140"/>
+			<eLiterals name="Rohrfestpunkt Nebenpunkt, flach gegründet" value="3150"/>
+			<eLiterals name="Rohrfestpunkt, Celler Bauart" value="3160"/>
+			<eLiterals name="Unterirdische Festlegung im Boden" value="3170"/>
+			<eLiterals name="Unterirdische Festlegung im Schacht" value="3180"/>
+			<eLiterals name="kleine unterirdische Festlegung" value="3190"/>
+			<eLiterals name="Mauerbolzen" value="3200"/>
+			<eLiterals name="Mauerbolzen, horizontal eingebracht (mit Inschrift)" value="3210"/>
+			<eLiterals name="Mauerbolzen, vertikal eingebracht (mit Inschrift)" value="3220"/>
+			<eLiterals name="Höhenmarke (des RfL)" value="3230"/>
+			<eLiterals name="Kugelbolzen" value="3240"/>
+			<eLiterals name="Tonnenbolzen" value="3250"/>
+			<eLiterals name="Landeshöhenbolzen" value="3260"/>
+			<eLiterals name="Stehbolzen bzw. Bolzen vertikal" value="3270"/>
+			<eLiterals name="Stehniete" value="3280"/>
+			<eLiterals name="sonstiger horizontaler Bolzen" value="3290"/>
+			<eLiterals name="Pfeilerbolzen" value="3300"/>
+			<eLiterals name="Pfeilerbolzen, Bezugspunkt Pfeileroberfläche" value="3301"/>
+			<eLiterals name="Pfeilerbolzen, Naturstein, Bolzen horizontal" value="3310"/>
+			<eLiterals name="Pfeilerbolzen, Naturstein, Bolzen horizontal, Bezugspunkt Pfeileroberfläche" value="3311"/>
+			<eLiterals name="Pfeilerbolzen, Naturstein, Bolzen vertikal" value="3320"/>
+			<eLiterals name="Pfeilerbolzen, Beton, Bolzen, horizontal" value="3330"/>
+			<eLiterals name="Pfeilerbolzen, Beton, Bolzen horizontal, Bezugspunkt Pfeileroberfläche" value="3331"/>
+			<eLiterals name="Pfeilerbolzen, Beton, Bolzen vertikal" value="3340"/>
+			<eLiterals name="Pfeilerniete, Naturstein, Niete vertikal" value="3350"/>
+			<eLiterals name="Rammpfahl" value="3400"/>
+			<eLiterals name="Rammpfahl, Bolzen horizontal" value="3410"/>
+			<eLiterals name="Rammpfahl, Bolzen vertikal" value="3420"/>
+			<eLiterals name="Schraubpfahl" value="3810"/>
+			<eLiterals name="Hektometerstein" value="3820"/>
+			<eLiterals name="Markstein" value="3830"/>
+			<eLiterals name="Schraubbolzen" value="3840"/>
+			<eLiterals name="Schraubeisen" value="3845"/>
+			<eLiterals name="Lochmarke/-bolzen (ohne Höhentafel)" value="3850"/>
+			<eLiterals name="Lochmarke/-bolzen mit Höhentafel" value="3860"/>
+			<eLiterals name="Festpunktstein" value="3870"/>
+			<eLiterals name="Eichpfahl" value="3880"/>
+			<eLiterals name="Gravimeterplatte 80 x 80 oder 60 x 60 cm" value="4100"/>
+			<eLiterals name="Gravimeternagel" value="4110"/>
+			<eLiterals name="Gravimeterpfeiler 20 x 20 x 100 cm" value="4120"/>
+			<eLiterals name="Gravimeterpfeiler 16 x 16 x 60 cm" value="4130"/>
+			<eLiterals name="Messingscheibe mit zentrischer Wölbung (Durchm. 8 cm)" value="4140"/>
+			<eLiterals name="Stehniete, Messing (Durchmesser 3 cm, Aufschrift SFP) " value="4150"/>
+			<eLiterals name="Messplakette, Aufschrift" value="4160"/>
+			<eLiterals name="Gewindebolzen (höchste Stelle, Mitte) auf Metallplatte (Betonpfeiler mit Fundament im festen Erdboden)" value="5100"/>
+			<eLiterals name="Oberfläche der Metallplatte (höchste Stelle, Mitte) (Betonpfeiler mit Fundament im festen Erdboden)" value="5150"/>
+			<eLiterals name="Gewindebolzen (höchste Stelle, Mitte) auf Metallplatte (Gemauerter Pfeiler auf einem Bauwerk)" value="5200"/>
+			<eLiterals name="Oberfläche der Metallplatte (höchste Stelle, Mitte) (Gemauerter Pfeiler auf einem Bauwerk)" value="5250"/>
+			<eLiterals name="Gewindebolzen (höchste Stelle, Mitte) auf Metallplatte (Stahlpfeiler auf einem Bauwerk)" value="5300"/>
+			<eLiterals name="Oberfläche der Metallplatte (höchste Stelle, Mitte) (Stahlpfeiler auf einem Bauwerk)" value="5350"/>
+			<eLiterals name="Gewindebolzen (höchste Stelle, Mitte) auf Metallplatte (Seitlich befestigtes Stahlrohr am Bauwerk)" value="5400"/>
+			<eLiterals name="Oberfläche der Metallplatte (höchste Stelle, Mitte) (Seitlich befestigtes Stahlrohr am Bauwerk)" value="5450"/>
+			<eLiterals name="Gewindebolzen (höchste Stelle, Mitte) auf Metallplatte (Antennenträger)" value="5500"/>
+			<eLiterals name="Oberfläche der Metallplatte (höchste Stelle, Mitte) (Antennenträger)" value="5550"/>
+			<eLiterals name="GNSS-Antennenhalterung, Oberfläche Platte (Loch) (SL)" value="5900"/>
+			<eLiterals name="Marke unter 'Bemerkung' näher definiert" value="9000"/>
+			<eLiterals name="Ohne Marke" value="9500"/>
+			<eLiterals name="Abmarkung zeitweilig ausgesetzt" value="9600"/>
+			<eLiterals name="Nach Quellenlage nicht zu spezifizieren" value="9998"/>
+			<eLiterals name="Sonstiges" value="9999"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Netzpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Netzpunkt/AX_Horizontfreiheit_Netzpunkt" name="horizontfreiheit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="punktkennung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="relativeHoehe" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="sonstigeEigenschaft" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Netzpunkt/AX_Marke" name="vermarkung_Marke" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zustaendigeStelle" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Sicherungspunkt" eSuperTypes="#//Angaben%20zum%20Netzpunkt/AX_Netzpunkt">
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="gehoertZu" eType="#//Angaben%20zum%20Netzpunkt/AX_Aufnahmepunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_Aufnahmepunkt/hat"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="beziehtSichAuf" eType="#//Angaben%20zum%20Netzpunkt/AX_SonstigerVermessungspunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_SonstigerVermessungspunkt/hat"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="hat" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt/istIdentischMitSP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt/unterschiedlicherBezugspunktMitSP"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_SonstigerVermessungspunkt" eSuperTypes="#//Angaben%20zum%20Netzpunkt/AX_Netzpunkt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="art" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="hat" eType="#//Angaben%20zum%20Netzpunkt/AX_Sicherungspunkt" eOpposite="#//Angaben%20zum%20Netzpunkt/AX_Sicherungspunkt/beziehtSichAuf"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="verbundenMit" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt/istIdentischMitSVP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="gehoertZu" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Schwerefestpunkt/istIdentischMitSVP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="beziehtSichAuf" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Lagefestpunkt/unterschiedlicherBezugspunktMitSVP"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt" eOpposite="#//Angaben%20zu%20Festpunkten%20der%20Landesvermessung/AX_Hoehenfestpunkt/unterschiedlicherBezugspunktMitSVP"/>
+		</eClassifiers>
+	</eSubpackages>
+	<eSubpackages name="Angaben zum Punktort">
+		<eClassifiers xsi:type="ecore:EClass" name="Acceleration"/>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Datenerhebung_Punktort">
+			<eLiterals name="Aus GNSS-Messung" value="0100"/>
+			<eLiterals name="Aus langzeitstatischer GNSS-Messung" value="0110"/>
+			<eLiterals name="Aus statischer GNSS-Messung" value="0120"/>
+			<eLiterals name="Aus Echtzeit-GNSS-Messung" value="0130"/>
+			<eLiterals name="Aus trigonometrischer Messung im TP-Netz" value="0200"/>
+			<eLiterals name="Aus lokaler trigonometrischer Messung (innerhalb einer Punktgruppe)" value="0210"/>
+			<eLiterals name="Aus netzweiser terrestrischer Messung" value="0220"/>
+			<eLiterals name="Aus Katastervermessung ermittelt" value="1000"/>
+			<eLiterals name="Aus Katastervermessung mit höchster Lagegenauigkeit (NW)" value="1010"/>
+			<eLiterals name="Aus Katastervermessung mit hoher Lagegenauigkeit (NW)" value="1020"/>
+			<eLiterals name="Aus Katastervermessung mit mittlerer Lagegenauigkeit (NW)" value="1030"/>
+			<eLiterals name="Aus Katastervermessung mit unzureichender Lagegenauigkeit (NW)" value="1040"/>
+			<eLiterals name="Aus Vermessung mit höchster Positionsgenauigkeit" value="1060"/>
+			<eLiterals name="Aus Vermessung mit mittlerer Positionsgenauigkeit" value="1070"/>
+			<eLiterals name="Aus Vermessung mit unterer Positionsgenauigkeit" value="1080"/>
+			<eLiterals name="Aufgrund Anforderungen mit Netzanschluss ermittelt" value="1100"/>
+			<eLiterals name="Aufgrund Anforderungen mit Bezug zur Flurstücksgrenze ermittelt" value="1200"/>
+			<eLiterals name="Aufgrund Anforderungen des LiegVermErlasses ermittelt (NI)" value="1300"/>
+			<eLiterals name="Aufgrund Anforderungen des Fortführungerlasses II ermittelt (NI)" value="1400"/>
+			<eLiterals name="Aufgrund Anforderungen älterer Vorschriften ermittelt" value="1500"/>
+			<eLiterals name="Auf einheitlichem und eindeutigem Raumbezug basierend (E-Koord.) (BW)" value="1600"/>
+			<eLiterals name="Auf bislang einheitlichem Raumbezug basierend ermittelt (B-Koord.) (BW)" value="1610"/>
+			<eLiterals name="Auf früher gültigem Raumbezug basierend ermittelt(T-Koord.) (BW)" value="1620"/>
+			<eLiterals name="Aufgrund Anforderungen des AP-Erlasses (M-V)" value="1630"/>
+			<eLiterals name="Aufgrund Anforderungen der LiVermA M-V, basierend auf AP-Feld" value="1640"/>
+			<eLiterals name="Aufgrund Anforderungen der LiVermA M-V" value="1650"/>
+			<eLiterals name="Aufgrund Anforderungen des LiegVermErlasses LSA (LSA)" value="1700"/>
+			<eLiterals name="Aufgrund Anforderungen der Anleitung für die Ausführung von Neuvermessungen, 1953, DDR (LSA)" value="1710"/>
+			<eLiterals name="Aufgrund Anforderungen der Liegenschaftsvermessungsordnung 112/82, DDR (LSA)" value="1720"/>
+			<eLiterals name="Aus Koordinatentransformation ermittelt" value="1800"/>
+			<eLiterals name="Aus sonstiger Vermessung ermittelt" value="1900"/>
+			<eLiterals name="Aus Luftbildmessung oder Fernerkundungsdaten ermittelt" value="2000"/>
+			<eLiterals name="Aus Netzvermessung ermittelt" value="3000"/>
+			<eLiterals name="Aufgrund Anforderungen des Festpunktfelderlasses ermittelt (NI, ST)" value="3100"/>
+			<eLiterals name="Aufgrund Anforderungen des Polygonpunktfelderlasses ermittelt (NI)" value="3200"/>
+			<eLiterals name="Aus Polygonierungsmessung" value="3300"/>
+			<eLiterals name="Aus Katasterunterlagen und Karten für graphische Zwecke ermittelt" value="4000"/>
+			<eLiterals name="Aus Katasterzahlen für graphische Zwecke ermittelt" value="4100"/>
+			<eLiterals name="Aus Katasterkarten digitalisiert" value="4200"/>
+			<eLiterals name="Aus Katasterkarten digitalisiert, Kartenmaßstab M größer gleich 1 zu 1000" value="4210"/>
+			<eLiterals name="Aus Katasterkarten digitalisiert, Kartenmaßstab 1 zu 1000 größer M größer gleich 1 zu 2000" value="4220"/>
+			<eLiterals name="Aus Katasterkarten digitalisiert, Kartenmaßstab 1 zu 2000 größer M größer gleich 1 zu 3000" value="4230"/>
+			<eLiterals name="Aus Katasterkarten digitalisiert, Kartenmaßstab 1 zu 3000 größer M größer gleich 1 zu 5000" value="4240"/>
+			<eLiterals name="Aus Katasterkarten digitalisiert, Kartenmaßstab 1 zu 5000 größer M" value="4250"/>
+			<eLiterals name="Mit  sonstigen geometrischen Bedingungen und/oder Homogenisierung (M größer gleich 1 zu 1000)" value="4260"/>
+			<eLiterals name="Mit Berechnung  oder Abstandsbedingung (M größer gleich 1 zu 1000)" value="4270"/>
+			<eLiterals name="Mit sonstigen geometrischen  Bedingungen und/oder Homogenisierung (M kleiner 1 zu 1000)" value="4280"/>
+			<eLiterals name="Mit  Berechnung oder Abstandsbedingungen (M kleiner 1 zu 1000)" value="4290"/>
+			<eLiterals name="Aus sonstigen Unterlagen digitalisiert" value="4300"/>
+			<eLiterals name="Aus sonstigen Unterlagen digitalisiert, Kartenmaßstab M größer gleich 1 zu 1000" value="4310"/>
+			<eLiterals name="Aus  sonstigen Unterlagen digitalisiert, Kartenmaßstab 1 zu 1000 größer M größer gleich 1 zu 2000" value="4320"/>
+			<eLiterals name="Aus sonstigen Unterlagen digitalisiert, Kartenmaßstab 1 zu 2000 größer M größer gleich 1 zu 3000" value="4330"/>
+			<eLiterals name="Aus sonstigen Unterlagen digitalisiert, Kartenmaßstab 1 zu 3000 größer M größer gleich 1 zu 5000" value="4340"/>
+			<eLiterals name="Aus sonstigen Unterlagen digitalisiert, Kartenmaßstab 1 zu 5000 größer M" value="4350"/>
+			<eLiterals name="Aus sonstigen Unterlagen digitalisiert, mit sonstigen geometrischen Bedingungen und/oder Homogenisierung (M größer gleich 1 zu 1000)" value="4360"/>
+			<eLiterals name="Aus sonstigen Unterlagen digitalisiert, Mit Berechnung oder Abstandsbedingung (M größer gleich 1 zu 1000)" value="4370"/>
+			<eLiterals name="Aus sonstigen Unterlagen digitalisiert, Mit sonstigen geometrischen Bedingungen und/oder Homogenisierung (M kleiner 1 zu 1000)" value="4380"/>
+			<eLiterals name="Aus sonstigen Unterlagen digitalisiert, Mit Berechnung oder Abstandsbedingungen (M kleiner 1 zu 1000)" value="4390"/>
+			<eLiterals name="Aus Nivellement" value="5000"/>
+			<eLiterals name="Aus geometrischem Nivellement" value="5010"/>
+			<eLiterals name="Aus trigonometrischer Höhenübertragung" value="5020"/>
+			<eLiterals name="Aus trigonometrischer Präzisionshöhenübertragung" value="5030"/>
+			<eLiterals name="Aus Präzisionsnivellement" value="5100"/>
+			<eLiterals name="Aus Höhenangaben nivellitisch bestimmt, Messgenauigkeit 1.Ordnung" value="5110"/>
+			<eLiterals name="Aus  Höhenangaben nivellitisch bestimmt, Messgenauigkeit 2.Ordnung" value="5120"/>
+			<eLiterals name="Aus Höhenangaben  nivellitisch bestimmt, Messgenauigkeit 3.Ordnung" value="5130"/>
+			<eLiterals name="Aus Höhenangaben nivellitisch bestimmt, Messgenauigkeit 4.Ordnung" value="5140"/>
+			<eLiterals name="Aus geometrischem Präzisionsnivellement, Messgenauigkeit  1. Ordnung" value="5150"/>
+			<eLiterals name="Aus geometrischem Präzisionsnivellement, Messgenauigkeit  2. Ordnung" value="5160"/>
+			<eLiterals name="Aus geometrischem Präzisionsnivellement, Messgenauigkeit  3. Ordnung" value="5170"/>
+			<eLiterals name="Aus Präzisionsnivellement (nur eine Messungsrichtung)" value="5200"/>
+			<eLiterals name="Höhe aus Laserscannermessung" value="5500"/>
+			<eLiterals name="Aus satellitengeodätischer Messung  und Addition einer Undulation" value="6000"/>
+			<eLiterals name="Mittels Quasigeoidundulation abgeleitet von gemessener ellipsoidischer Höhe" value="6100"/>
+			<eLiterals name="Mittels Quasigeoidundulation abgeleitet von gemessener Normalhöhe" value="6200"/>
+			<eLiterals name="Aus trigonometrischer Messung" value="7000"/>
+			<eLiterals name="Aus analoger Unterlage abgeleitet" value="8000"/>
+			<eLiterals name="Aus näherungsweiser Berechnung oder Transformation" value="8100"/>
+			<eLiterals name="Aus Stereo-Auswertung von Luftbildern" value="8200"/>
+			<eLiterals name="Graphisch bestimmt" value="8300"/>
+			<eLiterals name="Aus der Topographischen Karte 1 zu 10 000 abgegriffen" value="8310"/>
+			<eLiterals name="Aus der Topographischen Karte 1 zu 25 000 abgegriffen" value="8320"/>
+			<eLiterals name="Nach Quellenlage nicht zu spezifizieren" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Datenerhebung_Schwere">
+			<eLiterals name="Schwerewert direkt gemessen oder mittels Freiluftreduktion über geringe Entfernung abgeleitet (Höhenunterschied bis 1 m, Horizontalabstand bis 5 m)" value="1000"/>
+			<eLiterals name="Schwerewert mittels Freiluftreduktion über größere Entfernung abgeleitet" value="2000"/>
+			<eLiterals name="Schwerewert mittels Interpolation unter Verwendung einfacher Bougueranomalien ermittelt" value="3000"/>
+			<eLiterals name="Schwerewert im System DHSN 96 durch Abschlag ( -19 10-8 m s-2 ) aus Schwerewert im System DHSN 82 ermittelt (alte Bundesländer)" value="3100"/>
+			<eLiterals name="Schwerewert DHSN 96 durch Transformation aus System 71 ermittelt (neue Bundesländer)" value="3200"/>
+			<eLiterals name="Schwerewert durch andere Methode ermittelt" value="4000"/>
+			<eLiterals name="Methode der 'Datenerhebung Schwere' unbekannt" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_DQPunktort">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Genauigkeitsstufe_Punktort" name="genauigkeitsstufe" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="genauigkeitswert" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_LI_Lineage_Punktort" name="herkunft" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="lagezuverlaessigkeit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Vertrauenswuerdigkeit_Punktort" name="vertrauenswuerdigkeit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_DQSchwere">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="bestimmungsdatum" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Datenerhebung_Schwere" name="datenerhebung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Genauigkeitsstufe_Schwere" name="genauigkeitsstufe" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="genauigkeitswert" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Messmethode_Schwere" name="messmethode" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Vertrauenswuerdigkeit_Schwere" name="vertrauenswuerdigkeit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Genauigkeitsstufe_Punktort">
+			<eLiterals name="Standardabweichung S kleiner 1 mm" value="0900"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 2 mm" value="1000"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 5 mm" value="1100"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 1 cm" value="1200"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 1,5 cm" value="1300"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 2 cm" value="2000"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 2,5 cm" value="2050"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 3 cm" value="2100"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 6 cm" value="2200"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 10 cm" value="2300"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 30 cm" value="3000"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 60 cm" value="3100"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 100 cm" value="3200"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 500 cm" value="3300"/>
+			<eLiterals name="Standardabweichung S groesser 500 cm" value="5000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Genauigkeitsstufe_Schwere">
+			<eLiterals name="Standardabweichung S kleiner 20 10-8m s-2" value="1000"/>
+			<eLiterals name="Standardabweichung S kleiner gleich 100 10-8m s-2" value="2000"/>
+			<eLiterals name="Standardabweichung S groesser 100 10-8m s-2" value="3000"/>
+			<eLiterals name="Als Schwereanschlusspunkt ungeeignet" value="4000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Koordinatenstatus_Punktort">
+			<eLiterals name="Amtliche Koordinaten bzw. amtliche Höhe" value="1000"/>
+			<eLiterals name="Weitere gültige Koordinaten bzw. weitere gültige Höhe" value="2000"/>
+			<eLiterals name="Vorläufige Koordinaten bzw. vorläufige Höhe" value="3000"/>
+			<eLiterals name="Zu keiner Zeit gültig gewesene Koordinaten bzw. Höhe" value="4000"/>
+			<eLiterals name="Historische (nicht mehr gültige)  Koordinaten bzw. Höhe" value="5000"/>
+			<eLiterals name="Koordinaten bzw. Höhe, die sich als fehlerhaft herausgestellt haben" value="5100"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_LI_Lineage_Punktort">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_LI_ProcessStep_Punktort" name="processStep" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_LI_Source_Punktort" name="source" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_LI_ProcessStep_Punktort">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="dateTime" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_LI_ProcessStep_Punktort_Description" name="description" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="processor" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_LI_Source_Punktort" name="source" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_LI_ProcessStep_Punktort_Description">
+			<eLiterals name="Erhebung"/>
+			<eLiterals name="Berechnung"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_LI_Source_Punktort">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Datenerhebung_Punktort" name="description" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_LI_ProcessStep_Punktort" name="sourceStep" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Messmethode_Schwere">
+			<eLiterals name="Aus Absolutgravimetermessung ermittelt" value="1000"/>
+			<eLiterals name="Aus Relativgravimetermessung ermittelt" value="2000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Punktort">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="hinweise" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="kartendarstellung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Koordinatenstatus_Punktort" name="koordinatenstatus" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_DQPunktort" name="qualitaetsangaben" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ueberpruefungsdatum" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_PunktortAG" eSuperTypes="#//Angaben%20zum%20Punktort/AX_Punktort"/>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_PunktortAU" eSuperTypes="#//Angaben%20zum%20Punktort/AX_Punktort"/>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_PunktortTA" eSuperTypes="#//Angaben%20zum%20Punktort/AX_Punktort"/>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Schwere">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="aufstellhoehe" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="hinweise" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_DQSchwere" name="qualitaetsangaben" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Schwereanomalie_Schwere" name="schwereanomalie" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Schwerestatus_Schwere" name="schwerestatus" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Schweresystem_Schwere" name="schweresystem" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="schwerewert" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ueberpruefungsdatum" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Schwereanomalie_Schwere">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/AX_Schwereanomalie_Schwere_Art" name="art" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Punktort/Acceleration" name="wert" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Schwereanomalie_Schwere_Art">
+			<eLiterals name="Geländereduktion (Reliefkorrektion)" value="1000"/>
+			<eLiterals name="Freiluftanomalie im System Potsdam 1909 - Normalschwere nach Helmert 1901 - Breite auf dem Krassowski-Ellipsoid" value="2000"/>
+			<eLiterals name="Freiluftanomalie im System Potsdam 1909 mit Geländereduktion (Fayeanomalie) - Normalschwere nach Helmert 1901 - Breite auf dem Krassowski-Ellipsoid" value="3000"/>
+			<eLiterals name="Freiluftanomalie nach Molodenski: Schwere (im System DHSN 96) im Oberflächenpunkt minus Normalschwere (Formel des GRS 80) im Telluroidpunkt" value="3100"/>
+			<eLiterals name="Bougueranomalie im System Potsdam 1909 mit Geländereduktion - Normalschwere nach Helmert 1901 - Breite auf dem Krassowski-Ellipsoid" value="4000"/>
+			<eLiterals name="Bougueranomalie im System DHSN 82 mit Freiluft- und Plattenreduktion - Normalschwere im GRS 80" value="5000"/>
+			<eLiterals name="Bougueranomalie im System DHSN 96 mit Freiluft- und Plattenreduktion - Normalschwere im GRS 80" value="6000"/>
+			<eLiterals name="Art der Anomalie bzw. Reduktion unbekannt" value="9998"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Schwerestatus_Schwere">
+			<eLiterals name="amtlicher Schwerewert (gültiger Wert im amtlichen Schweresystem)" value="1000"/>
+			<eLiterals name="weiterer gültiger Schwerewert (nicht im amtlichen Schweresystem)" value="2000"/>
+			<eLiterals name="vorläufiger Schwerewert" value="3000"/>
+			<eLiterals name="zu keiner Zeit gültig gewesener Schwerewert" value="4000"/>
+			<eLiterals name="historischer (nicht mehr gültiger) Schwerewert" value="5000"/>
+			<eLiterals name="Schwerewert, der sich als fehlerhaft herausgestellt hat" value="5100"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Schweresystem_Schwere">
+			<eLiterals name="Schwerewert im System des DHSN 82 (System der Landesvermessung)" value="1000"/>
+			<eLiterals name="Schwerewert im System des DSGN 62 (auch als DSN 62 bezeichnet)" value="1100"/>
+			<eLiterals name="Schwerewert im System des SGN der DDR (auch als System 71 bezeichnet)" value="1200"/>
+			<eLiterals name="Schwerewert im System des DHSN 96 (System der Landesvermessung)" value="1300"/>
+			<eLiterals name="Schwerewert im System des ISGN 71 (wissenschaftliches System)" value="4000"/>
+			<eLiterals name="Schwerewert im System des DSGN 76 (wissenschaftliches System)" value="4010"/>
+			<eLiterals name="Schwerewert im System des DSGN 94 (wissenschaftliches System)" value="4020"/>
+			<eLiterals name="Potsdamer Schweresystem 1909" value="6000"/>
+			<eLiterals name="Schweresystem der Geophysikalischen Reichsaufnahme 1934 - 1943" value="6100"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Vertrauenswuerdigkeit_Punktort">
+			<eLiterals name="Vertrauenswürdigkeitsstufe Ausgleichung" value="1100"/>
+			<eLiterals name="Vertrauenswürdigkeitsstufe Berechnung" value="1200"/>
+			<eLiterals name="Vertrauenswürdigkeitsstufe Bestimmungsverfahren" value="1300"/>
+			<eLiterals name="Vertrauenswürdigkeitsstufe ohne Kontrollen" value="1400"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Vertrauenswuerdigkeit_Schwere">
+			<eLiterals name="Vertrauenswürdigkeitsstufe 'Ausgleichung'" value="1100"/>
+			<eLiterals name="Vertrauenswürdigkeitsstufe 'ohne Ausgleichung kontrolliert'" value="1300"/>
+			<eLiterals name="Vertrauenswürdigkeitsstufe 'unkontrolliert'" value="1400"/>
+		</eClassifiers>
+	</eSubpackages>
+	<eSubpackages name="Angaben zur Historie">
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Blattart_HistorischesFlurstueck">
+			<eLiterals name="Grundbuchblatt" value="1000"/>
+			<eLiterals name="Katasterblatt" value="2000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Buchung_HistorischesFlurstueck">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zur%20Historie/AX_Blattart_HistorischesFlurstueck" name="blattart" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsart" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsblattbezirk" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsblattkennzeichen" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="true" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsblattnummerMitBuchstabenerweiterung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummerDerBuchungsstelle" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_HistorischesFlurstueck" eSuperTypes="#//Angaben%20zum%20Flurstück/AX_Flurstueck_Kerndaten">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zur%20Historie/AX_Buchung_HistorischesFlurstueck" name="buchung" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nachfolgerFlurstueckskennzeichen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeitpunktDerHistorisierung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_HistorischesFlurstueckALB">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="amtlicheFlaeche" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zur%20Historie/AX_Buchung_HistorischesFlurstueck" name="buchung" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurstuecksfolge" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurstueckskennzeichen" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="true" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zum%20Flurstück/AX_Flurstuecksnummer" name="flurstuecksnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsart" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemarkung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummerDerFortfuehrung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nachfolgerFlurstueckskennzeichen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="objektkoordinaten" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="vorgaengerFlurstueckskennzeichen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeitpunktDerEntstehungDesBezugsflurstuecks" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_HistorischesFlurstueckOhneRaumbezug" eSuperTypes="#//Angaben%20zum%20Flurstück/AX_Flurstueck_Kerndaten">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nachfolgerFlurstueckskennzeichen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="vorgaengerFlurstueckskennzeichen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//Angaben%20zur%20Historie/AX_HistorischesFlurstueckOhneRaumbezug" />
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="zeigtAuf" eType="#//Angaben%20zur%20Lage/AX_LagebezeichnungOhneHausnummer" eOpposite="#//Angaben%20zur%20Lage/AX_LagebezeichnungOhneHausnummer/beschreibt"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="weistAuf" eType="#//Angaben%20zur%20Lage/AX_LagebezeichnungMitHausnummer" eOpposite="#//Angaben%20zur%20Lage/AX_LagebezeichnungMitHausnummer/hat"/>
+		</eClassifiers>
+	</eSubpackages>
+	<eSubpackages name="Angaben zur Lage">
+		<eClassifiers xsi:type="ecore:EClass" name="AX_GeoreferenzierteGebaeudeadresse">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="adressierungszusatz" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="datensatznummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemeinde" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="hausnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="kreis" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="land" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ortsteil" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zur%20Lage/AX_Post" name="postalischeAdresse" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zur%20Lage/AX_Qualitaet_Hauskoordinate" name="qualitaetsangaben" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="regierungsbezirk" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="strassenschluessel" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" name="hatAuch" eType="#//Angaben%20zur%20Lage/AX_LagebezeichnungMitHausnummer" eOpposite="#//Angaben%20zur%20Lage/AX_LagebezeichnungMitHausnummer/beziehtSichAuchAuf"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Lage">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zur%20Lage/AX_Lagebezeichnung" name="lagebezeichnung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Lagebezeichnung">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="unverschluesselt" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="verschluesselt" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_LagebezeichnungMitHausnummer" eSuperTypes="#//Angaben%20zur%20Lage/AX_Lage">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="hausnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ortsteil" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" upperBound="-1" name="gehoertZu" eType="#//Angaben%20zum%20Flurstück/AX_Flurstueck" eOpposite="#//Angaben%20zum%20Flurstück/AX_Flurstueck/weistAuf"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="hat" eType="#//Angaben%20zur%20Historie/AX_HistorischesFlurstueckOhneRaumbezug" eOpposite="#//Angaben%20zur%20Historie/AX_HistorischesFlurstueckOhneRaumbezug/weistAuf"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="beziehtSichAuchAuf" eType="#//Angaben%20zur%20Lage/AX_GeoreferenzierteGebaeudeadresse" eOpposite="#//Angaben%20zur%20Lage/AX_GeoreferenzierteGebaeudeadresse/hatAuch"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_LagebezeichnungMitPseudonummer" eSuperTypes="#//Angaben%20zur%20Lage/AX_Lage">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ortsteil" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="pseudonummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_LagebezeichnungOhneHausnummer" eSuperTypes="#//Angaben%20zur%20Lage/AX_Lage">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ortsteil" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zusatzZurLagebezeichnung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" upperBound="-1" name="gehoertZu" eType="#//Angaben%20zum%20Flurstück/AX_Flurstueck" eOpposite="#//Angaben%20zum%20Flurstück/AX_Flurstueck/zeigtAuf"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="beschreibt" eType="#//Angaben%20zur%20Historie/AX_HistorischesFlurstueckOhneRaumbezug" eOpposite="#//Angaben%20zur%20Historie/AX_HistorischesFlurstueckOhneRaumbezug/zeigtAuf"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Post">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ortsnamePost" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="postleitzahl" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="strassenname" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zusatzOrtsname" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Qualitaet_Hauskoordinate">
+			<eLiterals name="gebaeudeumring (A)" value="1000"/>
+			<eLiterals name="innerhalbFlurstueck (B)" value="2000"/>
+			<eLiterals name="interpoliert (C)" value="3000"/>
+		</eClassifiers>
+	</eSubpackages>
+	<eSubpackages name="Angaben zur Reservierung">
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Art_Punktkennung">
+			<eLiterals name="Punktkennung - allgemein" value="1000"/>
+			<eLiterals name="Punktkennung - Grenzpunkt" value="1100"/>
+			<eLiterals name="Punktkennung - Besonderer Gebäudepunkt" value="1200"/>
+			<eLiterals name="Punktkennung - Besonderer topographischer Punkt" value="1300"/>
+			<eLiterals name="Punktkennung - Aufnahmepunkt" value="1400"/>
+			<eLiterals name="Punktkennung - Sicherungspunkt" value="1500"/>
+			<eLiterals name="Punktkennung - Sonstiger Vermessungspunkt" value="1600"/>
+			<eLiterals name="Punktkennung - Besonderer Bauwerkspunkt" value="1700"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Art_Reservierung">
+			<eLiterals name="Punktkennung" value="1000"/>
+			<eLiterals name="Punktkennung - Grenzpunkt" value="1300"/>
+			<eLiterals name="Punktkennung - Besonderer Gebäudepunkt" value="1400"/>
+			<eLiterals name="Punktkennung - Besonderer topographischer Punkt" value="1500"/>
+			<eLiterals name="Punktkennung - Besonderer Bauwerkspunkt" value="1600"/>
+			<eLiterals name="Punktkennung - Aufnahmepunkt" value="1700"/>
+			<eLiterals name="Punktkennung - Sicherungspunkt" value="1800"/>
+			<eLiterals name="Punktkennung - Sonstiger Vermessungspunkt" value="1900"/>
+			<eLiterals name="Punktkennung - Lagefestpunkt" value="2000"/>
+			<eLiterals name="Punktkennung - Höhenfestpunkt" value="2100"/>
+			<eLiterals name="Punktkennung - Schwerefestpunkt" value="2200"/>
+			<eLiterals name="Punktkennung - Referenzstationspunkt" value="2300"/>
+			<eLiterals name="Flurstückskennzeichen" value="3000"/>
+			<eLiterals name="FN-Nummer" value="4000"/>
+			<eLiterals name="Abmarkungsprotokollnummer" value="5000"/>
+			<eLiterals name="Buchungsblattkennzeichen" value="6000"/>
+			<eLiterals name="Katasterblatt" value="6100"/>
+			<eLiterals name="Pseudoblatt" value="6200"/>
+			<eLiterals name="Erwerberblatt" value="6300"/>
+			<eLiterals name="Fiktives Blatt" value="6400"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_PunktkennungUntergegangen">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zur%20Reservierung/AX_Art_Punktkennung" name="art" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="punktkennung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_PunktkennungVergleichend">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="antragsnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zur%20Reservierung/AX_Art_Punktkennung" name="art" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="endgueltigePunktkennung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="vorlaeufigePunktkennung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Reservierung">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ablaufDerReservierung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="antragsnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zur%20Reservierung/AX_Art_Reservierung" name="art" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="auftragsnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Angaben%20zur%20Reservierung/AX_Reservierungsauftrag_Gebietskennung" name="gebietskennung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="nummerierungsbezirk" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="vermessungsstelle" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Reservierungsauftrag_Gebietskennung">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsblattbezirk" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="flur" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemarkung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+	</eSubpackages>
+	<eSubpackages name="Fortführungsnachweis">
+		<eClassifiers xsi:type="ecore:EEnum" name="AX_Art_Adressat_Auszug">
+			<eLiterals name="Privat" value="1000"/>
+			<eLiterals name="Notar" value="2000"/>
+			<eLiterals name="Grundbuchamt" value="3000"/>
+			<eLiterals name="Finanzamt" value="4000"/>
+			<eLiterals name="Bauaufsichtsbehörde" value="5000"/>
+			<eLiterals name="Weitere Beteiligte" value="6000"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Auszug">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="adressat" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Fortführungsnachweis/AX_Art_Adressat_Auszug" name="art" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="datum" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Dienststellenlogo">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_FGraphik">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Fortführungsnachweis/AX_K_AUSGKOPF_Standard" name="ausgabekopf" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Fortfuehrungsfall">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="anmerkungFuerDenNotar" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="anzahlDerFortfuehrungsmitteilungen" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="bemerkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsfallnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsmitteilungAnEigentuemerAntragsteller" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="ueberschriftImFortfuehrungsnachweis" lowerBound="1" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Fortführungsnachweis/AX_FGraphik" name="verweistAuf" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeigtAufAltesFlurstueck" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeigtAufNeuesFlurstueck" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" eType="#//Fortführungsnachweis/AX_FortfuehrungsnachweisDeckblatt" eOpposite="#//Fortführungsnachweis/AX_FortfuehrungsnachweisDeckblatt/beziehtSichAuf"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_FortfuehrungsnachweisDeckblatt">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Fortführungsnachweis/AX_K_AUSGKOPF_Standard" name="ausgabekopf" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Fortführungsnachweis/AX_Auszug" name="auszugFuer" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="bekanntgabeAnBeteiligteAm" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="bemerkung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="eignungspruefungAm" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="eignungspruefungVon" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="erstelltAm" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="erstelltVon" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Fortführungsnachweis/AX_Fortfuehrungsnummer" name="fNNummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsentscheidungAm" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsentscheidungVon" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsfallNummernbereich" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsmitteilungenErzeugt" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="grundbuchmitteilungFuerFinanzamt" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="inGemarkung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="titel" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="verwaltungsaktJN" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" upperBound="-1" name="beziehtSichAuf" eType="#//Fortführungsnachweis/AX_Fortfuehrungsfall" eOpposite="#//Fortführungsnachweis/AX_Fortfuehrungsfall/@eStructuralFeatures.10"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Fortfuehrungsnummer">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemarkungsnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="land" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_K_ANSCHRIFT">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="plzOrt" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="strasseHausnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="telefon" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_K_AUSGKOPF_Standard">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Fortführungsnachweis/AX_K_ANSCHRIFT" name="anschriftDienststelle" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="artDerAusgabe" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="datumDerAusgabe" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="dienststelle" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Fortführungsnachweis/AX_Dienststellenlogo" name="dienststellenlogo" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+			<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//Fortführungsnachweis/AX_Landeswappen" name="enthaeltEWP" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+		<eClassifiers xsi:type="ecore:EClass" name="AX_Landeswappen">
+			<eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		</eClassifiers>
+	</eSubpackages>
+</ecore:EPackage>

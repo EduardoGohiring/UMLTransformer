@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Angaben zur Historie" nsPrefix="Angaben zur Historie" nsURI="http://Angaben zur Historie/1.0">
+	<eClassifiers xsi:type="ecore:EClass" name="AX_HistorischesFlurstueckOhneRaumbezug">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="nachfolgerFlurstueckskennzeichen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="vorgaengerFlurstueckskennzeichen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" eType="#//AX_HistorischesFlurstueckOhneRaumbezug" eOpposite="#//AX_HistorischesFlurstueckOhneRaumbezug/gehoertAnteiligZu"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_HistorischesFlurstueckALB">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="amtlicheFlaeche" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Buchung_HistorischesFlurstueck" name="buchung" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurnummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurstuecksfolge" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurstueckskennzeichen" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="true" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="flurstuecksnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="fortfuehrungsart" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemarkung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummerDerFortfuehrung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="nachfolgerFlurstueckskennzeichen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="objektkoordinaten" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="vorgaengerFlurstueckskennzeichen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeitpunktDerEntstehungDesBezugsflurstuecks" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_HistorischesFlurstueck">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Buchung_HistorischesFlurstueck" name="buchung" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="nachfolgerFlurstueckskennzeichen" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zeitpunktDerHistorisierung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Buchung_HistorischesFlurstueck">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Blattart_HistorischesFlurstueck" name="blattart" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsart" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsblattbezirk" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsblattkennzeichen" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="true" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="buchungsblattnummerMitBuchstabenerweiterung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummerDerBuchungsstelle" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EEnum" name="AX_Blattart_HistorischesFlurstueck">
+		<eLiterals name="Grundbuchblatt" value="1000"/>
+		<eLiterals name="Katasterblatt" value="2000"/>
+	</eClassifiers>
+</ecore:EPackage>

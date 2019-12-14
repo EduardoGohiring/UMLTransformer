@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Angaben zum Netzpunkt" nsPrefix="Angaben zum Netzpunkt" nsURI="http://Angaben zum Netzpunkt/1.0">
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Aufnahmepunkt" eSuperTypes="#//AX_Netzpunkt">
+		<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="hat" eType="#//AX_Sicherungspunkt" eOpposite="#//AX_Sicherungspunkt/gehoertZu"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EEnum" name="AX_Horizontfreiheit_Netzpunkt">
+		<eLiterals name="Uneingeschränkt" value="1000"/>
+		<eLiterals name="Eingeschränkt" value="2000"/>
+		<eLiterals name="Nicht geeignet" value="3000"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EEnum" name="AX_Marke">
+		<eLiterals name="Marke, allgemein" value="1000"/>
+		<eLiterals name="Stein" value="1100"/>
+		<eLiterals name="Stein, Grenzstein" value="1110"/>
+		<eLiterals name="Lochstein" value="1111"/>
+		<eLiterals name="Vermessungspunktstein" value="1112"/>
+		<eLiterals name="Unbehauener Feldstein" value="1120"/>
+		<eLiterals name="Gemeinde- und Waldgrenzstein" value="1130"/>
+		<eLiterals name="Gemeindegrenzstein" value="1131"/>
+		<eLiterals name="Waldgrenzstein, Forstgrenzstein" value="1132"/>
+		<eLiterals name="Kunststoffmarke" value="1140"/>
+		<eLiterals name="Landesgrenzstein" value="1160"/>
+		<eLiterals name="Stein mit Besonderheiten in Form oder Material" value="1190"/>
+		<eLiterals name="Rohr" value="1200"/>
+		<eLiterals name="Rohr mit Schutzkappe" value="1201"/>
+		<eLiterals name="Rohr mit Kopf" value="1202"/>
+		<eLiterals name="Rohr mit Bolzen, oberirdisch" value="1203"/>
+		<eLiterals name="Eisenrohr" value="1210"/>
+		<eLiterals name="Eisenrohr (mit Schutzkappe)" value="1211"/>
+		<eLiterals name="Eisenrohr (ohne Schutzkappe)" value="1212"/>
+		<eLiterals name="Kunststoffrohr" value="1220"/>
+		<eLiterals name="Kunststoffrohr (mit Schutzkappe)" value="1221"/>
+		<eLiterals name="Kunststoffrohr (ohne Schutzkappe)" value="1222"/>
+		<eLiterals name="Drainrohr" value="1230"/>
+		<eLiterals name="Rohr mit Schutzkasten" value="1240"/>
+		<eLiterals name="Zementrohr" value="1250"/>
+		<eLiterals name="Glasrohr" value="1260"/>
+		<eLiterals name="Tonrohr" value="1290"/>
+		<eLiterals name="Bolzen/Nagel" value="1300"/>
+		<eLiterals name="Bolzen" value="1310"/>
+		<eLiterals name="Adapterbolzen" value="1311"/>
+		<eLiterals name="Nagel" value="1320"/>
+		<eLiterals name="Meißelzeichen (z. B. Kreuz, Kerbe, Anker)" value="1400"/>
+		<eLiterals name="Bohrloch" value="1410"/>
+		<eLiterals name="Pfahl" value="1500"/>
+		<eLiterals name="Sonstige Marke" value="1600"/>
+		<eLiterals name="Marke in Schutzbehälter" value="1610"/>
+		<eLiterals name="Flasche" value="1620"/>
+		<eLiterals name="Platte" value="1630"/>
+		<eLiterals name="Klinkerplatte" value="1631"/>
+		<eLiterals name="Granitplatte" value="1632"/>
+		<eLiterals name="Platte mit Loch" value="1635"/>
+		<eLiterals name="Hohlziegel" value="1640"/>
+		<eLiterals name="Klebemarke" value="1650"/>
+		<eLiterals name="Schlagmarke" value="1655"/>
+		<eLiterals name="Kanaldeckel (Kreuz des Gütesiegels auf Rand)" value="1660"/>
+		<eLiterals name="Marke besonderer Ausführung" value="1670"/>
+		<eLiterals name="Punkt dauerhaft und gut erkennbar festgelegt" value="1700"/>
+		<eLiterals name="Punkt der baulichen Anlage" value="1710"/>
+		<eLiterals name="Sockel (roh)" value="1711"/>
+		<eLiterals name="Sockel (verputzt)" value="1712"/>
+		<eLiterals name="Mauerecke (roh)" value="1713"/>
+		<eLiterals name="Mauerecke (verputzt)" value="1714"/>
+		<eLiterals name="Grenzsäule" value="1720"/>
+		<eLiterals name="Pfeiler" value="1800"/>
+		<eLiterals name="Kegel" value="1820"/>
+		<eLiterals name="Festlegung 1. Ordnung, Kopf 30x30 cm, Bezugspunkt Platte" value="2100"/>
+		<eLiterals name="Festlegung 1. Ordnung, Bezugspunkt Kopf 30x30 cm" value="2101"/>
+		<eLiterals name="Festlegung STN 1. Ordnung, Pfeiler-kopf 30x30 cm, Bezugspunkt Platte 60x60 cm, Steinwürfel, Tonkegel" value="2102"/>
+		<eLiterals name="Festlegung 2. bis 5. Ordnung, Kopf 16x16 oder 12x12 cm, Bezugspunkt Platte 30x30 cm" value="2110"/>
+		<eLiterals name="Festlegung 3. bis 5. Ordnung, Bezugspunkt Kopf 16x16 oder 12x12 cm, Platte 30x30 cm" value="2111"/>
+		<eLiterals name="Festlegung 2. bis 4. Ordnung, Kopf 20x20 cm, Bezugspunkt Platte " value="2120"/>
+		<eLiterals name="Festlegung 2. bis 4. Ordnung, Bezugspunkt Kopf 20x20 cm, " value="2121"/>
+		<eLiterals name="Festlegung 2. bis 4. Ordnung, Kopf 25x25 cm, Bezugspunkt Platte " value="2130"/>
+		<eLiterals name="Festlegung 2. bis 4. Ordnung, Bezugspunkt Kopf 25x25 cm, " value="2131"/>
+		<eLiterals name="Festlegung STN 3. und 5. Ordnung, Pfeilerkopf 16x16 cm, Bezugspunkt Platte 30x30-40x40 cm" value="2132"/>
+		<eLiterals name="Festlegung STN 3. und 5. Ordnung, Pfeilerkopf 16x16 cm, Bezugspunkt Bolzen oder Rotgußkappe im Fels" value="2133"/>
+		<eLiterals name="Festlegung TP-Feld, Pfeilerkopf 25x25 cm, Bezugspunkt Platte 35x35 cm" value="2134"/>
+		<eLiterals name="Festlegung RBP-Feld, Pfeilerkopf 16x16 cm mit Gravur &quot;TP&quot; und &quot;Dreieck&quot;, Bezugspunkt Platte 30x30-35x35 cm" value="2135"/>
+		<eLiterals name="Plattformbolzen mit Aufschrift TP" value="2140"/>
+		<eLiterals name="Turmbolzen mit Aufschrift TP" value="2150"/>
+		<eLiterals name="Leuchtschraube oder -bolzen" value="2160"/>
+		<eLiterals name="Schraube (vertikal)" value="2161"/>
+		<eLiterals name="Messingmarke oder Messingbolzen" value="2162"/>
+		<eLiterals name="Keramikbolzen, oberirdisch" value="2163"/>
+		<eLiterals name="Bolzen im Fels, unterirdisch" value="2164"/>
+		<eLiterals name="Rotgusskappe im Fels, unterirdisch" value="2165"/>
+		<eLiterals name="Messingbolzen (gewölbt), Aufschrift TP und Dreieck" value="2166"/>
+		<eLiterals name="Turmbolzen, Festlegungsbolzen oder sonstiger Bolzen, keine weiteren Angaben bekannt oder gespeichert" value="2170"/>
+		<eLiterals name="Festlegung 2. Ordnung, Kopf 16x16 cm oder 12x12 cm, Bezugspunkt Platte 60x60 cm" value="2180"/>
+		<eLiterals name="Festlegung 2. Ordnung, Bezugspunkt Kopf 16x16 cm oder 12x12 cm, Platte 60x60 cm" value="2181"/>
+		<eLiterals name="Festlegung 2. bis 3. Ordnung, Kopf 16x16 cm, Bezugspunkt Platte 40x40 cm" value="2190"/>
+		<eLiterals name="Festlegung 2. bis 3. Ordnung, Bezugspunkt Kopf 16x16 cm, Platte 40x40 cm" value="2191"/>
+		<eLiterals name="Bergpfeiler ca. 60 cm lang, ohne Platte, Kopf 12x12 cm" value="2192"/>
+		<eLiterals name="Pfeiler mit Aufschrift AP" value="2200"/>
+		<eLiterals name="Pfeiler mit Aufschrift AP mit Platte, Bezugspunkt Kopf" value="2201"/>
+		<eLiterals name="Plattformbolzen mit der Aufschrift AP" value="2210"/>
+		<eLiterals name="Turmbolzen mit der Aufschrift AP" value="2220"/>
+		<eLiterals name="Festlegung der Wasserstraßenverwaltung, Stein mit Rohr und Stehbolzen, Typ 1" value="2230"/>
+		<eLiterals name="Festlegung der Wasserstraßenverwaltung, Stein mit Rohr und Stehbolzen, Typ 2" value="2240"/>
+		<eLiterals name="Festlegung der Wasserstraßenverwaltung, Stein mit Rohr und Stehbolzen, Typ 3" value="2250"/>
+		<eLiterals name="Festlegung Sachsen-Anhalt SANREF (unterirdischer Granitpfeiler mit Kopfbolzen)" value="2260"/>
+		<eLiterals name="3D-Bolzen einzementiert in Kopffläche einer Festlegung STN 1. Ordnung" value="2261"/>
+		<eLiterals name="3D-Bolzen in Kopffläche einer Festle-gung TP-Feld" value="2262"/>
+		<eLiterals name="3D-Bolzen in Kopffläche einer AF Sachsen 3. Ordnung" value="2263"/>
+		<eLiterals name="3D-Bolzen in Kopffläche einer AF Sachsen 5. Ordnung" value="2264"/>
+		<eLiterals name="3D-Bolzen in Granitplatte unter Schutzkasten oder Kunststoff- Schutz-rohr" value="2265"/>
+		<eLiterals name="Sondervermarkung, einbetonierter Granitpfeiler 40x40x90 cm mit Zentrumsbolzen in Kopffläche" value="2266"/>
+		<eLiterals name="Alte Festlegung der Kgl. Generalkommission und von Kurhessen, Rillenstein" value="2300"/>
+		<eLiterals name="Alte Festlegung von Nassau, exz., ehemals 2.O." value="2310"/>
+		<eLiterals name="Alte Festlegung von Nassau, exz., ehemals 3.O." value="2320"/>
+		<eLiterals name="Alte Festlegung von Hessen-Darmstadt, 3.O." value="2330"/>
+		<eLiterals name="Alte Festlegung von Hessen-Darmstadt, 4.O." value="2340"/>
+		<eLiterals name="Alte Festlegung von Hessen-Darmstadt, 3.O. exz." value="2350"/>
+		<eLiterals name="Alte Festlegung von Hessen-Darmstadt, 4.O.exz." value="2360"/>
+		<eLiterals name="Alte Festlegung von Westfalen, 2. O. exz." value="2370"/>
+		<eLiterals name="Alte Festlegung von Württemberg, exz." value="2400"/>
+		<eLiterals name="Alte Festlegung von Württemberg" value="2410"/>
+		<eLiterals name="Alte Festlegung von Mecklenburg, ehemals 1. bis 2. Ordnung" value="2420"/>
+		<eLiterals name="Alte Festlegung von Mecklenburg, ehemals 2. bis 3. Ordnung" value="2430"/>
+		<eLiterals name="Alte Festlegung von Mecklenburg, ehemals 4. Ordnung" value="2440"/>
+		<eLiterals name="Alte Festlegung Sachsen, 1. und 2. Ordnung (Nagelsche Säule)" value="2450"/>
+		<eLiterals name="Alte Festlegung Sachsen, 3. Ordnung, Pfeilerkopf 35x35 cm mit zentrischer Messingmarke" value="2460"/>
+		<eLiterals name="Alte Festlegung Sachsen, 5. Ordnung, Pfeilerkopf 25x25 cm mit zentrischer Messingmarke" value="2470"/>
+		<eLiterals name="Alte Festlegung von Baden, exz., Typ 1" value="2500"/>
+		<eLiterals name="Alte Festlegung von Baden, exz., Typ 2" value="2510"/>
+		<eLiterals name="Alte Festlegung von Baden" value="2540"/>
+		<eLiterals name="Rohr mit Schutzkasten, Grundständer" value="2550"/>
+		<eLiterals name="Grundständer mit Messingmarke unter Schutzkasten" value="2551"/>
+		<eLiterals name="Marke (allgemein) unter Schutzkasten" value="2552"/>
+		<eLiterals name="Platte unter Schutzkasten" value="2553"/>
+		<eLiterals name="Rohr mit Verschlusskappe und aufgesetztem Lochstein" value="2560"/>
+		<eLiterals name="Alte Festlegung in Bayern, exz." value="2600"/>
+		<eLiterals name="gebohrter Granitstein (Bezugspunkt) über Tonrohr" value="2601"/>
+		<eLiterals name="gebohrter Granitstein über Tonrohr (Bezugspunkt)" value="2602"/>
+		<eLiterals name="gebohrter Granitstein (Bezugspunkt) über Platte" value="2603"/>
+		<eLiterals name="gebohrter Granitstein über Platte (Bezugspunkt)" value="2604"/>
+		<eLiterals name="gebohrter Granitstein (Bezugspunkt) über Eisenrohr" value="2605"/>
+		<eLiterals name="gebohrter Granitstein über Eisenrohr (Bezugspunkt)" value="2606"/>
+		<eLiterals name="Betonstein (Bezugspunkt) über Platte" value="2607"/>
+		<eLiterals name="Betonstein über Platte (Bezugspunkt)" value="2608"/>
+		<eLiterals name="Betonstein mit durchgehendem Bohrloch (Einschaltpunkt-Stein in Bayern) " value="2609"/>
+		<eLiterals name="Alte Festlegung in Bayern" value="2610"/>
+		<eLiterals name="KT-Stein der österreichischen Katastraltriangulation" value="2611"/>
+		<eLiterals name="Stein (Bezugspunkt) über Platte" value="2612"/>
+		<eLiterals name="Stein über Platte (Bezugspunkt)" value="2613"/>
+		<eLiterals name="Stein (Bezugspunkt) über Tonrohr" value="2614"/>
+		<eLiterals name="Stein über Tonrohr (Bezugspunkt)" value="2615"/>
+		<eLiterals name="Stein mit Eisenrohr" value="2616"/>
+		<eLiterals name="Alte Festlegung in Sachsen-Coburg, 3.O." value="2620"/>
+		<eLiterals name="Alte Festlegung in Sachsen-Coburg, 4.O." value="2630"/>
+		<eLiterals name="Alte Festlegung in Bayern und der Pfalz, HDNP-Stein" value="2640"/>
+		<eLiterals name="Festlegung MP-Pfeiler" value="2700"/>
+		<eLiterals name="Festlegung Orientierungspunkt" value="2710"/>
+		<eLiterals name="Steinpfeiler" value="2750"/>
+		<eLiterals name="Betonpfeiler" value="2760"/>
+		<eLiterals name="Kreuz (gemeisselt)" value="2770"/>
+		<eLiterals name="Knopf" value="2800"/>
+		<eLiterals name="Mitte" value="2810"/>
+		<eLiterals name="Spitze" value="2820"/>
+		<eLiterals name="Kreuz (Mitte)" value="2830"/>
+		<eLiterals name="Helmstange" value="2840"/>
+		<eLiterals name="Fahnenstange" value="2850"/>
+		<eLiterals name="Wetterstange" value="2860"/>
+		<eLiterals name="Blitzableiter" value="2870"/>
+		<eLiterals name="Antenne" value="2880"/>
+		<eLiterals name="Rohrstange " value="2890"/>
+		<eLiterals name="Platte, unterirdisch" value="2900"/>
+		<eLiterals name="Platte einbetoniert mit zentrischem Messingbolzen" value="2901"/>
+		<eLiterals name="Platte einbetoniert mit zentrischem Bohrloch" value="2902"/>
+		<eLiterals name="Platte einbetoniert mit zentrischer Keramikmarke" value="2903"/>
+		<eLiterals name="Platte einbetoniert mit zentrischer Messingmarke" value="2904"/>
+		<eLiterals name="Steinwürfel, unterirdisch" value="2910"/>
+		<eLiterals name="Steinplatte, unterirdisch" value="2920"/>
+		<eLiterals name="Platte, unterirdisch, 60x60 cm" value="2930"/>
+		<eLiterals name="Platte, unterirdisch, 30x30 cm" value="2940"/>
+		<eLiterals name="Platte, unterirdisch, mit Stehniet" value="2950"/>
+		<eLiterals name="Platte unterirdisch mit Kopfbolzen" value="2951"/>
+		<eLiterals name="Platte, unterirdisch, mit Schutzrohr" value="2960"/>
+		<eLiterals name="Pfeiler 30x30x90 cm, mit Stehniete" value="2970"/>
+		<eLiterals name="Platte, mit Bolzen, unterirdisch, im Schacht" value="2980"/>
+		<eLiterals name="Unterirdische Festlegung (des RfL)" value="3000"/>
+		<eLiterals name="Unterirdische Festlegung Sonderform" value="3010"/>
+		<eLiterals name="Unterirdischer Rammpfahl" value="3020"/>
+		<eLiterals name="Unterirdischer Pfeilerbolzen" value="3030"/>
+		<eLiterals name="Unterirdischer Bolzen" value="3040"/>
+		<eLiterals name="Hamburger Flachpunkt" value="3050"/>
+		<eLiterals name="Unterirdische Säule" value="3060"/>
+		<eLiterals name="Unterirdischer Rammstab" value="3070"/>
+		<eLiterals name="Rohrfestpunkt" value="3100"/>
+		<eLiterals name="Rohrfestpunkt, Hamburger Bauart" value="3110"/>
+		<eLiterals name="Rohrfestpunkt, Oldenburger Bauart" value="3120"/>
+		<eLiterals name="Rohrfestpunkt, Eider Bauart" value="3130"/>
+		<eLiterals name="Rohrfestpunkt Nordrhein-Westfalen" value="3140"/>
+		<eLiterals name="Rohrfestpunkt Nebenpunkt, flach gegründet" value="3150"/>
+		<eLiterals name="Rohrfestpunkt, Celler Bauart" value="3160"/>
+		<eLiterals name="Unterirdische Festlegung im Boden" value="3170"/>
+		<eLiterals name="Unterirdische Festlegung im Schacht" value="3180"/>
+		<eLiterals name="kleine unterirdische Festlegung" value="3190"/>
+		<eLiterals name="Mauerbolzen" value="3200"/>
+		<eLiterals name="Mauerbolzen, horizontal eingebracht (mit Inschrift)" value="3210"/>
+		<eLiterals name="Mauerbolzen, vertikal eingebracht (mit Inschrift)" value="3220"/>
+		<eLiterals name="Höhenmarke (des RfL)" value="3230"/>
+		<eLiterals name="Kugelbolzen" value="3240"/>
+		<eLiterals name="Tonnenbolzen" value="3250"/>
+		<eLiterals name="Landeshöhenbolzen" value="3260"/>
+		<eLiterals name="Stehbolzen bzw. Bolzen vertikal" value="3270"/>
+		<eLiterals name="Stehniete" value="3280"/>
+		<eLiterals name="sonstiger horizontaler Bolzen" value="3290"/>
+		<eLiterals name="Pfeilerbolzen" value="3300"/>
+		<eLiterals name="Pfeilerbolzen, Bezugspunkt Pfeileroberfläche" value="3301"/>
+		<eLiterals name="Pfeilerbolzen, Naturstein, Bolzen horizontal" value="3310"/>
+		<eLiterals name="Pfeilerbolzen, Naturstein, Bolzen horizontal, Bezugspunkt Pfeileroberfläche" value="3311"/>
+		<eLiterals name="Pfeilerbolzen, Naturstein, Bolzen vertikal" value="3320"/>
+		<eLiterals name="Pfeilerbolzen, Beton, Bolzen, horizontal" value="3330"/>
+		<eLiterals name="Pfeilerbolzen, Beton, Bolzen horizontal, Bezugspunkt Pfeileroberfläche" value="3331"/>
+		<eLiterals name="Pfeilerbolzen, Beton, Bolzen vertikal" value="3340"/>
+		<eLiterals name="Pfeilerniete, Naturstein, Niete vertikal" value="3350"/>
+		<eLiterals name="Rammpfahl" value="3400"/>
+		<eLiterals name="Rammpfahl, Bolzen horizontal" value="3410"/>
+		<eLiterals name="Rammpfahl, Bolzen vertikal" value="3420"/>
+		<eLiterals name="Schraubpfahl" value="3810"/>
+		<eLiterals name="Hektometerstein" value="3820"/>
+		<eLiterals name="Markstein" value="3830"/>
+		<eLiterals name="Schraubbolzen" value="3840"/>
+		<eLiterals name="Schraubeisen" value="3845"/>
+		<eLiterals name="Lochmarke/-bolzen (ohne Höhentafel)" value="3850"/>
+		<eLiterals name="Lochmarke/-bolzen mit Höhentafel" value="3860"/>
+		<eLiterals name="Festpunktstein" value="3870"/>
+		<eLiterals name="Eichpfahl" value="3880"/>
+		<eLiterals name="Gravimeterplatte 80 x 80 oder 60 x 60 cm" value="4100"/>
+		<eLiterals name="Gravimeternagel" value="4110"/>
+		<eLiterals name="Gravimeterpfeiler 20 x 20 x 100 cm" value="4120"/>
+		<eLiterals name="Gravimeterpfeiler 16 x 16 x 60 cm" value="4130"/>
+		<eLiterals name="Messingscheibe mit zentrischer Wölbung (Durchm. 8 cm)" value="4140"/>
+		<eLiterals name="Stehniete, Messing (Durchmesser 3 cm, Aufschrift SFP) " value="4150"/>
+		<eLiterals name="Messplakette, Aufschrift" value="4160"/>
+		<eLiterals name="Gewindebolzen (höchste Stelle, Mitte) auf Metallplatte (Betonpfeiler mit Fundament im festen Erdboden)" value="5100"/>
+		<eLiterals name="Oberfläche der Metallplatte (höchste Stelle, Mitte) (Betonpfeiler mit Fundament im festen Erdboden)" value="5150"/>
+		<eLiterals name="Gewindebolzen (höchste Stelle, Mitte) auf Metallplatte (Gemauerter Pfeiler auf einem Bauwerk)" value="5200"/>
+		<eLiterals name="Oberfläche der Metallplatte (höchste Stelle, Mitte) (Gemauerter Pfeiler auf einem Bauwerk)" value="5250"/>
+		<eLiterals name="Gewindebolzen (höchste Stelle, Mitte) auf Metallplatte (Stahlpfeiler auf einem Bauwerk)" value="5300"/>
+		<eLiterals name="Oberfläche der Metallplatte (höchste Stelle, Mitte) (Stahlpfeiler auf einem Bauwerk)" value="5350"/>
+		<eLiterals name="Gewindebolzen (höchste Stelle, Mitte) auf Metallplatte (Seitlich befestigtes Stahlrohr am Bauwerk)" value="5400"/>
+		<eLiterals name="Oberfläche der Metallplatte (höchste Stelle, Mitte) (Seitlich befestigtes Stahlrohr am Bauwerk)" value="5450"/>
+		<eLiterals name="Gewindebolzen (höchste Stelle, Mitte) auf Metallplatte (Antennenträger)" value="5500"/>
+		<eLiterals name="Oberfläche der Metallplatte (höchste Stelle, Mitte) (Antennenträger)" value="5550"/>
+		<eLiterals name="GNSS-Antennenhalterung, Oberfläche Platte (Loch) (SL)" value="5900"/>
+		<eLiterals name="Marke unter 'Bemerkung' näher definiert" value="9000"/>
+		<eLiterals name="Ohne Marke" value="9500"/>
+		<eLiterals name="Abmarkung zeitweilig ausgesetzt" value="9600"/>
+		<eLiterals name="Nach Quellenlage nicht zu spezifizieren" value="9998"/>
+		<eLiterals name="Sonstiges" value="9999"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Netzpunkt">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Horizontfreiheit_Netzpunkt" name="horizontfreiheit" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="punktkennung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="relativeHoehe" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="sonstigeEigenschaft" lowerBound="0" upperBound="-1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Marke" name="vermarkung_Marke" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zustaendigeStelle" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Sicherungspunkt" eSuperTypes="#//AX_Netzpunkt">
+		<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="gehoertZu" eType="#//AX_Aufnahmepunkt" eOpposite="#//AX_Aufnahmepunkt/hat"/>
+		<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="beziehtSichAuf" eType="#//AX_SonstigerVermessungspunkt" eOpposite="#//AX_SonstigerVermessungspunkt/hat"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_SonstigerVermessungspunkt" eSuperTypes="#//AX_Netzpunkt">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="art" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" upperBound="-1" name="hat" eType="#//AX_Sicherungspunkt" eOpposite="#//AX_Sicherungspunkt/beziehtSichAuf"/>
+	</eClassifiers>
+</ecore:EPackage>

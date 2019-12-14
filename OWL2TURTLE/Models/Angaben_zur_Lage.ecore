@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Angaben zur Lage" nsPrefix="Angaben zur Lage" nsURI="http://Angaben zur Lage/1.0">
+	<eClassifiers xsi:type="ecore:EClass" name="AX_GeoreferenzierteGebaeudeadresse">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="adressierungszusatz" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="datensatznummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="gemeinde" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="hausnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="kreis" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="land" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="ortsteil" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Post" name="postalischeAdresse" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Qualitaet_Hauskoordinate" name="qualitaetsangaben" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="regierungsbezirk" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="strassenschluessel" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" lowerBound="1" name="hatAuch" eType="#//AX_LagebezeichnungMitHausnummer" eOpposite="#//AX_LagebezeichnungMitHausnummer/beziehtSichAuchAuf"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Lage">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" eType="#//AX_Lagebezeichnung" name="lagebezeichnung" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Lagebezeichnung">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="unverschluesselt" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="verschluesselt" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_LagebezeichnungMitHausnummer" eSuperTypes="#//AX_Lage">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="hausnummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="ortsteil" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EReference" ordered="false" name="beziehtSichAuchAuf" eType="#//AX_GeoreferenzierteGebaeudeadresse" eOpposite="#//AX_GeoreferenzierteGebaeudeadresse/hatAuch"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_LagebezeichnungMitPseudonummer" eSuperTypes="#//AX_Lage">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="laufendeNummer" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="ortsteil" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="pseudonummer" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_LagebezeichnungOhneHausnummer" eSuperTypes="#//AX_Lage">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="ortsteil" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zusatzZurLagebezeichnung" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EClass" name="AX_Post">
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="ortsnamePost" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="postleitzahl" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="strassenname" lowerBound="1" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+		<eStructuralFeatures xsi:type="ecore:EAttribute" name="zusatzOrtsname" lowerBound="0" upperBound="1" defaultValueLiteral="" transient="false" derived="false" ordered="false" changeable="true"/>
+	</eClassifiers>
+	<eClassifiers xsi:type="ecore:EEnum" name="AX_Qualitaet_Hauskoordinate">
+		<eLiterals name="gebaeudeumring (A)" value="1000"/>
+		<eLiterals name="innerhalbFlurstueck (B)" value="2000"/>
+		<eLiterals name="interpoliert (C)" value="3000"/>
+	</eClassifiers>
+</ecore:EPackage>

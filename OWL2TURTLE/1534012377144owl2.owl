@@ -1,0 +1,140 @@
+Prefix(:=<http://example.com/owl/UMLClassDiagram/>)
+Prefix(xsd:<=http://www.w3.org/2001/XMLSchema#>)
+Prefix(owl:<=http://www.w3.org/2002/owl2#>)
+Ontology(<=http://example.com/owl/UMLClassDiagram>)
+
+DatatypeDefinition(
+:AX_Funktion_Lagefestpunkt)
+DataOneOf("Zentrum"^^xsd:String "Exzentrum, Stationspunkt, Nebenstand"^^xsd:String "Zwillingspunkt, Orientierungspunkt"^^xsd:String "Versicherungspunkt"^^xsd:String ))
+Declaration(Class(:AX_Funktion_Lagefestpunkt))
+
+DatatypeDefinition(
+:AX_Funktion_Referenzstationspunkt)
+DataOneOf("Zentrum"^^xsd:String "Exzentrum"^^xsd:String ))
+Declaration(Class(:AX_Funktion_Referenzstationspunkt))
+
+DatatypeDefinition(
+:AX_Funktion_Schwerefestpunkt)
+DataOneOf("Zentrum"^^xsd:String "Exzentrum"^^xsd:String ))
+Declaration(Class(:AX_Funktion_Schwerefestpunkt))
+
+DatatypeDefinition(
+:AX_GNSSTauglichkeit)
+DataOneOf("weitgehende Horizontfreiheit, Mehrwegeffekte nicht wahrscheinlich"^^xsd:String "sehr gute Satelliten-Empfangseigenschaften nachgewiesen"^^xsd:String "eingeschränkte Horizontfreiheit "^^xsd:String "eingeschränkte Horizontfreiheit, Tauglichkeit nachgewiesen"^^xsd:String "Mehrwegeffekte möglich"^^xsd:String "Mehrwegeffekte nachgewiesen"^^xsd:String "Festpunkt nicht geeignet für Satellitenmessverfahren"^^xsd:String "GNSS-Tauglichkeit nicht untersucht"^^xsd:String ))
+Declaration(Class(:AX_GNSSTauglichkeit))
+
+DatatypeDefinition(
+:AX_Klassifikation_Hierarchiestufe3D_Lagefestpunkt)
+DataOneOf("Hierarchiestufe A"^^xsd:String "Hierarchiestufe B"^^xsd:String "Hierarchiestufe C"^^xsd:String "Hierarchiestufe D"^^xsd:String "Hierarchiestufe E"^^xsd:String "Nach Quellenlage nicht zu spezifizieren"^^xsd:String ))
+Declaration(Class(:AX_Klassifikation_Hierarchiestufe3D_Lagefestpunkt))
+
+DatatypeDefinition(
+:AX_Klassifikation_Ordnung_Lagefestpunkt)
+DataOneOf("TP (1) - Hauptdreieckspunkt, Zwischenpunkt 1. Ordnung"^^xsd:String "TP (2) - Trigonometrischer Punkt 2. Ordnung"^^xsd:String "TP (3) - Trigonometrischer Punkt 3. Ordnung"^^xsd:String "TP (4) - Trigonometrischer Punkt 4. Ordnung"^^xsd:String "TP (5) - Trigonometrischer Punkt 5. Ordnung"^^xsd:String "ÜL - Übergeordneter Lagefestpunkt (Berlin)"^^xsd:String "LFP, der nur eine interne Bedeutung hat"^^xsd:String "Nach Quellenlage nicht zu spezifieren"^^xsd:String "Sonstiges"^^xsd:String ))
+Declaration(Class(:AX_Klassifikation_Ordnung_Lagefestpunkt))
+
+DatatypeDefinition(
+:AX_Klassifikation_Wertigkeit_Lagefestpunkt)
+DataOneOf("Fundamentalpunkt (Punkt auf dem die Position (3D), die schwerebezogene Höhe und die Schwere hoch genau bestimmt worden sind)"^^xsd:String "Übergeordneter Festpunkt"^^xsd:String "Geodätischer Grundnetzpunkt"^^xsd:String "Gebrauchsfestpunkt"^^xsd:String "Untergeordneter Festpunkt"^^xsd:String "Nach Quellenlage nicht zu spezifizieren"^^xsd:String "Sonstiges"^^xsd:String ))
+Declaration(Class(:AX_Klassifikation_Wertigkeit_Lagefestpunkt))
+
+DatatypeDefinition(
+:AX_Ordnung_Hoehenfestpunkt)
+DataOneOf("NivP(1) - Haupthöhenpunkt, Zwischenlinienpunkt 1.Ordnung"^^xsd:String "NivP(1) - Netzverdichtung GPS (Niedersachsen)"^^xsd:String "NivP(2) - Nivellementpunkt 2. Ordnung"^^xsd:String "NivP(3) - Nivellementpunkt 3. Ordnung"^^xsd:String "NivP(3) - nivellitisch bestimmter Bodenpunkt für Referenzstation"^^xsd:String "NivP(4) - Nivellementpunkt 4. Ordnung"^^xsd:String "ÜH - Übergeordneter Höhenfestpunkt (Berlin)"^^xsd:String "Höhenfestpunkt, der nur eine interne Bedeutung hat"^^xsd:String "Nach Quellenlage nicht zu spezifizieren"^^xsd:String ))
+Declaration(Class(:AX_Ordnung_Hoehenfestpunkt))
+
+DatatypeDefinition(
+:AX_Ordnung_Schwerefestpunkt)
+DataOneOf("SFP(0) - Schweregrundnetzpunkt"^^xsd:String "SFP(1) - Schwerefestpunkt 1.Ordnung, Hauptschwerenetzpunkt"^^xsd:String "SFP(2) - Schwerefestpunkt 2.Ordnung"^^xsd:String "SFP(3) - Schwerefestpunkt 3.Ordnung"^^xsd:String "SFP(4) - Schwerefestpunkt 4. Ordnung"^^xsd:String "SFP, der nur eine interne Bedeutung hat"^^xsd:String "nach Quellenlage nicht zu spezifizieren"^^xsd:String ))
+Declaration(Class(:AX_Ordnung_Schwerefestpunkt))
+
+DatatypeDefinition(
+:AX_Punktstabilitaet)
+DataOneOf("sehr gut"^^xsd:String "gut"^^xsd:String "befriedigend"^^xsd:String "ausreichend"^^xsd:String "mangelhaft (ohne Nennung eines Grundes)"^^xsd:String "mangelhaft (Bergsenkungsgebiet)"^^xsd:String "mangelhaft (in rutschgefährdeter Hanglage)"^^xsd:String "mangelhaft (sehr nahe an Gewässer)"^^xsd:String "mangelhaft (instabiler Untergrund)"^^xsd:String "aus Wiederholungsmessungen nachgewiesene Stabilität der Vermarkung"^^xsd:String "mangelhaft"^^xsd:String "Stabilität der Vermarkung nicht untersucht"^^xsd:String ))
+Declaration(Class(:AX_Punktstabilitaet))
+
+DatatypeDefinition(
+:AX_Punktstabilitaet_Hoehenfestpunkt_GeologischeStabilitaet)
+DataOneOf("sehr gute geologische Stabilität"^^xsd:String "gute geologische Stabilität"^^xsd:String "befriedigende geologische Stabilität"^^xsd:String "ausreichende geologische Stabilität"^^xsd:String "mangelhafte geologische Stabilität"^^xsd:String "geologische Stabilität nicht untersucht"^^xsd:String ))
+Declaration(Class(:AX_Punktstabilitaet_Hoehenfestpunkt_GeologischeStabilitaet))
+
+DatatypeDefinition(
+:AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserschwankung)
+DataOneOf("sehr geringe Grundwasserschwankung (kleiner gleich 0,5 m)"^^xsd:String "geringe Grundwasserschwankung (groesser 0,5 m und kleiner gleich 2 m)"^^xsd:String "mäßige Grundwasserschwankung (groesser 2 m und kleiner gleich 5 m)"^^xsd:String "starke Grundwasserschwankung (groesser 5m und kleiner gleich 10 m)"^^xsd:String "sehr starke Grundwasserschwankung (groesser 10 m)"^^xsd:String "Grundwasserschwankung nicht ermittelt"^^xsd:String ))
+Declaration(Class(:AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserschwankung))
+
+DatatypeDefinition(
+:AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserstand)
+DataOneOf("Grundwasserstand sehr tief (groesser 10 m)"^^xsd:String "Grundwasserstand tief (groesser 5 m und kleiner gleich 10 m)"^^xsd:String "Grundwasserstand normal (groesser 2 m und kleiner gleich 5 m)"^^xsd:String "Grundwasserstand hoch (groesser 0,5 m und kleiner gleich 2 m)"^^xsd:String "Grundwasserstand sehr hoch (kleiner gleich 0,5 m)"^^xsd:String "Grundwasserstand abgesenkt"^^xsd:String "Grundwasserstand nicht ermittelt"^^xsd:String ))
+Declaration(Class(:AX_Punktstabilitaet_Hoehenfestpunkt_Grundwasserstand))
+
+DatatypeDefinition(
+:AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesBaugrundes)
+DataOneOf("sehr gute Stabilität des Baugrundes"^^xsd:String "gute Stabilität des Baugrundes"^^xsd:String "befriedigende Güte des Baugrundes"^^xsd:String "ausreichende Güte des Baugrundes"^^xsd:String "mangelhafte Güte des Baugrundes"^^xsd:String "Güte des Baugrundes nicht untersucht"^^xsd:String ))
+Declaration(Class(:AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesBaugrundes))
+
+DatatypeDefinition(
+:AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesVermarkungstraegers)
+DataOneOf("sehr gut"^^xsd:String "gut"^^xsd:String "befriedigend"^^xsd:String "ausreichend"^^xsd:String "unzureichend"^^xsd:String "nicht bekannt"^^xsd:String ))
+Declaration(Class(:AX_Punktstabilitaet_Hoehenfestpunkt_GueteDesVermarkungstraegers))
+
+DatatypeDefinition(
+:AX_Punktstabilitaet_Hoehenfestpunkt_HoehenstabilitaetAusWiederholungsmessungen)
+DataOneOf("sehr gut"^^xsd:String "gut"^^xsd:String "befriedigend"^^xsd:String "bedenklich"^^xsd:String "unzureichend"^^xsd:String "nicht bekannt"^^xsd:String ))
+Declaration(Class(:AX_Punktstabilitaet_Hoehenfestpunkt_HoehenstabilitaetAusWiederholungsmessungen))
+
+DatatypeDefinition(
+:AX_Punktstabilitaet_Hoehenfestpunkt_TopographieUndUmwelt)
+DataOneOf("keine Topographie- und Umwelteinflüsse"^^xsd:String "geringe Topographie- und Umwelteinflüsse"^^xsd:String "mäßige Topographie- und Umwelteinflüsse"^^xsd:String "starke Topographie- und Umwelteinflüsse"^^xsd:String "sehr starke Topographie- und Umwelteinflüsse"^^xsd:String "Topographie- und Umwelteinflüsse nicht untersucht"^^xsd:String ))
+Declaration(Class(:AX_Punktstabilitaet_Hoehenfestpunkt_TopographieUndUmwelt))
+
+DatatypeDefinition(
+:AX_Punktstabilitaet_Hoehenfestpunkt_VermuteteHoehenstabilitaet)
+DataOneOf("sehr gut"^^xsd:String "gut"^^xsd:String "befriedigend"^^xsd:String "ausreichend"^^xsd:String "mangelhaft"^^xsd:String "nicht bekannt"^^xsd:String ))
+Declaration(Class(:AX_Punktstabilitaet_Hoehenfestpunkt_VermuteteHoehenstabilitaet))
+
+DatatypeDefinition(
+:AX_Skizzenart_Skizze)
+DataOneOf("Lage-/Einmessungsskizze/Ansicht für die Standardausgabe"^^xsd:String "sonstige Lageskizze"^^xsd:String "sonstige Einmessungsskizze"^^xsd:String "sonstige Ansichtszeichnung oder Foto"^^xsd:String "Randzeichnung"^^xsd:String "Ausschnitt aus der Punktübersicht"^^xsd:String "Luftbildausschnitt mit Punkteintrag"^^xsd:String "Diagramm, Tabelle"^^xsd:String ))
+Declaration(Class(:AX_Skizzenart_Skizze))
+EquivalentClasses(:AX_GNSSEmpfaenger
+ObjectUnionOf()
+):AX_GNSSEmpfaenger)EquivalentClasses(:AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile
+ObjectUnionOf()
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile)EquivalentClasses(:AX_Hoehenfestpunkt
+ObjectUnionOf( :AX_Festpunkt)
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt)EquivalentClasses(:AX_Lagefestpunkt
+ObjectUnionOf( :AX_Festpunkt)
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt)EquivalentClasses(:AX_Punktstabilitaet_Hoehenfestpunkt
+ObjectUnionOf()
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt)EquivalentClasses(:AX_Referenzstationspunkt
+ObjectUnionOf( :AX_Festpunkt)
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt):AX_Referenzstationspunkt:AX_Festpunkt)EquivalentClasses(:AX_Festpunkt
+ObjectUnionOf()
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt):AX_Referenzstationspunkt:AX_Festpunkt):AX_Festpunkt)EquivalentClasses(:AX_DQFestpunkt
+ObjectUnionOf()
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt):AX_Referenzstationspunkt:AX_Festpunkt):AX_Festpunkt):AX_DQFestpunkt)EquivalentClasses(:AX_Phasenzentrumsvariation_Referenzstationspunkt
+ObjectUnionOf()
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt):AX_Referenzstationspunkt:AX_Festpunkt):AX_Festpunkt):AX_DQFestpunkt):AX_Phasenzentrumsvariation_Referenzstationspunkt)EquivalentClasses(:AX_Pfeilerhoehe_Lagefestpunkt
+ObjectUnionOf()
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt):AX_Referenzstationspunkt:AX_Festpunkt):AX_Festpunkt):AX_DQFestpunkt):AX_Phasenzentrumsvariation_Referenzstationspunkt):AX_Pfeilerhoehe_Lagefestpunkt)EquivalentClasses(:AX_Skizze
+ObjectUnionOf()
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt):AX_Referenzstationspunkt:AX_Festpunkt):AX_Festpunkt):AX_DQFestpunkt):AX_Phasenzentrumsvariation_Referenzstationspunkt):AX_Pfeilerhoehe_Lagefestpunkt):AX_Skizze)EquivalentClasses(:AX_Offsetkomponenten_Referenzstationspunkt
+ObjectUnionOf()
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt):AX_Referenzstationspunkt:AX_Festpunkt):AX_Festpunkt):AX_DQFestpunkt):AX_Phasenzentrumsvariation_Referenzstationspunkt):AX_Pfeilerhoehe_Lagefestpunkt):AX_Skizze):AX_Offsetkomponenten_Referenzstationspunkt)EquivalentClasses(:AX_DQHoehenfestpunkt
+ObjectUnionOf()
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt):AX_Referenzstationspunkt:AX_Festpunkt):AX_Festpunkt):AX_DQFestpunkt):AX_Phasenzentrumsvariation_Referenzstationspunkt):AX_Pfeilerhoehe_Lagefestpunkt):AX_Skizze):AX_Offsetkomponenten_Referenzstationspunkt):AX_DQHoehenfestpunkt)EquivalentClasses(:AX_GNSSAntenne
+ObjectUnionOf()
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt):AX_Referenzstationspunkt:AX_Festpunkt):AX_Festpunkt):AX_DQFestpunkt):AX_Phasenzentrumsvariation_Referenzstationspunkt):AX_Pfeilerhoehe_Lagefestpunkt):AX_Skizze):AX_Offsetkomponenten_Referenzstationspunkt):AX_DQHoehenfestpunkt):AX_GNSSAntenne)EquivalentClasses(:AX_Schwerefestpunkt
+ObjectUnionOf( :AX_Festpunkt)
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt):AX_Referenzstationspunkt:AX_Festpunkt):AX_Festpunkt):AX_DQFestpunkt):AX_Phasenzentrumsvariation_Referenzstationspunkt):AX_Pfeilerhoehe_Lagefestpunkt):AX_Skizze):AX_Offsetkomponenten_Referenzstationspunkt):AX_DQHoehenfestpunkt):AX_GNSSAntenne):AX_Schwerefestpunkt:AX_Festpunkt)EquivalentClasses(:AX_Klassifikation_Lagefestpunkt
+ObjectUnionOf()
+):AX_GNSSEmpfaenger):AX_Phasenzentrumsvariation_Referenzstationspunkt_Zeile):AX_Hoehenfestpunkt:AX_Festpunkt):AX_Lagefestpunkt:AX_Festpunkt):AX_Punktstabilitaet_Hoehenfestpunkt):AX_Referenzstationspunkt:AX_Festpunkt):AX_Festpunkt):AX_DQFestpunkt):AX_Phasenzentrumsvariation_Referenzstationspunkt):AX_Pfeilerhoehe_Lagefestpunkt):AX_Skizze):AX_Offsetkomponenten_Referenzstationspunkt):AX_DQHoehenfestpunkt):AX_GNSSAntenne):AX_Schwerefestpunkt:AX_Festpunkt):AX_Klassifikation_Lagefestpunkt)IntersectionOf(:AX_Festpunkt
+SubClassOf( :AX_Festpunkt
+))IntersectionOf(:AX_Festpunkt
+SubClassOf( :AX_Festpunkt
+))IntersectionOf(:AX_Festpunkt
+SubClassOf( :AX_Festpunkt
+))IntersectionOf(:AX_Festpunkt
+SubClassOf( :AX_Festpunkt
+))
